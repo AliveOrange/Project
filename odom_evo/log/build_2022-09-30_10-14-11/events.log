@@ -1,0 +1,401 @@
+[0.000000] (-) TimerEvent: {}
+[0.000255] (odom_map_tum) JobQueued: {'identifier': 'odom_map_tum', 'dependencies': OrderedDict()}
+[0.000356] (odom_map_tum) JobStarted: {'identifier': 'odom_map_tum'}
+[0.010052] (odom_map_tum) JobProgress: {'identifier': 'odom_map_tum', 'progress': 'cmake'}
+[0.010672] (odom_map_tum) JobProgress: {'identifier': 'odom_map_tum', 'progress': 'build'}
+[0.011153] (odom_map_tum) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum', '--', '-j16', '-l16'], 'cwd': '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(new_python3.6)'), ('LANGUAGE', 'en_US:en'), ('USER', 'baixiaobo'), ('LC_TIME', 'en_US.UTF-8'), ('SSH_AGENT_PID', '1299'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/calmcar/lib:/home/baixiaobo/install_galactic/install/calmcar/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/baixiaobo'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('CONDA_SHLVL', '2'), ('OLDPWD', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/tum_file'), ('TERM_PROGRAM_VERSION', '1.63.2'), ('DESKTOP_SESSION', 'ubuntu'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1010'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=33ac1a41f756de8d8fc5d89c633508d1'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install:/home/baixiaobo/install_galactic/install'), ('ROS_DISTRO', 'galactic'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'baixiaobo'), ('JOURNAL_STREAM', '8:37483'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'baixiaobo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/baixiaobo/anaconda3/envs/new_python3.6/bin:/opt/ros/galactic/bin:/home/baixiaobo/anaconda3/bin:/home/baixiaobo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/baixiaobo/Qt7.0/6.2.0/gcc_64/bin/:/home/baixiaobo/Qt7.0/Tools/QtCreator/bin/:/home/baixiaobo/Qt7.0/6.2.0/gcc_64/bin/:/home/baixiaobo/Qt7.0/Tools/QtCreator/bin/'), ('SESSION_MANAGER', 'local/baixiaobo:@/tmp/.ICE-unix/1350,unix/baixiaobo:/tmp/.ICE-unix/1350'), ('INVOCATION_ID', 'b192fef76fd94f479ce1e1b5ed4cbe98'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/1fa24230_b300_46c8_ab49_ea81e12f57e5'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('CONDA_PREFIX_1', '/home/baixiaobo/anaconda3'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e60cc89f31.sock'), ('GNOME_TERMINAL_SERVICE', ':1.2170'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_for_rviz:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/chassis_odom:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/calmcar:/home/baixiaobo/install_galactic/install/calmcar:/opt/ros/galactic'), ('CONDA_PYTHON_EXE', '/home/baixiaobo/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'new_python3.6'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/baixiaobo/anaconda3/bin/conda'), ('CLUTTER_IM_MODULE', 'fcitx'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=33ac1a41f756de8d8fc5d89c633508d1'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/calmcar/lib/python3.7/site-packages:/home/baixiaobo/install_galactic/install/calmcar/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('BREAKPAD_DUMP_LOCATION', '/home/baixiaobo/.config/Code/exthost Crash Reports'), ('CONDA_PREFIX', '/home/baixiaobo/anaconda3/envs/new_python3.6'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_for_rviz:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/lidar:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/chassis_odom:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/calmcar:/home/baixiaobo/install_galactic/install/calmcar:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map:/opt/ros/galactic')]), 'shell': False}
+[0.042690] (odom_map_tum) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target odom_map_tum\x1b[0m\n'}
+[0.093146] (odom_map_tum) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding CXX object CMakeFiles/odom_map_tum.dir/src/local_map_on_odom.cpp.o\x1b[0m\n'}
+[0.099879] (-) TimerEvent: {}
+[0.200164] (-) TimerEvent: {}
+[0.300576] (-) TimerEvent: {}
+[0.400919] (-) TimerEvent: {}
+[0.501213] (-) TimerEvent: {}
+[0.601485] (-) TimerEvent: {}
+[0.701768] (-) TimerEvent: {}
+[0.802034] (-) TimerEvent: {}
+[0.902360] (-) TimerEvent: {}
+[1.002636] (-) TimerEvent: {}
+[1.102888] (-) TimerEvent: {}
+[1.203144] (-) TimerEvent: {}
+[1.303482] (-) TimerEvent: {}
+[1.351998] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[1.352220] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[1.352270] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmissing terminating " character\n'}
+[1.352334] (odom_map_tum) StderrLine: {'line': b'   60 | #include "nav_msgs/msg/path.hpp"\x1b[01;35m\x1b[K"\x1b[m\x1b[K\n'}
+[1.352375] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.352427] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra tokens at end of #include directive\n'}
+[1.389610] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12\x1b[m\x1b[K:\n'}
+[1.389778] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmissing terminating " character\n'}
+[1.389836] (odom_map_tum) StderrLine: {'line': b'   60 | #include "nav_msgs/msg/path.hpp"\x1b[01;35m\x1b[K"\x1b[m\x1b[K\n'}
+[1.389889] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.403518] (-) TimerEvent: {}
+[1.503802] (-) TimerEvent: {}
+[1.604090] (-) TimerEvent: {}
+[1.704432] (-) TimerEvent: {}
+[1.804732] (-) TimerEvent: {}
+[1.904982] (-) TimerEvent: {}
+[2.005314] (-) TimerEvent: {}
+[2.105705] (-) TimerEvent: {}
+[2.206035] (-) TimerEvent: {}
+[2.306331] (-) TimerEvent: {}
+[2.406618] (-) TimerEvent: {}
+[2.506877] (-) TimerEvent: {}
+[2.607107] (-) TimerEvent: {}
+[2.707392] (-) TimerEvent: {}
+[2.807691] (-) TimerEvent: {}
+[2.907917] (-) TimerEvent: {}
+[3.008165] (-) TimerEvent: {}
+[3.108350] (-) TimerEvent: {}
+[3.208622] (-) TimerEvent: {}
+[3.308890] (-) TimerEvent: {}
+[3.409201] (-) TimerEvent: {}
+[3.509535] (-) TimerEvent: {}
+[3.609809] (-) TimerEvent: {}
+[3.710039] (-) TimerEvent: {}
+[3.810287] (-) TimerEvent: {}
+[3.910539] (-) TimerEvent: {}
+[4.010944] (-) TimerEvent: {}
+[4.111237] (-) TimerEvent: {}
+[4.211484] (-) TimerEvent: {}
+[4.311913] (-) TimerEvent: {}
+[4.412204] (-) TimerEvent: {}
+[4.512553] (-) TimerEvent: {}
+[4.612831] (-) TimerEvent: {}
+[4.713089] (-) TimerEvent: {}
+[4.813410] (-) TimerEvent: {}
+[4.913690] (-) TimerEvent: {}
+[5.013929] (-) TimerEvent: {}
+[5.114266] (-) TimerEvent: {}
+[5.206609] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.206775] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, std::string)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.206823] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:122:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<double, 4, 4>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[5.206875] (odom_map_tum) StderrLine: {'line': b'  122 |             transform = \x1b[01;31m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.206915] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.206954] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.206991] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.207028] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.207066] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.207105] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.207143] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.207184] (odom_map_tum) StderrLine: {'line': b'  206 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const Matrix& other)\n'}
+[5.207223] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.207260] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:57:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::Matrix<double, 4, 4>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.207307] (odom_map_tum) StderrLine: {'line': b'  206 |     EIGEN_STRONG_INLINE Matrix& operator=(\x1b[01;36m\x1b[Kconst Matrix& other\x1b[m\x1b[K)\n'}
+[5.207349] (odom_map_tum) StderrLine: {'line': b'      |                                           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.207388] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.207431] (odom_map_tum) StderrLine: {'line': b'  223 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const DenseBase<OtherDerived>& other)\n'}
+[5.207471] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.207511] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.207550] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.207589] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:122:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::DenseBase<Derived>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.207628] (odom_map_tum) StderrLine: {'line': b'  122 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.207666] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.207703] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.207741] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.207778] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.207816] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.207854] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.207891] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.207933] (odom_map_tum) StderrLine: {'line': b'  236 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const EigenBase<OtherDerived> &other)\n'}
+[5.207971] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.208010] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.208050] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.208088] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:122:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::EigenBase<Derived>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.208130] (odom_map_tum) StderrLine: {'line': b'  122 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.208167] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.208204] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.208241] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.208279] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.208324] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.208368] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.208407] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.208448] (odom_map_tum) StderrLine: {'line': b'  243 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const ReturnByValue<OtherDerived>& func)\n'}
+[5.208488] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.208525] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.208563] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.208602] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:122:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::ReturnByValue<Derived>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.208644] (odom_map_tum) StderrLine: {'line': b'  122 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.208681] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.208719] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.208757] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.208794] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.208831] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.208868] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.208906] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.208948] (odom_map_tum) StderrLine: {'line': b'  281 |     Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)\n'}
+[5.208986] (odom_map_tum) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.209023] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<double, 4, 4>&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.209064] (odom_map_tum) StderrLine: {'line': b'  281 |     Matrix& operator=(\x1b[01;36m\x1b[KMatrix&& other\x1b[m\x1b[K) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)\n'}
+[5.209102] (odom_map_tum) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.209140] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.209181] (odom_map_tum) StderrLine: {'line': b'  392 |     Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);\n'}
+[5.209220] (odom_map_tum) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.209258] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.209295] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.209335] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:122:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::RotationBase<OtherDerived, 4>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.209374] (odom_map_tum) StderrLine: {'line': b'  122 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.209412] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.213494] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:164:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwx\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kqx\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.213704] (odom_map_tum) StderrLine: {'line': b'  164 |                 Eigen::Quaterniond quaternion(qw,\x1b[01;31m\x1b[Kwx\x1b[m\x1b[K,qy,qz);\n'}
+[5.213753] (odom_map_tum) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[5.213792] (odom_map_tum) StderrLine: {'line': b'      |                                                  \x1b[32m\x1b[Kqx\x1b[m\x1b[K\n'}
+[5.213831] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:165:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of non-static member function \xe2\x80\x98\x1b[01m\x1b[KEigen::QuaternionBase<Derived>::Matrix3 Eigen::QuaternionBase<Derived>::toRotationMatrix() const [with Derived = Eigen::Quaternion<double>; Eigen::QuaternionBase<Derived>::Matrix3 = Eigen::Matrix<double, 3, 3>; typename Eigen::internal::traits<T>::Scalar = double]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.213886] (odom_map_tum) StderrLine: {'line': b'  165 |                 rotation = quaternion.\x1b[01;31m\x1b[KtoRotationMatrix\x1b[m\x1b[K;\n'}
+[5.213935] (odom_map_tum) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.214095] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Geometry:42\x1b[m\x1b[K,\n'}
+[5.214153] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:6\x1b[m\x1b[K,\n'}
+[5.214194] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.214233] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.214269] (-) TimerEvent: {}
+[5.214332] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.214379] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:531:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.214420] (odom_map_tum) StderrLine: {'line': b'  531 | \x1b[01;36m\x1b[KQuaternionBase<Derived>\x1b[m\x1b[K::toRotationMatrix(void) const\n'}
+[5.214459] (odom_map_tum) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.214497] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.214539] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:160:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kqx\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[5.214602] (odom_map_tum) StderrLine: {'line': b'  160 |                 float \x1b[01;35m\x1b[Kqx\x1b[m\x1b[K = odom_input.at(i).odom().pose_quaternion().x();\n'}
+[5.214656] (odom_map_tum) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[5.216986] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:187:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwx\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kqx\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.217198] (odom_map_tum) StderrLine: {'line': b'  187 |             Eigen::Quaterniond quaternion(qw,\x1b[01;31m\x1b[Kwx\x1b[m\x1b[K,qy,qz);\n'}
+[5.217248] (odom_map_tum) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[5.217293] (odom_map_tum) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[Kqx\x1b[m\x1b[K\n'}
+[5.217341] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:188:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of non-static member function \xe2\x80\x98\x1b[01m\x1b[KEigen::QuaternionBase<Derived>::Matrix3 Eigen::QuaternionBase<Derived>::toRotationMatrix() const [with Derived = Eigen::Quaternion<double>; Eigen::QuaternionBase<Derived>::Matrix3 = Eigen::Matrix<double, 3, 3>; typename Eigen::internal::traits<T>::Scalar = double]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.217382] (odom_map_tum) StderrLine: {'line': b'  188 |             rotation = quaternion.\x1b[01;31m\x1b[KtoRotationMatrix\x1b[m\x1b[K;\n'}
+[5.217425] (odom_map_tum) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.217466] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Geometry:42\x1b[m\x1b[K,\n'}
+[5.217504] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:6\x1b[m\x1b[K,\n'}
+[5.217543] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.217580] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.217942] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.217999] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:531:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.218042] (odom_map_tum) StderrLine: {'line': b'  531 | \x1b[01;36m\x1b[KQuaternionBase<Derived>\x1b[m\x1b[K::toRotationMatrix(void) const\n'}
+[5.218081] (odom_map_tum) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.218119] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.218157] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:203:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<double, 4, 4>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[5.218203] (odom_map_tum) StderrLine: {'line': b'  203 |             transform = \x1b[01;31m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.218242] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.218282] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.218319] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.218356] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.218397] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.218434] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.218477] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.218516] (odom_map_tum) StderrLine: {'line': b'  206 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const Matrix& other)\n'}
+[5.218551] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.218587] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:57:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::Matrix<double, 4, 4>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.218628] (odom_map_tum) StderrLine: {'line': b'  206 |     EIGEN_STRONG_INLINE Matrix& operator=(\x1b[01;36m\x1b[Kconst Matrix& other\x1b[m\x1b[K)\n'}
+[5.218667] (odom_map_tum) StderrLine: {'line': b'      |                                           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.218703] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.218747] (odom_map_tum) StderrLine: {'line': b'  223 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const DenseBase<OtherDerived>& other)\n'}
+[5.218785] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.218821] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.218858] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.218903] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:203:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::DenseBase<Derived>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.218983] (odom_map_tum) StderrLine: {'line': b'  203 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.219046] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.219110] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.219173] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.219236] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.219299] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.219362] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.219424] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.219491] (odom_map_tum) StderrLine: {'line': b'  236 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const EigenBase<OtherDerived> &other)\n'}
+[5.219554] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.219621] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.219687] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.219729] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:203:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::EigenBase<Derived>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.219769] (odom_map_tum) StderrLine: {'line': b'  203 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.219807] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.219845] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.219882] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.219920] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.219957] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.219995] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.220032] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.220074] (odom_map_tum) StderrLine: {'line': b'  243 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const ReturnByValue<OtherDerived>& func)\n'}
+[5.220111] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.220148] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.220186] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.220224] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:203:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::ReturnByValue<Derived>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.220264] (odom_map_tum) StderrLine: {'line': b'  203 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.220303] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.220348] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.220407] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.220449] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.220488] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.220526] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.220564] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.220606] (odom_map_tum) StderrLine: {'line': b'  281 |     Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)\n'}
+[5.220645] (odom_map_tum) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.220683] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<double, 4, 4>&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.220722] (odom_map_tum) StderrLine: {'line': b'  281 |     Matrix& operator=(\x1b[01;36m\x1b[KMatrix&& other\x1b[m\x1b[K) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)\n'}
+[5.220759] (odom_map_tum) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.220798] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.220844] (odom_map_tum) StderrLine: {'line': b'  392 |     Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);\n'}
+[5.220882] (odom_map_tum) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.220918] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.220958] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.220996] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:203:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::RotationBase<OtherDerived, 4>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.221034] (odom_map_tum) StderrLine: {'line': b'  203 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.221072] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.223101] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:245:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwx\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kqx\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.223175] (odom_map_tum) StderrLine: {'line': b'  245 |                 Eigen::Quaterniond quaternion(qw,\x1b[01;31m\x1b[Kwx\x1b[m\x1b[K,qy,qz);\n'}
+[5.223211] (odom_map_tum) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[5.223247] (odom_map_tum) StderrLine: {'line': b'      |                                                  \x1b[32m\x1b[Kqx\x1b[m\x1b[K\n'}
+[5.223284] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:246:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of non-static member function \xe2\x80\x98\x1b[01m\x1b[KEigen::QuaternionBase<Derived>::Matrix3 Eigen::QuaternionBase<Derived>::toRotationMatrix() const [with Derived = Eigen::Quaternion<double>; Eigen::QuaternionBase<Derived>::Matrix3 = Eigen::Matrix<double, 3, 3>; typename Eigen::internal::traits<T>::Scalar = double]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.223326] (odom_map_tum) StderrLine: {'line': b'  246 |                 rotation = quaternion.\x1b[01;31m\x1b[KtoRotationMatrix\x1b[m\x1b[K;\n'}
+[5.223363] (odom_map_tum) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.223399] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Geometry:42\x1b[m\x1b[K,\n'}
+[5.223435] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:6\x1b[m\x1b[K,\n'}
+[5.223471] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.223508] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.223563] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.223599] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:531:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.223637] (odom_map_tum) StderrLine: {'line': b'  531 | \x1b[01;36m\x1b[KQuaternionBase<Derived>\x1b[m\x1b[K::toRotationMatrix(void) const\n'}
+[5.223678] (odom_map_tum) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.223715] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.223752] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:241:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kqx\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[5.223790] (odom_map_tum) StderrLine: {'line': b'  241 |                 float \x1b[01;35m\x1b[Kqx\x1b[m\x1b[K = odom_input.at(i).odom().pose_quaternion().x();\n'}
+[5.223829] (odom_map_tum) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[5.226051] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:268:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwx\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kqx\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.226134] (odom_map_tum) StderrLine: {'line': b'  268 |             Eigen::Quaterniond quaternion(qw,\x1b[01;31m\x1b[Kwx\x1b[m\x1b[K,qy,qz);\n'}
+[5.226172] (odom_map_tum) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[5.226208] (odom_map_tum) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[Kqx\x1b[m\x1b[K\n'}
+[5.226247] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:269:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of non-static member function \xe2\x80\x98\x1b[01m\x1b[KEigen::QuaternionBase<Derived>::Matrix3 Eigen::QuaternionBase<Derived>::toRotationMatrix() const [with Derived = Eigen::Quaternion<double>; Eigen::QuaternionBase<Derived>::Matrix3 = Eigen::Matrix<double, 3, 3>; typename Eigen::internal::traits<T>::Scalar = double]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.226291] (odom_map_tum) StderrLine: {'line': b'  269 |             rotation = quaternion.\x1b[01;31m\x1b[KtoRotationMatrix\x1b[m\x1b[K;\n'}
+[5.226329] (odom_map_tum) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.226365] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Geometry:42\x1b[m\x1b[K,\n'}
+[5.226401] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:6\x1b[m\x1b[K,\n'}
+[5.226437] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.226473] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.226510] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.226547] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:531:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[5.226583] (odom_map_tum) StderrLine: {'line': b'  531 | \x1b[01;36m\x1b[KQuaternionBase<Derived>\x1b[m\x1b[K::toRotationMatrix(void) const\n'}
+[5.226702] (odom_map_tum) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.226899] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.226956] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:284:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<double, 4, 4>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[5.227003] (odom_map_tum) StderrLine: {'line': b'  284 |             transform = \x1b[01;31m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.227044] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.227103] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.227144] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.227180] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.227219] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.227257] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.227293] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.227336] (odom_map_tum) StderrLine: {'line': b'  206 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const Matrix& other)\n'}
+[5.227373] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.227409] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:57:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::Matrix<double, 4, 4>&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.227448] (odom_map_tum) StderrLine: {'line': b'  206 |     EIGEN_STRONG_INLINE Matrix& operator=(\x1b[01;36m\x1b[Kconst Matrix& other\x1b[m\x1b[K)\n'}
+[5.227484] (odom_map_tum) StderrLine: {'line': b'      |                                           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.227520] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.227559] (odom_map_tum) StderrLine: {'line': b'  223 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const DenseBase<OtherDerived>& other)\n'}
+[5.227597] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.227633] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.227672] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.227711] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:284:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::DenseBase<Derived>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.227749] (odom_map_tum) StderrLine: {'line': b'  284 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.227785] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.227827] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.227866] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.227902] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.227939] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.227976] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.228015] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.228056] (odom_map_tum) StderrLine: {'line': b'  236 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const EigenBase<OtherDerived> &other)\n'}
+[5.228096] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.228138] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.228196] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.228235] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:284:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::EigenBase<Derived>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.228275] (odom_map_tum) StderrLine: {'line': b'  284 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.228320] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.228359] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.228401] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.228437] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.228474] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.228512] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.228551] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.228598] (odom_map_tum) StderrLine: {'line': b'  243 |     EIGEN_STRONG_INLINE Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const ReturnByValue<OtherDerived>& func)\n'}
+[5.228637] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.228687] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.228724] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.228761] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:284:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::ReturnByValue<Derived>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.228803] (odom_map_tum) StderrLine: {'line': b'  284 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.228841] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.228878] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:437\x1b[m\x1b[K,\n'}
+[5.228914] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[5.228952] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27\x1b[m\x1b[K,\n'}
+[5.228989] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[5.229025] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[5.229062] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.229105] (odom_map_tum) StderrLine: {'line': b'  281 |     Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)\n'}
+[5.229143] (odom_map_tum) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.229180] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<double, 4, 4>&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.229218] (odom_map_tum) StderrLine: {'line': b'  281 |     Matrix& operator=(\x1b[01;36m\x1b[KMatrix&& other\x1b[m\x1b[K) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)\n'}
+[5.229254] (odom_map_tum) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[5.229291] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.229340] (odom_map_tum) StderrLine: {'line': b'  392 |     Matrix& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);\n'}
+[5.229378] (odom_map_tum) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.229415] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[5.229453] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.229490] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:284:25:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KEigen::Transform<double, 3, 2>\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kconst Eigen::RotationBase<OtherDerived, 4>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.229527] (odom_map_tum) StderrLine: {'line': b'  284 |             transform = \x1b[01;36m\x1b[Ktransform_affine\x1b[m\x1b[K;\n'}
+[5.229563] (odom_map_tum) StderrLine: {'line': b'      |                         \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.314394] (-) TimerEvent: {}
+[5.414781] (-) TimerEvent: {}
+[5.515125] (-) TimerEvent: {}
+[5.615441] (-) TimerEvent: {}
+[5.715735] (-) TimerEvent: {}
+[5.816053] (-) TimerEvent: {}
+[5.916321] (-) TimerEvent: {}
+[6.016576] (-) TimerEvent: {}
+[6.116854] (-) TimerEvent: {}
+[6.217151] (-) TimerEvent: {}
+[6.317432] (-) TimerEvent: {}
+[6.417770] (-) TimerEvent: {}
+[6.518041] (-) TimerEvent: {}
+[6.618351] (-) TimerEvent: {}
+[6.718710] (-) TimerEvent: {}
+[6.818942] (-) TimerEvent: {}
+[6.919130] (-) TimerEvent: {}
+[7.019495] (-) TimerEvent: {}
+[7.119871] (-) TimerEvent: {}
+[7.220149] (-) TimerEvent: {}
+[7.320460] (-) TimerEvent: {}
+[7.420786] (-) TimerEvent: {}
+[7.521093] (-) TimerEvent: {}
+[7.621405] (-) TimerEvent: {}
+[7.721661] (-) TimerEvent: {}
+[7.821961] (-) TimerEvent: {}
+[7.922303] (-) TimerEvent: {}
+[8.022632] (-) TimerEvent: {}
+[8.122928] (-) TimerEvent: {}
+[8.223236] (-) TimerEvent: {}
+[8.323533] (-) TimerEvent: {}
+[8.423847] (-) TimerEvent: {}
+[8.524148] (-) TimerEvent: {}
+[8.624483] (-) TimerEvent: {}
+[8.724781] (-) TimerEvent: {}
+[8.825103] (-) TimerEvent: {}
+[8.925404] (-) TimerEvent: {}
+[9.025722] (-) TimerEvent: {}
+[9.126024] (-) TimerEvent: {}
+[9.226356] (-) TimerEvent: {}
+[9.326657] (-) TimerEvent: {}
+[9.426890] (-) TimerEvent: {}
+[9.527148] (-) TimerEvent: {}
+[9.627478] (-) TimerEvent: {}
+[9.727804] (-) TimerEvent: {}
+[9.828136] (-) TimerEvent: {}
+[9.928490] (-) TimerEvent: {}
+[10.028847] (-) TimerEvent: {}
+[10.129173] (-) TimerEvent: {}
+[10.229475] (-) TimerEvent: {}
+[10.329857] (-) TimerEvent: {}
+[10.393413] (odom_map_tum) StderrLine: {'line': b'make[2]: *** [CMakeFiles/odom_map_tum.dir/build.make:76: CMakeFiles/odom_map_tum.dir/src/local_map_on_odom.cpp.o] Error 1\n'}
+[10.393738] (odom_map_tum) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_tum.dir/all] Error 2\n'}
+[10.393820] (odom_map_tum) StderrLine: {'line': b'make: *** [Makefile:146: all] Error 2\n'}
+[10.394884] (odom_map_tum) CommandEnded: {'returncode': 2}
+[10.429956] (-) TimerEvent: {}
+[10.461246] (odom_map_tum) JobEnded: {'identifier': 'odom_map_tum', 'rc': 2}
+[10.471988] (-) EventReactorShutdown: {}

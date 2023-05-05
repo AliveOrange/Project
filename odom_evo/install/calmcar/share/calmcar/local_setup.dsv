@@ -1,0 +1,4 @@
+source;share/calmcar/environment/ament_prefix_path.sh
+source;share/calmcar/environment/library_path.sh
+source;share/calmcar/environment/path.sh
+source;share/calmcar/environment/pythonpath.sh

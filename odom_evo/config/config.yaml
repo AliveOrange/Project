@@ -1,0 +1,55 @@
+#底盘参数
+distance_f2r: 2.850 #底盘轴距
+distance_fr2l: 1.340 #前轮中心距,车宽1840，减去一个轮胎宽
+distance_rr2l: 1.340 #后轮中心距
+r_rrw: 0.33 #后右轮半径，规格R19，半径约0.3353
+r_rlw: 0.33 #后左轮半径
+r_frw: 0.33 #前右轮半径
+r_flw: 0.33 #前左轮半径
+front_wheel_weight: 0.1 #前轮权重
+rear_wheel_weight: 0.9 #后轮权重
+steer_transmission_ratio: 15.2 #方向盘固定传动比
+
+#ros参数
+ros_rate: 300
+
+#地图累积参数
+local_map_frame_num: 5
+# odom_source: 2 # 1 表示chassis_odom; 2 表示ins_odom
+odom_source: 1 # 1 表示chassis_odom; 2 表示ins_odom
+
+#点云剪裁参数
+filters_status: true
+x_min: 0
+x_max: 50
+y_min: -20
+y_max: 20
+z_min: -4
+z_max: 4
+
+#标定
+hand_calib_status: true # 手动标定
+calib_roll: 0
+calib_pitch: 2.46 
+calib_yaw: 0
+calib_x: 0
+calib_y: 0
+calib_z: 1.47
+map_cloud_calib_status: false #是否采用标定文件对地图进行标定
+cloud_msg_calib_status: true #是否采用标定文件对雷达帧进行标定
+calib_file_address: /home/baixiaobo/work/chassiss_odom_ws/ros2/ChassisOdomMap/ChassisOdomMap/calib/M1_to_car_calib_result.xml
+
+#切片保存
+pcd_status: true
+pcd_address: /home/baixiaobo/work/chassiss_odom_ws/ros2/ChassisOdomMap/ChassisOdomMap/file/pcd
+image_address: /home/baixiaobo/work/chassiss_odom_ws/ros2/ChassisOdomMap/ChassisOdomMap/file/image
+json_address: /home/baixiaobo/work/chassiss_odom_ws/ros2/ChassisOdomMap/ChassisOdomMap/file/json
+gps_address: /home/baixiaobo/work/chassiss_odom_ws/ros2/ChassisOdomMap/ChassisOdomMap/file/gps
+map_address: /home/baixiaobo/work/chassiss_odom_ws/ros2/ChassisOdomMap/ChassisOdomMap/file/map
+
+
+#降采样
+downsample_status: false
+leaf_x: 1
+leaf_y: 1
+leaf_z: 1

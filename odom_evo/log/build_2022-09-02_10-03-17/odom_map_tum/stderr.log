@@ -1,0 +1,51 @@
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+   60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+      |                                 [01;35m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kextra tokens at end of #include directive
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+   60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+      |                                 [01;35m[K^[m[K
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:[m[K In member function ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, std::string)[m[K’:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:110:19:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat x[m[K’
+  110 |             float [01;31m[Kx[m[K = odom_input.at(i).odom().position().x()+20;
+      |                   [01;31m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:107:19:[m[K [01;36m[Knote: [m[K‘[01m[Kfloat x[m[K’ previously declared here
+  107 |             float [01;36m[Kx[m[K = odom_input.at(i).odom().position().x();
+      |                   [01;36m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:111:19:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat y[m[K’
+  111 |             float [01;31m[Ky[m[K = odom_input.at(i).odom().position().y()+20;
+      |                   [01;31m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:108:19:[m[K [01;36m[Knote: [m[K‘[01m[Kfloat y[m[K’ previously declared here
+  108 |             float [01;36m[Ky[m[K = odom_input.at(i).odom().position().y();
+      |                   [01;36m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:112:19:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat z[m[K’
+  112 |             float [01;31m[Kz[m[K = odom_input.at(i).odom().position().z()+20;
+      |                   [01;31m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:109:19:[m[K [01;36m[Knote: [m[K‘[01m[Kfloat z[m[K’ previously declared here
+  109 |             float [01;36m[Kz[m[K = odom_input.at(i).odom().position().z();
+      |                   [01;36m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:144:19:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat x[m[K’
+  144 |             float [01;31m[Kx[m[K = odom_input.at(i).odom().position().x() + 10;
+      |                   [01;31m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:141:19:[m[K [01;36m[Knote: [m[K‘[01m[Kfloat x[m[K’ previously declared here
+  141 |             float [01;36m[Kx[m[K = odom_input.at(i).odom().position().x();
+      |                   [01;36m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:145:19:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat y[m[K’
+  145 |             float [01;31m[Ky[m[K = odom_input.at(i).odom().position().y() + 10;
+      |                   [01;31m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:142:19:[m[K [01;36m[Knote: [m[K‘[01m[Kfloat y[m[K’ previously declared here
+  142 |             float [01;36m[Ky[m[K = odom_input.at(i).odom().position().y();
+      |                   [01;36m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:146:19:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat z[m[K’
+  146 |             float [01;31m[Kz[m[K = odom_input.at(i).odom().position().z() + 10;
+      |                   [01;31m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:143:19:[m[K [01;36m[Knote: [m[K‘[01m[Kfloat z[m[K’ previously declared here
+  143 |             float [01;36m[Kz[m[K = odom_input.at(i).odom().position().z();
+      |                   [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/odom_map_tum.dir/build.make:76: CMakeFiles/odom_map_tum.dir/src/local_map_on_odom.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_tum.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

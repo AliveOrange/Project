@@ -1,0 +1,23 @@
+[0.014s] Invoking command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz -- -j16 -l16
+[0.038s] [35m[1mConsolidate compiler generated dependencies of target odom_map_for_rviz[0m
+[0.083s] [  2%] [32mBuilding CXX object CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o[0m
+[4.945s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/src/local_map_on_odom.cpp:9[m[K:
+[4.945s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:[m[K In constructor ‘[01m[KTfPublisher::TfPublisher(std::shared_ptr<rclcpp::Node>&, std::deque<odom::proto::Frame>)[m[K’:
+[4.945s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:20:35:[m[K [01;35m[Kwarning: [m[K‘[01m[KTfPublisher::node_[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+[4.945s]    20 |     std::shared_ptr<rclcpp::Node> [01;35m[Knode_[m[K;
+[4.945s]       |                                   [01;35m[K^~~~~[m[K
+[4.946s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:17:36:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kstd::deque<odom::proto::Frame> TfPublisher::odom_frame_[m[K’ [[01;35m[K-Wreorder[m[K]
+[4.946s]    17 |     std::deque<odom::proto::Frame> [01;35m[Kodom_frame_[m[K;
+[4.946s]       |                                    [01;35m[K^~~~~~~~~~~[m[K
+[4.946s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:25:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+[4.946s]    25 | [01;35m[KTfPublisher[m[K::TfPublisher(std::shared_ptr<rclcpp::Node> &node,std::deque<odom::proto::Frame> odom_frame) : node_(node),odom_frame_(odom_frame)
+[4.946s]       | [01;35m[K^~~~~~~~~~~[m[K
+[5.016s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/src/local_map_on_odom.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[5.016s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/src/local_map_on_odom.cpp:53:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kodom_publisher[m[K’ was not declared in this scope; did you mean ‘[01m[KOdomPublisher[m[K’?
+[5.016s]    53 |             [01;31m[Kodom_publisher[m[K->Publish(odom_frame);
+[5.016s]       |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[5.016s]       |             [32m[KOdomPublisher[m[K
+[9.616s] make[2]: *** [CMakeFiles/odom_map_for_rviz.dir/build.make:76: CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o] Error 1
+[9.616s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_for_rviz.dir/all] Error 2
+[9.616s] make: *** [Makefile:146: all] Error 2
+[9.619s] Invoked command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz -- -j16 -l16

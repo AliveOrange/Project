@@ -1,0 +1,11 @@
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/src/local_map_on_odom.cpp:9[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:[m[K In constructor ‘[01m[KTfPublisher::TfPublisher(std::shared_ptr<rclcpp::Node>&, std::deque<odom::proto::Frame>)[m[K’:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:20:35:[m[K [01;35m[Kwarning: [m[K‘[01m[KTfPublisher::node_[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   20 |     std::shared_ptr<rclcpp::Node> [01;35m[Knode_[m[K;
+      |                                   [01;35m[K^~~~~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:17:36:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kstd::deque<odom::proto::Frame> TfPublisher::odom_frame_[m[K’ [[01;35m[K-Wreorder[m[K]
+   17 |     std::deque<odom::proto::Frame> [01;35m[Kodom_frame_[m[K;
+      |                                    [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:25:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   25 | [01;35m[KTfPublisher[m[K::TfPublisher(std::shared_ptr<rclcpp::Node> &node,std::deque<odom::proto::Frame> odom_frame) : node_(node),odom_frame_(odom_frame)
+      | [01;35m[K^~~~~~~~~~~[m[K

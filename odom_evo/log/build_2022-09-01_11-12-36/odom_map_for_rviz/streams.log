@@ -1,0 +1,73 @@
+[0.011s] Invoking command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_for_rviz': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_for_rviz -- -j16 -l16
+[0.037s] [35m[1mConsolidate compiler generated dependencies of target odom_map_for_rviz[0m
+[0.087s] [  2%] [32mBuilding CXX object CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o[0m
+[1.355s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_ins_subscriber_for_rviz.hpp:9[m[K,
+[1.355s]                  from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[1.355s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+[1.355s]    60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+[1.355s]       |                                 [01;35m[K^[m[K
+[1.355s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kextra tokens at end of #include directive
+[1.399s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:13[m[K:
+[1.399s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+[1.399s]    60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+[1.399s]       |                                 [01;35m[K^[m[K
+[5.190s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[5.190s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:[m[K In member function ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, std::string&)[m[K’:
+[5.190s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:73:58:[m[K [01;31m[Kerror: [m[K‘[01m[KDPROJECT_PATH[m[K’ was not declared in this scope; did you mean ‘[01m[KPROJECT_PATH[m[K’?
+[5.190s]    73 |             std::ofstream save_chassis_odom((std::string)[01;31m[KDPROJECT_PATH[m[K + "/tum_file/chassis_odom.txt", ios::app);
+[5.190s]       |                                                          [01;31m[K^~~~~~~~~~~~~[m[K
+[5.190s]       |                                                          [32m[KPROJECT_PATH[m[K
+[5.193s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:83:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kodom_msgs[m[K’ was not declared in this scope
+[5.193s]    83 |             save_chassis_odom << [01;31m[Kodom_msgs[m[K->header.stamp.toSec() << " " << x << " " << y << " " << z << " " << qx << " " << qy << " " << qz << " " << qw << std::endl;
+[5.193s]       |                                  [01;31m[K^~~~~~~~~[m[K
+[5.200s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[5.200s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:103:58:[m[K [01;31m[Kerror: [m[K‘[01m[KDPROJECT_PATH[m[K’ was not declared in this scope; did you mean ‘[01m[KPROJECT_PATH[m[K’?
+[5.200s]   103 |             std::ofstream save_chassis_odom((std::string)[01;31m[KDPROJECT_PATH[m[K + "/tum_file/ins_odom.txt", ios::app);
+[5.200s]       |                                                          [01;31m[K^~~~~~~~~~~~~[m[K
+[5.200s]       |                                                          [32m[KPROJECT_PATH[m[K
+[5.203s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:113:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kodom_msgs[m[K’ was not declared in this scope
+[5.203s]   113 |             save_chassis_odom << [01;31m[Kodom_msgs[m[K->header.stamp.toSec() << " " << x << " " << y << " " << z << " " << qx << " " << qy << " " << qz << " " << qw << std::endl;
+[5.203s]       |                                  [01;31m[K^~~~~~~~~[m[K
+[5.215s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[5.215s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:33:64:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type ‘[01m[Kstd::string&[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>&[m[K’} to an rvalue of type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’}
+[5.215s]    33 |             odom_publisher_chassis->Publish(odom_frame_chassis,[01;31m[K"chassis_odom"[m[K);
+[5.215s]       |                                                                [01;31m[K^~~~~~~~~~~~~~[m[K
+[5.215s] In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+[5.215s]                  from [01m[K/usr/include/c++/9/bits/locale_classes.h:40[m[K,
+[5.215s]                  from [01m[K/usr/include/c++/9/bits/ios_base.h:41[m[K,
+[5.215s]                  from [01m[K/usr/include/c++/9/ios:42[m[K,
+[5.215s]                  from [01m[K/usr/include/c++/9/istream:38[m[K,
+[5.215s]                  from [01m[K/usr/include/c++/9/fstream:38[m[K,
+[5.215s]                  from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:14[m[K,
+[5.215s]                  from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_ins_subscriber_for_rviz.hpp:9[m[K,
+[5.215s]                  from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[5.215s] [01m[K/usr/include/c++/9/bits/basic_string.h:529:7:[m[K [01;36m[Knote: [m[K  after user-defined conversion: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with <template-parameter-2-1> = std::allocator<char>; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>][m[K’
+[5.215s]   529 |       [01;36m[Kbasic_string[m[K(const _CharT* __s, const _Alloc& __a = _Alloc())
+[5.215s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[5.216s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[5.216s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:55:86:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, std::string&)[m[K’
+[5.216s]    55 | void OdomPublisher::Publish(std::deque<odom::proto::Frame> &odom_input, [01;36m[Kstd::string &odom_source[m[K)
+[5.216s]       |                                                                         [01;36m[K~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[5.216s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:38:56:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type ‘[01m[Kstd::string&[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>&[m[K’} to an rvalue of type ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’}
+[5.216s]    38 |             odom_publisher_ins->Publish(odom_frame_ins,[01;31m[K"ins_odom"[m[K);
+[5.216s]       |                                                        [01;31m[K^~~~~~~~~~[m[K
+[5.216s] In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+[5.216s]                  from [01m[K/usr/include/c++/9/bits/locale_classes.h:40[m[K,
+[5.216s]                  from [01m[K/usr/include/c++/9/bits/ios_base.h:41[m[K,
+[5.216s]                  from [01m[K/usr/include/c++/9/ios:42[m[K,
+[5.216s]                  from [01m[K/usr/include/c++/9/istream:38[m[K,
+[5.216s]                  from [01m[K/usr/include/c++/9/fstream:38[m[K,
+[5.216s]                  from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:14[m[K,
+[5.216s]                  from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_ins_subscriber_for_rviz.hpp:9[m[K,
+[5.216s]                  from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[5.216s] [01m[K/usr/include/c++/9/bits/basic_string.h:529:7:[m[K [01;36m[Knote: [m[K  after user-defined conversion: ‘[01m[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with <template-parameter-2-1> = std::allocator<char>; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>][m[K’
+[5.216s]   529 |       [01;36m[Kbasic_string[m[K(const _CharT* __s, const _Alloc& __a = _Alloc())
+[5.216s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[5.216s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[5.216s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:55:86:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, std::string&)[m[K’
+[5.216s]    55 | void OdomPublisher::Publish(std::deque<odom::proto::Frame> &odom_input, [01;36m[Kstd::string &odom_source[m[K)
+[5.216s]       |                                                                         [01;36m[K~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[10.031s] make[2]: *** [CMakeFiles/odom_map_for_rviz.dir/build.make:76: CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o] Error 1
+[10.031s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_for_rviz.dir/all] Error 2
+[10.031s] make: *** [Makefile:146: all] Error 2
+[10.034s] Invoked command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_for_rviz' returned '2': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_for_rviz -- -j16 -l16

@@ -1,0 +1,442 @@
+[0.013s] Invoking command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/local/bin/cmake /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap -DCMAKE_INSTALL_PREFIX=/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz
+[0.046s] -- The C compiler identification is GNU 7.5.0
+[0.082s] -- The CXX compiler identification is GNU 9.4.0
+[0.086s] -- Detecting C compiler ABI info
+[0.121s] -- Detecting C compiler ABI info - done
+[0.127s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.127s] -- Detecting C compile features
+[0.127s] -- Detecting C compile features - done
+[0.130s] -- Detecting CXX compiler ABI info
+[0.172s] -- Detecting CXX compiler ABI info - done
+[0.177s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.177s] -- Detecting CXX compile features
+[0.178s] -- Detecting CXX compile features - done
+[0.331s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") 
+[0.337s] -- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)
+[0.355s] -- Found PythonInterp: /home/baixiaobo/anaconda3/bin/python3 (found suitable version "3.7", minimum required is "3") 
+[0.355s] -- Using PYTHON_EXECUTABLE: /home/baixiaobo/anaconda3/bin/python3
+[0.422s] -- Found rclcpp: 9.2.1 (/opt/ros/galactic/share/rclcpp/cmake)
+[0.451s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.455s] -- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[0.506s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.530s] -- Found FastRTPS: /opt/ros/galactic/include  
+[0.585s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.622s] -- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)
+[0.623s] -- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)
+[0.634s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.635s] -- Found Threads: TRUE  
+[0.715s] -- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)
+[0.788s] -- Checking for module 'eigen3'
+[0.796s] --   Found eigen3, version 3.3.4
+[0.817s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[0.817s] -- Eigen found (include: /usr/include/eigen3, version: 3.3.4)
+[0.862s] -- Checking for module 'flann'
+[0.872s] --   Found flann, version 1.9.1
+[0.898s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[0.922s] -- The imported target "vtkParseOGLExt" references the file
+[0.922s]    "/usr/bin/vtkParseOGLExt-7.1"
+[0.922s] but this file does not exist.  Possible reasons include:
+[0.922s] * The file was deleted, renamed, or moved to another location.
+[0.922s] * An install or uninstall procedure did not complete successfully.
+[0.922s] * The installation package was faulty and contained
+[0.922s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[0.922s] but not all the files it references.
+[0.923s] 
+[0.923s] -- The imported target "vtkRenderingPythonTkWidgets" references the file
+[0.923s]    "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"
+[0.923s] but this file does not exist.  Possible reasons include:
+[0.923s] * The file was deleted, renamed, or moved to another location.
+[0.923s] * An install or uninstall procedure did not complete successfully.
+[0.923s] * The installation package was faulty and contained
+[0.923s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[0.923s] but not all the files it references.
+[0.923s] 
+[0.923s] -- The imported target "vtk" references the file
+[0.923s]    "/usr/bin/vtk"
+[0.923s] but this file does not exist.  Possible reasons include:
+[0.923s] * The file was deleted, renamed, or moved to another location.
+[0.923s] * An install or uninstall procedure did not complete successfully.
+[0.923s] * The installation package was faulty and contained
+[0.923s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[0.923s] but not all the files it references.
+[0.923s] 
+[0.923s] -- The imported target "pvtk" references the file
+[0.923s]    "/usr/bin/pvtk"
+[0.923s] but this file does not exist.  Possible reasons include:
+[0.924s] * The file was deleted, renamed, or moved to another location.
+[0.924s] * An install or uninstall procedure did not complete successfully.
+[0.924s] * The installation package was faulty and contained
+[0.924s]    "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"
+[0.924s] but not all the files it references.
+[0.924s] 
+[0.933s] -- Checking for module 'libusb-1.0'
+[0.942s] --   Found libusb-1.0, version 1.0.23
+[0.966s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[0.966s]   The package name passed to `find_package_handle_standard_args` (USB_10)
+[0.966s]   does not match the name of the calling package (OpenNI).  This can lead to
+[0.966s]   problems in calling code that expects `find_package` result variables
+[0.966s]   (e.g., `_FOUND`) to follow a certain pattern.
+[0.966s] Call Stack (most recent call first):
+[0.966s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)
+[0.967s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)
+[0.967s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)
+[0.967s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)
+[0.967s]   CMakeLists.txt:39 (find_package)
+[0.967s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.967s] [0m
+[0.967s] -- Found USB_10: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[0.999s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[1.002s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.002s]   The package name passed to `find_package_handle_standard_args` (USB_10)
+[1.002s]   does not match the name of the calling package (OpenNI2).  This can lead to
+[1.002s]   problems in calling code that expects `find_package` result variables
+[1.003s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.003s] Call Stack (most recent call first):
+[1.003s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI2.cmake:28 (find_package_handle_standard_args)
+[1.003s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:193 (find_package)
+[1.003s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_openni2)
+[1.003s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)
+[1.003s]   CMakeLists.txt:39 (find_package)
+[1.003s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.003s] [0m
+[1.038s] -- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+[1.047s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.047s]   The package name passed to `find_package_handle_standard_args` (libusb-1.0)
+[1.047s]   does not match the name of the calling package (PCL).  This can lead to
+[1.047s]   problems in calling code that expects `find_package` result variables
+[1.047s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.047s] Call Stack (most recent call first):
+[1.047s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:291 (find_package_handle_standard_args)
+[1.047s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:338 (find_libusb)
+[1.047s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)
+[1.047s]   CMakeLists.txt:39 (find_package)
+[1.047s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.047s] [0m
+[1.047s] -- Found libusb-1.0: /usr/include  
+[1.051s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.051s]   The package name passed to `find_package_handle_standard_args` (USB_10)
+[1.051s]   does not match the name of the calling package (OpenNI).  This can lead to
+[1.051s]   problems in calling code that expects `find_package` result variables
+[1.051s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.051s] Call Stack (most recent call first):
+[1.051s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)
+[1.051s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)
+[1.051s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)
+[1.051s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)
+[1.051s]   CMakeLists.txt:39 (find_package)
+[1.051s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.051s] [0m
+[1.051s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[1.055s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.055s]   The package name passed to `find_package_handle_standard_args` (USB_10)
+[1.055s]   does not match the name of the calling package (OpenNI2).  This can lead to
+[1.055s]   problems in calling code that expects `find_package` result variables
+[1.055s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.055s] Call Stack (most recent call first):
+[1.055s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI2.cmake:28 (find_package_handle_standard_args)
+[1.055s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:193 (find_package)
+[1.055s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_openni2)
+[1.056s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)
+[1.056s]   CMakeLists.txt:39 (find_package)
+[1.056s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.056s] [0m
+[1.056s] -- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
+[1.074s] -- Found Qhull: optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so  
+[1.075s] -- QHULL found (include: /usr/include, lib: optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so)
+[1.078s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.078s]   The package name passed to `find_package_handle_standard_args` (USB_10)
+[1.078s]   does not match the name of the calling package (OpenNI).  This can lead to
+[1.078s]   problems in calling code that expects `find_package` result variables
+[1.079s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.079s] Call Stack (most recent call first):
+[1.079s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)
+[1.079s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)
+[1.079s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)
+[1.079s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)
+[1.079s]   CMakeLists.txt:39 (find_package)
+[1.079s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.079s] [0m
+[1.079s] -- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
+[1.087s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.087s]   The package name passed to `find_package_handle_standard_args` (PCL_COMMON)
+[1.087s]   does not match the name of the calling package (PCL).  This can lead to
+[1.087s]   problems in calling code that expects `find_package` result variables
+[1.087s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.087s] Call Stack (most recent call first):
+[1.087s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.087s]   CMakeLists.txt:39 (find_package)
+[1.087s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.087s] [0m
+[1.087s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[1.088s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.088s]   The package name passed to `find_package_handle_standard_args` (PCL_KDTREE)
+[1.088s]   does not match the name of the calling package (PCL).  This can lead to
+[1.088s]   problems in calling code that expects `find_package` result variables
+[1.088s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.088s] Call Stack (most recent call first):
+[1.088s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.088s]   CMakeLists.txt:39 (find_package)
+[1.088s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.088s] [0m
+[1.088s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[1.088s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.088s]   The package name passed to `find_package_handle_standard_args` (PCL_OCTREE)
+[1.088s]   does not match the name of the calling package (PCL).  This can lead to
+[1.088s]   problems in calling code that expects `find_package` result variables
+[1.089s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.089s] Call Stack (most recent call first):
+[1.089s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.089s]   CMakeLists.txt:39 (find_package)
+[1.089s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.089s] [0m
+[1.089s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[1.089s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.089s]   The package name passed to `find_package_handle_standard_args` (PCL_SEARCH)
+[1.089s]   does not match the name of the calling package (PCL).  This can lead to
+[1.089s]   problems in calling code that expects `find_package` result variables
+[1.089s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.089s] Call Stack (most recent call first):
+[1.089s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.089s]   CMakeLists.txt:39 (find_package)
+[1.089s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.090s] [0m
+[1.090s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[1.090s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.090s]   The package name passed to `find_package_handle_standard_args`
+[1.090s]   (PCL_SAMPLE_CONSENSUS) does not match the name of the calling package
+[1.090s]   (PCL).  This can lead to problems in calling code that expects
+[1.090s]   `find_package` result variables (e.g., `_FOUND`) to follow a certain
+[1.090s]   pattern.
+[1.090s] Call Stack (most recent call first):
+[1.090s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.090s]   CMakeLists.txt:39 (find_package)
+[1.090s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.090s] [0m
+[1.090s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[1.091s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.091s]   The package name passed to `find_package_handle_standard_args`
+[1.091s]   (PCL_FILTERS) does not match the name of the calling package (PCL).  This
+[1.091s]   can lead to problems in calling code that expects `find_package` result
+[1.091s]   variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.091s] Call Stack (most recent call first):
+[1.091s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.091s]   CMakeLists.txt:39 (find_package)
+[1.091s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.091s] [0m
+[1.091s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[1.092s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.092s]   The package name passed to `find_package_handle_standard_args` (PCL_2D)
+[1.092s]   does not match the name of the calling package (PCL).  This can lead to
+[1.092s]   problems in calling code that expects `find_package` result variables
+[1.092s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.092s] Call Stack (most recent call first):
+[1.092s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)
+[1.092s]   CMakeLists.txt:39 (find_package)
+[1.092s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.092s] [0m
+[1.092s] -- Found PCL_2D: /usr/include/pcl-1.10  
+[1.092s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.092s]   The package name passed to `find_package_handle_standard_args`
+[1.092s]   (PCL_GEOMETRY) does not match the name of the calling package (PCL).  This
+[1.092s]   can lead to problems in calling code that expects `find_package` result
+[1.092s]   variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.092s] Call Stack (most recent call first):
+[1.092s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)
+[1.092s]   CMakeLists.txt:39 (find_package)
+[1.092s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.093s] [0m
+[1.093s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.10  
+[1.093s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.093s]   The package name passed to `find_package_handle_standard_args` (PCL_IO)
+[1.093s]   does not match the name of the calling package (PCL).  This can lead to
+[1.093s]   problems in calling code that expects `find_package` result variables
+[1.093s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.093s] Call Stack (most recent call first):
+[1.093s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.093s]   CMakeLists.txt:39 (find_package)
+[1.093s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.093s] [0m
+[1.093s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[1.093s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.093s]   The package name passed to `find_package_handle_standard_args`
+[1.093s]   (PCL_FEATURES) does not match the name of the calling package (PCL).  This
+[1.093s]   can lead to problems in calling code that expects `find_package` result
+[1.093s]   variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.093s] Call Stack (most recent call first):
+[1.093s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.094s]   CMakeLists.txt:39 (find_package)
+[1.094s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.094s] [0m
+[1.094s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[1.094s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.094s]   The package name passed to `find_package_handle_standard_args` (PCL_ML)
+[1.094s]   does not match the name of the calling package (PCL).  This can lead to
+[1.094s]   problems in calling code that expects `find_package` result variables
+[1.094s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.094s] Call Stack (most recent call first):
+[1.094s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.094s]   CMakeLists.txt:39 (find_package)
+[1.094s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.094s] [0m
+[1.095s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[1.095s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.095s]   The package name passed to `find_package_handle_standard_args`
+[1.095s]   (PCL_SEGMENTATION) does not match the name of the calling package (PCL).
+[1.095s]   This can lead to problems in calling code that expects `find_package`
+[1.095s]   result variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.095s] Call Stack (most recent call first):
+[1.095s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.095s]   CMakeLists.txt:39 (find_package)
+[1.095s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.095s] [0m
+[1.095s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[1.096s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.096s]   The package name passed to `find_package_handle_standard_args`
+[1.096s]   (PCL_VISUALIZATION) does not match the name of the calling package (PCL).
+[1.096s]   This can lead to problems in calling code that expects `find_package`
+[1.096s]   result variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.096s] Call Stack (most recent call first):
+[1.096s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.097s]   CMakeLists.txt:39 (find_package)
+[1.097s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.097s] [0m
+[1.097s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[1.097s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.097s]   The package name passed to `find_package_handle_standard_args`
+[1.097s]   (PCL_SURFACE) does not match the name of the calling package (PCL).  This
+[1.097s]   can lead to problems in calling code that expects `find_package` result
+[1.097s]   variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.097s] Call Stack (most recent call first):
+[1.098s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.098s]   CMakeLists.txt:39 (find_package)
+[1.098s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.098s] [0m
+[1.098s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[1.098s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.098s]   The package name passed to `find_package_handle_standard_args`
+[1.098s]   (PCL_REGISTRATION) does not match the name of the calling package (PCL).
+[1.098s]   This can lead to problems in calling code that expects `find_package`
+[1.098s]   result variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.098s] Call Stack (most recent call first):
+[1.098s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.098s]   CMakeLists.txt:39 (find_package)
+[1.099s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.099s] [0m
+[1.099s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[1.099s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.099s]   The package name passed to `find_package_handle_standard_args`
+[1.099s]   (PCL_KEYPOINTS) does not match the name of the calling package (PCL).  This
+[1.099s]   can lead to problems in calling code that expects `find_package` result
+[1.099s]   variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.099s] Call Stack (most recent call first):
+[1.099s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.099s]   CMakeLists.txt:39 (find_package)
+[1.099s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.099s] [0m
+[1.100s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[1.100s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.100s]   The package name passed to `find_package_handle_standard_args`
+[1.100s]   (PCL_TRACKING) does not match the name of the calling package (PCL).  This
+[1.100s]   can lead to problems in calling code that expects `find_package` result
+[1.100s]   variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.100s] Call Stack (most recent call first):
+[1.100s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.100s]   CMakeLists.txt:39 (find_package)
+[1.100s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.101s] [0m
+[1.101s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[1.101s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.101s]   The package name passed to `find_package_handle_standard_args`
+[1.101s]   (PCL_RECOGNITION) does not match the name of the calling package (PCL).
+[1.101s]   This can lead to problems in calling code that expects `find_package`
+[1.101s]   result variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.101s] Call Stack (most recent call first):
+[1.101s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.101s]   CMakeLists.txt:39 (find_package)
+[1.101s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.101s] [0m
+[1.101s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[1.102s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.102s]   The package name passed to `find_package_handle_standard_args` (PCL_STEREO)
+[1.102s]   does not match the name of the calling package (PCL).  This can lead to
+[1.102s]   problems in calling code that expects `find_package` result variables
+[1.102s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.102s] Call Stack (most recent call first):
+[1.102s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.102s]   CMakeLists.txt:39 (find_package)
+[1.102s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.102s] [0m
+[1.102s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[1.103s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.103s]   The package name passed to `find_package_handle_standard_args` (PCL_APPS)
+[1.103s]   does not match the name of the calling package (PCL).  This can lead to
+[1.103s]   problems in calling code that expects `find_package` result variables
+[1.103s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.103s] Call Stack (most recent call first):
+[1.103s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.103s]   CMakeLists.txt:39 (find_package)
+[1.103s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.103s] [0m
+[1.103s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[1.104s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.104s]   The package name passed to `find_package_handle_standard_args`
+[1.104s]   (PCL_IN_HAND_SCANNER) does not match the name of the calling package (PCL).
+[1.104s]   This can lead to problems in calling code that expects `find_package`
+[1.104s]   result variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.104s] Call Stack (most recent call first):
+[1.104s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)
+[1.104s]   CMakeLists.txt:39 (find_package)
+[1.104s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.104s] [0m
+[1.104s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.10  
+[1.104s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.104s]   The package name passed to `find_package_handle_standard_args`
+[1.105s]   (PCL_POINT_CLOUD_EDITOR) does not match the name of the calling package
+[1.105s]   (PCL).  This can lead to problems in calling code that expects
+[1.105s]   `find_package` result variables (e.g., `_FOUND`) to follow a certain
+[1.105s]   pattern.
+[1.105s] Call Stack (most recent call first):
+[1.105s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)
+[1.105s]   CMakeLists.txt:39 (find_package)
+[1.105s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.105s] [0m
+[1.105s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.10  
+[1.105s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.105s]   The package name passed to `find_package_handle_standard_args`
+[1.105s]   (PCL_OUTOFCORE) does not match the name of the calling package (PCL).  This
+[1.105s]   can lead to problems in calling code that expects `find_package` result
+[1.105s]   variables (e.g., `_FOUND`) to follow a certain pattern.
+[1.105s] Call Stack (most recent call first):
+[1.105s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.105s]   CMakeLists.txt:39 (find_package)
+[1.105s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.105s] [0m
+[1.106s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[1.106s] [33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.106s]   The package name passed to `find_package_handle_standard_args` (PCL_PEOPLE)
+[1.106s]   does not match the name of the calling package (PCL).  This can lead to
+[1.106s]   problems in calling code that expects `find_package` result variables
+[1.106s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.106s] Call Stack (most recent call first):
+[1.106s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)
+[1.106s]   CMakeLists.txt:39 (find_package)
+[1.106s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.106s] [0m
+[1.106s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[1.114s] -- Found OpenCV: /usr (found version "4.2.0") 
+[1.115s] -- Found nav_msgs: 2.2.4 (/opt/ros/galactic/share/nav_msgs/cmake)
+[1.163s] -- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)
+[1.173s] -- Found Boost: /usr/include (found version "1.71.0")  
+[1.174s] -- Found tf2: 0.17.3 (/opt/ros/galactic/share/tf2/cmake)
+[1.181s] -- Found tf2_ros: 0.17.3 (/opt/ros/galactic/share/tf2_ros/cmake)
+[1.373s] -- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[1.422s] [31mCMake Error at /opt/ros/galactic/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:42 (message):
+[1.422s]   ament_target_dependencies() the first argument must be a valid target name
+[1.422s] Call Stack (most recent call first):
+[1.422s]   CMakeLists.txt:93 (ament_target_dependencies)
+[1.422s] 
+[1.422s] [0m
+[1.422s] -- Configuring incomplete, errors occurred!
+[1.422s] See also "/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz/CMakeFiles/CMakeOutput.log".
+[1.422s] See also "/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz/CMakeFiles/CMakeError.log".
+[1.432s] Invoked command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/local/bin/cmake /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap -DCMAKE_INSTALL_PREFIX=/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz

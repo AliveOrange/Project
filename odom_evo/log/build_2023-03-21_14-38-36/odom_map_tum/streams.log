@@ -1,0 +1,14 @@
+[0.011s] Invoking command in '/home/alex/Documents/odom_evo/build/odom_map_tum': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/alex/Documents/odom_evo -DCMAKE_INSTALL_PREFIX=/home/alex/Documents/odom_evo/install/odom_map_tum
+[0.038s] -- Could NOT find Protobuf (missing: Protobuf_INCLUDE_DIR) 
+[0.040s] CMake Error at /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:146 (message):
+[0.040s]   Could NOT find Protobuf (missing: Protobuf_INCLUDE_DIR)
+[0.040s] Call Stack (most recent call first):
+[0.040s]   /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:393 (_FPHSA_FAILURE_MESSAGE)
+[0.040s]   /usr/share/cmake-3.16/Modules/FindProtobuf.cmake:624 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+[0.040s]   CMakeLists.txt:34 (find_package)
+[0.040s] 
+[0.040s] 
+[0.041s] -- Configuring incomplete, errors occurred!
+[0.041s] See also "/home/alex/Documents/odom_evo/build/odom_map_tum/CMakeFiles/CMakeOutput.log".
+[0.041s] See also "/home/alex/Documents/odom_evo/build/odom_map_tum/CMakeFiles/CMakeError.log".
+[0.043s] Invoked command in '/home/alex/Documents/odom_evo/build/odom_map_tum' returned '1': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/alex/Documents/odom_evo -DCMAKE_INSTALL_PREFIX=/home/alex/Documents/odom_evo/install/odom_map_tum

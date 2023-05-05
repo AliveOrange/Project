@@ -1,0 +1,57 @@
+[0.014s] Invoking command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map:/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum -- -j16 -l16
+[0.041s] [35m[1mConsolidate compiler generated dependencies of target odom_map_tum[0m
+[0.092s] [  2%] [32mBuilding CXX object CMakeFiles/odom_map_tum.dir/src/local_map_on_odom.cpp.o[0m
+[1.350s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+[1.350s]                  from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[1.351s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+[1.351s]    60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+[1.351s]       |                                 [01;35m[K^[m[K
+[1.351s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kextra tokens at end of #include directive
+[1.386s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[1.386s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+[1.386s]    60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+[1.386s]       |                                 [01;35m[K^[m[K
+[5.144s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[5.144s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:[m[K In member function ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, std::string)[m[K’:
+[5.145s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:68:40:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 2 has type ‘[01m[Kgoogle::protobuf::uint64[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+[5.145s]    68 |             printf("chassis_time: [01;35m[K%20.9f[m[K\n",[32m[Kodom_input.at(i).header().sys_timestamp()[m[K);
+[5.145s]       |                                   [01;35m[K~~~~~^[m[K    [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.145s]       |                                        [01;35m[K|[m[K                                           [32m[K|[m[K
+[5.145s]       |                                        [01;35m[Kdouble[m[K                                      [32m[Kgoogle::protobuf::uint64 {aka long unsigned int}[m[K
+[5.145s]       |                                   [32m[K%20.9ld[m[K
+[5.150s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:97:38:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 2 has type ‘[01m[Kgoogle::protobuf::uint64[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+[5.150s]    97 |             printf("wheel_time: [01;35m[K%20.9f[m[K\n",[32m[Kodom_input.at(i).header().sys_timestamp()[m[K);
+[5.150s]       |                                 [01;35m[K~~~~~^[m[K    [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.150s]       |                                      [01;35m[K|[m[K                                           [32m[K|[m[K
+[5.151s]       |                                      [01;35m[Kdouble[m[K                                      [32m[Kgoogle::protobuf::uint64 {aka long unsigned int}[m[K
+[5.151s]       |                                 [32m[K%20.9ld[m[K
+[5.152s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:125:38:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 2 has type ‘[01m[Kgoogle::protobuf::uint64[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+[5.152s]   125 |             printf("wheel_time: [01;35m[K%20.9f[m[K\n",[32m[Kodom_input.at(i).header().sys_timestamp()[m[K);
+[5.152s]       |                                 [01;35m[K~~~~~^[m[K    [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.152s]       |                                      [01;35m[K|[m[K                                           [32m[K|[m[K
+[5.152s]       |                                      [01;35m[Kdouble[m[K                                      [32m[Kgoogle::protobuf::uint64 {aka long unsigned int}[m[K
+[5.152s]       |                                 [32m[K%20.9ld[m[K
+[15.586s] [  4%] [32m[1mLinking CXX executable odom_map_tum[0m
+[17.809s] [100%] Built target odom_map_tum
+[17.818s] Invoked command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map:/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum -- -j16 -l16
+[17.888s] Invoking command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map:/opt/ros/galactic /usr/local/bin/cmake --install /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum
+[17.890s] -- Install configuration: "RELEASE"
+[17.890s] -- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/lib/odom_map_tum/odom_map_tum
+[17.897s] -- Set runtime path of "/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/lib/odom_map_tum/odom_map_tum" to ""
+[17.897s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/ament_index/resource_index/package_run_dependencies/odom_map_tum
+[17.897s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/ament_index/resource_index/parent_prefix_path/odom_map_tum
+[17.897s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/environment/ament_prefix_path.sh
+[17.897s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/environment/ament_prefix_path.dsv
+[17.898s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/environment/path.sh
+[17.898s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/environment/path.dsv
+[17.898s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/local_setup.bash
+[17.898s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/local_setup.sh
+[17.898s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/local_setup.zsh
+[17.898s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/local_setup.dsv
+[17.898s] -- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/package.dsv
+[17.898s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/ament_index/resource_index/packages/odom_map_tum
+[17.898s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/cmake/ament_cmake_export_dependencies-extras.cmake
+[17.899s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/cmake/odom_map_tumConfig.cmake
+[17.899s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/cmake/odom_map_tumConfig-version.cmake
+[17.901s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map_tum/share/odom_map_tum/package.xml
+[17.901s] Invoked command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map:/opt/ros/galactic /usr/local/bin/cmake --install /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum

@@ -1,0 +1,21 @@
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+   60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+      |                                 [01;35m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kextra tokens at end of #include directive
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+   60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+      |                                 [01;35m[K^[m[K
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:[m[K In member function ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, std::string)[m[K’:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:73:55:[m[K [01;31m[Kerror: [m[K‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<odom::proto::Frame>, odom::proto::Frame>::value_type[m[K’ {aka ‘[01m[Kclass odom::proto::Frame[m[K’} has no member named ‘[01m[Ksys_timestamp[m[K’
+   73 |             printf("time3: %20.9f\n",odom_input.at(i).[01;31m[Ksys_timestamp[m[K());
+      |                                                       [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:147:55:[m[K [01;31m[Kerror: [m[K‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<odom::proto::Frame>, odom::proto::Frame>::value_type[m[K’ {aka ‘[01m[Kclass odom::proto::Frame[m[K’} has no member named ‘[01m[Ksys_timestamp[m[K’
+  147 |             printf("time3: %20.9f\n",odom_input.at(i).[01;31m[Ksys_timestamp[m[K());
+      |                                                       [01;31m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/odom_map_tum.dir/build.make:76: CMakeFiles/odom_map_tum.dir/src/local_map_on_odom.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_tum.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

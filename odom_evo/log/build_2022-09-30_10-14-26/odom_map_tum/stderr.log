@@ -1,0 +1,286 @@
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+   60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+      |                                 [01;35m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kextra tokens at end of #include directive
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+   60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+      |                                 [01;35m[K^[m[K
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:[m[K In member function ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, std::string)[m[K’:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:122:25:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KEigen::Matrix<double, 4, 4>[m[K’ and ‘[01m[KEigen::Transform<double, 3, 2>[m[K’)
+  122 |             transform = [01;31m[Ktransform_affine[m[K;
+      |                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:57:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ to ‘[01m[Kconst Eigen::Matrix<double, 4, 4>&[m[K’
+  206 |     EIGEN_STRONG_INLINE Matrix& operator=([01;36m[Kconst Matrix& other[m[K)
+      |                                           [01;36m[K~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:122:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::DenseBase<Derived>[m[K’
+  122 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:122:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::EigenBase<Derived>[m[K’
+  122 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:122:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  122 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  281 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ to ‘[01m[KEigen::Matrix<double, 4, 4>&&[m[K’
+  281 |     Matrix& operator=([01;36m[KMatrix&& other[m[K) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |                       [01;36m[K~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  392 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:122:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 4>[m[K’
+  122 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:164:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kwx[m[K’ was not declared in this scope; did you mean ‘[01m[Kqx[m[K’?
+  164 |                 Eigen::Quaterniond quaternion(qw,[01;31m[Kwx[m[K,qy,qz);
+      |                                                  [01;31m[K^~[m[K
+      |                                                  [32m[Kqx[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:165:39:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[KEigen::QuaternionBase<Derived>::Matrix3 Eigen::QuaternionBase<Derived>::toRotationMatrix() const [with Derived = Eigen::Quaternion<double>; Eigen::QuaternionBase<Derived>::Matrix3 = Eigen::Matrix<double, 3, 3>; typename Eigen::internal::traits<T>::Scalar = double][m[K’
+  165 |                 rotation = quaternion.[01;31m[KtoRotationMatrix[m[K;
+      |                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Geometry:42[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:6[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:531:1:[m[K [01;36m[Knote: [m[Kdeclared here
+  531 | [01;36m[KQuaternionBase<Derived>[m[K::toRotationMatrix(void) const
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:160:23:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kqx[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  160 |                 float [01;35m[Kqx[m[K = odom_input.at(i).odom().pose_quaternion().x();
+      |                       [01;35m[K^~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:187:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kwx[m[K’ was not declared in this scope; did you mean ‘[01m[Kqx[m[K’?
+  187 |             Eigen::Quaterniond quaternion(qw,[01;31m[Kwx[m[K,qy,qz);
+      |                                              [01;31m[K^~[m[K
+      |                                              [32m[Kqx[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:188:35:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[KEigen::QuaternionBase<Derived>::Matrix3 Eigen::QuaternionBase<Derived>::toRotationMatrix() const [with Derived = Eigen::Quaternion<double>; Eigen::QuaternionBase<Derived>::Matrix3 = Eigen::Matrix<double, 3, 3>; typename Eigen::internal::traits<T>::Scalar = double][m[K’
+  188 |             rotation = quaternion.[01;31m[KtoRotationMatrix[m[K;
+      |                                   [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Geometry:42[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:6[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:531:1:[m[K [01;36m[Knote: [m[Kdeclared here
+  531 | [01;36m[KQuaternionBase<Derived>[m[K::toRotationMatrix(void) const
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:203:25:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KEigen::Matrix<double, 4, 4>[m[K’ and ‘[01m[KEigen::Transform<double, 3, 2>[m[K’)
+  203 |             transform = [01;31m[Ktransform_affine[m[K;
+      |                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:57:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ to ‘[01m[Kconst Eigen::Matrix<double, 4, 4>&[m[K’
+  206 |     EIGEN_STRONG_INLINE Matrix& operator=([01;36m[Kconst Matrix& other[m[K)
+      |                                           [01;36m[K~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:203:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::DenseBase<Derived>[m[K’
+  203 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:203:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::EigenBase<Derived>[m[K’
+  203 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:203:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  203 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  281 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ to ‘[01m[KEigen::Matrix<double, 4, 4>&&[m[K’
+  281 |     Matrix& operator=([01;36m[KMatrix&& other[m[K) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |                       [01;36m[K~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  392 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:203:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 4>[m[K’
+  203 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:245:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kwx[m[K’ was not declared in this scope; did you mean ‘[01m[Kqx[m[K’?
+  245 |                 Eigen::Quaterniond quaternion(qw,[01;31m[Kwx[m[K,qy,qz);
+      |                                                  [01;31m[K^~[m[K
+      |                                                  [32m[Kqx[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:246:39:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[KEigen::QuaternionBase<Derived>::Matrix3 Eigen::QuaternionBase<Derived>::toRotationMatrix() const [with Derived = Eigen::Quaternion<double>; Eigen::QuaternionBase<Derived>::Matrix3 = Eigen::Matrix<double, 3, 3>; typename Eigen::internal::traits<T>::Scalar = double][m[K’
+  246 |                 rotation = quaternion.[01;31m[KtoRotationMatrix[m[K;
+      |                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Geometry:42[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:6[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:531:1:[m[K [01;36m[Knote: [m[Kdeclared here
+  531 | [01;36m[KQuaternionBase<Derived>[m[K::toRotationMatrix(void) const
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:241:23:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kqx[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  241 |                 float [01;35m[Kqx[m[K = odom_input.at(i).odom().pose_quaternion().x();
+      |                       [01;35m[K^~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:268:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kwx[m[K’ was not declared in this scope; did you mean ‘[01m[Kqx[m[K’?
+  268 |             Eigen::Quaterniond quaternion(qw,[01;31m[Kwx[m[K,qy,qz);
+      |                                              [01;31m[K^~[m[K
+      |                                              [32m[Kqx[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:269:35:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[KEigen::QuaternionBase<Derived>::Matrix3 Eigen::QuaternionBase<Derived>::toRotationMatrix() const [with Derived = Eigen::Quaternion<double>; Eigen::QuaternionBase<Derived>::Matrix3 = Eigen::Matrix<double, 3, 3>; typename Eigen::internal::traits<T>::Scalar = double][m[K’
+  269 |             rotation = quaternion.[01;31m[KtoRotationMatrix[m[K;
+      |                                   [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Geometry:42[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:6[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Quaternion.h:531:1:[m[K [01;36m[Knote: [m[Kdeclared here
+  531 | [01;36m[KQuaternionBase<Derived>[m[K::toRotationMatrix(void) const
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:284:25:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KEigen::Matrix<double, 4, 4>[m[K’ and ‘[01m[KEigen::Transform<double, 3, 2>[m[K’)
+  284 |             transform = [01;31m[Ktransform_affine[m[K;
+      |                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:57:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ to ‘[01m[Kconst Eigen::Matrix<double, 4, 4>&[m[K’
+  206 |     EIGEN_STRONG_INLINE Matrix& operator=([01;36m[Kconst Matrix& other[m[K)
+      |                                           [01;36m[K~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:284:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::DenseBase<Derived>[m[K’
+  284 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:284:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::EigenBase<Derived>[m[K’
+  284 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:284:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  284 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:27[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  281 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:281:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ to ‘[01m[KEigen::Matrix<double, 4, 4>&&[m[K’
+  281 |     Matrix& operator=([01;36m[KMatrix&& other[m[K) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |                       [01;36m[K~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 4; int _Cols = 4; int _Options = 0; int _MaxRows = 4; int _MaxCols = 4][m[K’
+  392 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:392:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:284:25:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Transform<double, 3, 2>[m[K’ is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 4>[m[K’
+  284 |             transform = [01;36m[Ktransform_affine[m[K;
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/odom_map_tum.dir/build.make:76: CMakeFiles/odom_map_tum.dir/src/local_map_on_odom.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_tum.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

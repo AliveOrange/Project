@@ -1,0 +1,17 @@
+[0.014s] Invoking command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map:/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum -- -j16 -l16
+[0.041s] [35m[1mConsolidate compiler generated dependencies of target odom_map_tum[0m
+[0.087s] [  2%] [32mBuilding CXX object CMakeFiles/odom_map_tum.dir/src/local_map_on_odom.cpp.o[0m
+[1.309s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+[1.309s]                  from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[1.309s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+[1.309s]    60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+[1.309s]       |                                 [01;35m[K^[m[K
+[1.309s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kextra tokens at end of #include directive
+[1.354s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[1.354s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+[1.354s]    60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+[1.354s]       |                                 [01;35m[K^[m[K
+[7.136s] make[2]: *** [CMakeFiles/odom_map_tum.dir/build.make:76: CMakeFiles/odom_map_tum.dir/src/local_map_on_odom.cpp.o] Interrupt
+[7.136s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_tum.dir/all] Interrupt
+[7.136s] make: *** [Makefile:146: all] Interrupt
+[7.172s] Invoked command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/install/odom_map:/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum -- -j16 -l16

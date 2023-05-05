@@ -1,0 +1,23 @@
+[35m[1mConsolidate compiler generated dependencies of target odom_map_for_rviz[0m
+[  2%] [32mBuilding CXX object CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o[0m
+[  5%] [32m[1mLinking CXX executable odom_map_for_rviz[0m
+[100%] Built target odom_map_for_rviz
+-- Install configuration: "RELEASE"
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/lib/odom_map_for_rviz/odom_map_for_rviz
+-- Set runtime path of "/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/lib/odom_map_for_rviz/odom_map_for_rviz" to ""
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/ament_index/resource_index/package_run_dependencies/odom_map_for_rviz
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/ament_index/resource_index/parent_prefix_path/odom_map_for_rviz
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/ament_prefix_path.sh
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/ament_prefix_path.dsv
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/path.sh
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/path.dsv
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.bash
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.sh
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.zsh
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.dsv
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/package.dsv
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/ament_index/resource_index/packages/odom_map_for_rviz
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/cmake/odom_map_for_rvizConfig.cmake
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/cmake/odom_map_for_rvizConfig-version.cmake
+-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/package.xml

@@ -1,0 +1,208 @@
+[0.000000] (-) TimerEvent: {}
+[0.000144] (odom_map_for_rviz) JobQueued: {'identifier': 'odom_map_for_rviz', 'dependencies': OrderedDict()}
+[0.000502] (odom_map_for_rviz) JobStarted: {'identifier': 'odom_map_for_rviz'}
+[0.009732] (odom_map_for_rviz) JobProgress: {'identifier': 'odom_map_for_rviz', 'progress': 'cmake'}
+[0.010330] (odom_map_for_rviz) JobProgress: {'identifier': 'odom_map_for_rviz', 'progress': 'build'}
+[0.010819] (odom_map_for_rviz) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz', '--', '-j16', '-l16'], 'cwd': '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', ''), ('LANGUAGE', 'en_US:en'), ('USER', 'baixiaobo'), ('LC_TIME', 'en_US.UTF-8'), ('SSH_AGENT_PID', '1303'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/baixiaobo'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/baixiaobo/.local/share/Trash/files'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('MANAGERPID', '1106'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '9022'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install'), ('ROS_DISTRO', 'galactic'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'baixiaobo'), ('JOURNAL_STREAM', '8:42359'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'baixiaobo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/baixiaobo/anaconda3/bin:/home/baixiaobo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/baixiaobo/Qt7.0/6.2.0/gcc_64/bin/:/home/baixiaobo/Qt7.0/Tools/QtCreator/bin/'), ('SESSION_MANAGER', 'local/baixiaobo:@/tmp/.ICE-unix/1349,unix/baixiaobo:/tmp/.ICE-unix/1349'), ('INVOCATION_ID', '9eab0b8ed65c441e9d36cac62ee9f1d1'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/chassis_odom:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar:/opt/ros/galactic'), ('CONDA_PYTHON_EXE', '/home/baixiaobo/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:546a8e6d-a9c4-4bdf-90eb-810ff9f4a2d2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/baixiaobo/anaconda3/bin/conda'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar/lib/python3.7/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/baixiaobo/anaconda3'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/lidar:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/chassis_odom:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar:/opt/ros/galactic')]), 'shell': False}
+[0.041959] (odom_map_for_rviz) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target odom_map_for_rviz\x1b[0m\n'}
+[0.094603] (odom_map_for_rviz) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding CXX object CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o\x1b[0m\n'}
+[0.099783] (-) TimerEvent: {}
+[0.200011] (-) TimerEvent: {}
+[0.300273] (-) TimerEvent: {}
+[0.400550] (-) TimerEvent: {}
+[0.500922] (-) TimerEvent: {}
+[0.601272] (-) TimerEvent: {}
+[0.701600] (-) TimerEvent: {}
+[0.801957] (-) TimerEvent: {}
+[0.902225] (-) TimerEvent: {}
+[1.002508] (-) TimerEvent: {}
+[1.102762] (-) TimerEvent: {}
+[1.203083] (-) TimerEvent: {}
+[1.303417] (-) TimerEvent: {}
+[1.403696] (-) TimerEvent: {}
+[1.503950] (-) TimerEvent: {}
+[1.604201] (-) TimerEvent: {}
+[1.704494] (-) TimerEvent: {}
+[1.804737] (-) TimerEvent: {}
+[1.905091] (-) TimerEvent: {}
+[2.005406] (-) TimerEvent: {}
+[2.105794] (-) TimerEvent: {}
+[2.206147] (-) TimerEvent: {}
+[2.306475] (-) TimerEvent: {}
+[2.406788] (-) TimerEvent: {}
+[2.507065] (-) TimerEvent: {}
+[2.607374] (-) TimerEvent: {}
+[2.707636] (-) TimerEvent: {}
+[2.807946] (-) TimerEvent: {}
+[2.908205] (-) TimerEvent: {}
+[3.008572] (-) TimerEvent: {}
+[3.108926] (-) TimerEvent: {}
+[3.209179] (-) TimerEvent: {}
+[3.309426] (-) TimerEvent: {}
+[3.409689] (-) TimerEvent: {}
+[3.509945] (-) TimerEvent: {}
+[3.610227] (-) TimerEvent: {}
+[3.710488] (-) TimerEvent: {}
+[3.810742] (-) TimerEvent: {}
+[3.911011] (-) TimerEvent: {}
+[4.011318] (-) TimerEvent: {}
+[4.111596] (-) TimerEvent: {}
+[4.211872] (-) TimerEvent: {}
+[4.312238] (-) TimerEvent: {}
+[4.412536] (-) TimerEvent: {}
+[4.512898] (-) TimerEvent: {}
+[4.613192] (-) TimerEvent: {}
+[4.713487] (-) TimerEvent: {}
+[4.813727] (-) TimerEvent: {}
+[4.914050] (-) TimerEvent: {}
+[5.014358] (-) TimerEvent: {}
+[5.114695] (-) TimerEvent: {}
+[5.192115] (odom_map_for_rviz) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/src/local_map_on_odom.cpp:4\x1b[m\x1b[K:\n'}
+[5.192308] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/odom_publisher_for_rviz.hpp:58:2:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wpedantic\x1b[m\x1b[K]\n'}
+[5.192383] (odom_map_for_rviz) StderrLine: {'line': b'   58 | }\x1b[01;35m\x1b[K;\x1b[m\x1b[K\n'}
+[5.192430] (odom_map_for_rviz) StderrLine: {'line': b'      |  \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[5.214796] (-) TimerEvent: {}
+[5.315100] (-) TimerEvent: {}
+[5.415455] (-) TimerEvent: {}
+[5.515786] (-) TimerEvent: {}
+[5.616135] (-) TimerEvent: {}
+[5.716413] (-) TimerEvent: {}
+[5.816704] (-) TimerEvent: {}
+[5.917034] (-) TimerEvent: {}
+[6.017386] (-) TimerEvent: {}
+[6.117686] (-) TimerEvent: {}
+[6.217993] (-) TimerEvent: {}
+[6.318257] (-) TimerEvent: {}
+[6.418561] (-) TimerEvent: {}
+[6.518851] (-) TimerEvent: {}
+[6.619100] (-) TimerEvent: {}
+[6.719364] (-) TimerEvent: {}
+[6.819642] (-) TimerEvent: {}
+[6.919927] (-) TimerEvent: {}
+[7.020199] (-) TimerEvent: {}
+[7.120494] (-) TimerEvent: {}
+[7.220758] (-) TimerEvent: {}
+[7.321051] (-) TimerEvent: {}
+[7.421317] (-) TimerEvent: {}
+[7.521576] (-) TimerEvent: {}
+[7.621884] (-) TimerEvent: {}
+[7.722199] (-) TimerEvent: {}
+[7.822517] (-) TimerEvent: {}
+[7.922790] (-) TimerEvent: {}
+[8.023121] (-) TimerEvent: {}
+[8.123389] (-) TimerEvent: {}
+[8.223707] (-) TimerEvent: {}
+[8.323969] (-) TimerEvent: {}
+[8.424214] (-) TimerEvent: {}
+[8.524533] (-) TimerEvent: {}
+[8.624835] (-) TimerEvent: {}
+[8.725107] (-) TimerEvent: {}
+[8.825401] (-) TimerEvent: {}
+[8.925675] (-) TimerEvent: {}
+[9.025944] (-) TimerEvent: {}
+[9.126201] (-) TimerEvent: {}
+[9.226454] (-) TimerEvent: {}
+[9.326728] (-) TimerEvent: {}
+[9.427149] (-) TimerEvent: {}
+[9.527462] (-) TimerEvent: {}
+[9.627747] (-) TimerEvent: {}
+[9.728002] (-) TimerEvent: {}
+[9.828259] (-) TimerEvent: {}
+[9.928521] (-) TimerEvent: {}
+[10.028781] (-) TimerEvent: {}
+[10.129124] (-) TimerEvent: {}
+[10.229465] (-) TimerEvent: {}
+[10.329780] (-) TimerEvent: {}
+[10.430047] (-) TimerEvent: {}
+[10.530360] (-) TimerEvent: {}
+[10.630600] (-) TimerEvent: {}
+[10.730923] (-) TimerEvent: {}
+[10.831238] (-) TimerEvent: {}
+[10.931553] (-) TimerEvent: {}
+[11.031785] (-) TimerEvent: {}
+[11.132133] (-) TimerEvent: {}
+[11.232458] (-) TimerEvent: {}
+[11.332791] (-) TimerEvent: {}
+[11.433060] (-) TimerEvent: {}
+[11.533399] (-) TimerEvent: {}
+[11.633714] (-) TimerEvent: {}
+[11.734011] (-) TimerEvent: {}
+[11.834339] (-) TimerEvent: {}
+[11.934621] (-) TimerEvent: {}
+[12.034869] (-) TimerEvent: {}
+[12.135152] (-) TimerEvent: {}
+[12.235428] (-) TimerEvent: {}
+[12.335704] (-) TimerEvent: {}
+[12.435997] (-) TimerEvent: {}
+[12.536302] (-) TimerEvent: {}
+[12.636588] (-) TimerEvent: {}
+[12.736851] (-) TimerEvent: {}
+[12.837127] (-) TimerEvent: {}
+[12.937448] (-) TimerEvent: {}
+[13.037823] (-) TimerEvent: {}
+[13.138171] (-) TimerEvent: {}
+[13.238466] (-) TimerEvent: {}
+[13.338714] (-) TimerEvent: {}
+[13.439133] (-) TimerEvent: {}
+[13.539454] (-) TimerEvent: {}
+[13.639763] (-) TimerEvent: {}
+[13.740060] (-) TimerEvent: {}
+[13.840370] (-) TimerEvent: {}
+[13.940660] (-) TimerEvent: {}
+[14.040929] (-) TimerEvent: {}
+[14.141247] (-) TimerEvent: {}
+[14.241540] (-) TimerEvent: {}
+[14.341862] (-) TimerEvent: {}
+[14.442181] (-) TimerEvent: {}
+[14.542477] (-) TimerEvent: {}
+[14.642745] (-) TimerEvent: {}
+[14.743018] (-) TimerEvent: {}
+[14.843327] (-) TimerEvent: {}
+[14.943595] (-) TimerEvent: {}
+[14.945212] (odom_map_for_rviz) StdoutLine: {'line': b'[  5%] \x1b[32m\x1b[1mLinking CXX executable odom_map_for_rviz\x1b[0m\n'}
+[15.043692] (-) TimerEvent: {}
+[15.143973] (-) TimerEvent: {}
+[15.244230] (-) TimerEvent: {}
+[15.344498] (-) TimerEvent: {}
+[15.444787] (-) TimerEvent: {}
+[15.545107] (-) TimerEvent: {}
+[15.645478] (-) TimerEvent: {}
+[15.745835] (-) TimerEvent: {}
+[15.846217] (-) TimerEvent: {}
+[15.946557] (-) TimerEvent: {}
+[16.046945] (-) TimerEvent: {}
+[16.147292] (-) TimerEvent: {}
+[16.247550] (-) TimerEvent: {}
+[16.347898] (-) TimerEvent: {}
+[16.448208] (-) TimerEvent: {}
+[16.548554] (-) TimerEvent: {}
+[16.648906] (-) TimerEvent: {}
+[16.749185] (-) TimerEvent: {}
+[16.849460] (-) TimerEvent: {}
+[16.900006] (odom_map_for_rviz) StdoutLine: {'line': b'[100%] Built target odom_map_for_rviz\n'}
+[16.909019] (odom_map_for_rviz) CommandEnded: {'returncode': 0}
+[16.949532] (-) TimerEvent: {}
+[16.956797] (odom_map_for_rviz) JobProgress: {'identifier': 'odom_map_for_rviz', 'progress': 'install'}
+[16.960364] (odom_map_for_rviz) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz'], 'cwd': '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', ''), ('LANGUAGE', 'en_US:en'), ('USER', 'baixiaobo'), ('LC_TIME', 'en_US.UTF-8'), ('SSH_AGENT_PID', '1303'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/baixiaobo'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/baixiaobo/.local/share/Trash/files'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('MANAGERPID', '1106'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '9022'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install'), ('ROS_DISTRO', 'galactic'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'baixiaobo'), ('JOURNAL_STREAM', '8:42359'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'baixiaobo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/baixiaobo/anaconda3/bin:/home/baixiaobo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/baixiaobo/Qt7.0/6.2.0/gcc_64/bin/:/home/baixiaobo/Qt7.0/Tools/QtCreator/bin/'), ('SESSION_MANAGER', 'local/baixiaobo:@/tmp/.ICE-unix/1349,unix/baixiaobo:/tmp/.ICE-unix/1349'), ('INVOCATION_ID', '9eab0b8ed65c441e9d36cac62ee9f1d1'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/chassis_odom:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar:/opt/ros/galactic'), ('CONDA_PYTHON_EXE', '/home/baixiaobo/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:546a8e6d-a9c4-4bdf-90eb-810ff9f4a2d2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/baixiaobo/anaconda3/bin/conda'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar/lib/python3.7/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/baixiaobo/anaconda3'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/lidar:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/chassis_odom:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar:/opt/ros/galactic')]), 'shell': False}
+[16.963950] (odom_map_for_rviz) StdoutLine: {'line': b'-- Install configuration: "RELEASE"\n'}
+[16.964429] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/lib/odom_map_for_rviz/odom_map_for_rviz\n'}
+[16.968972] (odom_map_for_rviz) StdoutLine: {'line': b'-- Set runtime path of "/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/lib/odom_map_for_rviz/odom_map_for_rviz" to ""\n'}
+[16.969065] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/ament_index/resource_index/package_run_dependencies/odom_map_for_rviz\n'}
+[16.969502] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/ament_index/resource_index/parent_prefix_path/odom_map_for_rviz\n'}
+[16.969749] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/ament_prefix_path.sh\n'}
+[16.969829] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/ament_prefix_path.dsv\n'}
+[16.969992] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/path.sh\n'}
+[16.970067] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/path.dsv\n'}
+[16.970292] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.bash\n'}
+[16.970515] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.sh\n'}
+[16.970826] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.zsh\n'}
+[16.970974] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.dsv\n'}
+[16.971088] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/package.dsv\n'}
+[16.971247] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/ament_index/resource_index/packages/odom_map_for_rviz\n'}
+[16.971401] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[16.971562] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/cmake/odom_map_for_rvizConfig.cmake\n'}
+[16.971788] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/cmake/odom_map_for_rvizConfig-version.cmake\n'}
+[16.971882] (odom_map_for_rviz) StdoutLine: {'line': b'-- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz/share/odom_map_for_rviz/package.xml\n'}
+[16.972595] (odom_map_for_rviz) CommandEnded: {'returncode': 0}
+[17.037588] (odom_map_for_rviz) JobEnded: {'identifier': 'odom_map_for_rviz', 'rc': 0}
+[17.038098] (-) EventReactorShutdown: {}

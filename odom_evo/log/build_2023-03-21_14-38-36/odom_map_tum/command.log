@@ -1,0 +1,2 @@
+Invoking command in '/home/alex/Documents/odom_evo/build/odom_map_tum': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/alex/Documents/odom_evo -DCMAKE_INSTALL_PREFIX=/home/alex/Documents/odom_evo/install/odom_map_tum
+Invoked command in '/home/alex/Documents/odom_evo/build/odom_map_tum' returned '1': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/alex/Documents/odom_evo -DCMAKE_INSTALL_PREFIX=/home/alex/Documents/odom_evo/install/odom_map_tum

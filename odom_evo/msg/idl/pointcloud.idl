@@ -1,0 +1,29 @@
+
+module lidar {
+    module msg {
+        struct PointXYZI 
+        {
+            float x;
+            float y;
+            float z;
+            float intensity;
+            double timestamp;
+            uint16 ring;
+        };
+
+        struct PointCloudMsg
+        {
+            sequence<PointXYZI> PointCloud;
+
+            double timestamp;
+            string frame_id;
+            uint32 seq;
+            uint32 height;
+            uint32 width;
+            uint8 is_dense;
+        };
+    };
+};
+
+
+

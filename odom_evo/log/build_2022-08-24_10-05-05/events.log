@@ -1,0 +1,153 @@
+[0.000000] (-) TimerEvent: {}
+[0.000265] (odom_map_for_rviz) JobQueued: {'identifier': 'odom_map_for_rviz', 'dependencies': OrderedDict()}
+[0.000644] (odom_map_for_rviz) JobStarted: {'identifier': 'odom_map_for_rviz'}
+[0.008592] (odom_map_for_rviz) JobProgress: {'identifier': 'odom_map_for_rviz', 'progress': 'cmake'}
+[0.009660] (odom_map_for_rviz) JobProgress: {'identifier': 'odom_map_for_rviz', 'progress': 'build'}
+[0.009785] (odom_map_for_rviz) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz', '--', '-j16', '-l16'], 'cwd': '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', ''), ('LANGUAGE', 'en_US:en'), ('USER', 'baixiaobo'), ('LC_TIME', 'en_US.UTF-8'), ('SSH_AGENT_PID', '1268'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/baixiaobo'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/baixiaobo'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('MANAGERPID', '1084'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '2389'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install'), ('ROS_DISTRO', 'galactic'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'baixiaobo'), ('JOURNAL_STREAM', '8:39600'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'baixiaobo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/baixiaobo/anaconda3/bin:/home/baixiaobo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/baixiaobo/Qt7.0/6.2.0/gcc_64/bin/:/home/baixiaobo/Qt7.0/Tools/QtCreator/bin/'), ('SESSION_MANAGER', 'local/baixiaobo:@/tmp/.ICE-unix/1314,unix/baixiaobo:/tmp/.ICE-unix/1314'), ('INVOCATION_ID', '8d946e3eb88b47dbb4871cc4e84149e9'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/chassis_odom:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar:/opt/ros/galactic'), ('CONDA_PYTHON_EXE', '/home/baixiaobo/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:680bfc3a-60b8-4cc6-adec-888ab0dd4e0c'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/baixiaobo/anaconda3/bin/conda'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar/lib/python3.7/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/baixiaobo/anaconda3'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/lidar:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/chassis_odom:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar:/opt/ros/galactic')]), 'shell': False}
+[0.038494] (odom_map_for_rviz) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target odom_map_for_rviz\x1b[0m\n'}
+[0.086769] (odom_map_for_rviz) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding CXX object CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o\x1b[0m\n'}
+[0.099768] (-) TimerEvent: {}
+[0.199995] (-) TimerEvent: {}
+[0.300314] (-) TimerEvent: {}
+[0.400684] (-) TimerEvent: {}
+[0.500998] (-) TimerEvent: {}
+[0.601288] (-) TimerEvent: {}
+[0.701624] (-) TimerEvent: {}
+[0.801918] (-) TimerEvent: {}
+[0.902180] (-) TimerEvent: {}
+[1.002478] (-) TimerEvent: {}
+[1.102753] (-) TimerEvent: {}
+[1.203040] (-) TimerEvent: {}
+[1.303334] (-) TimerEvent: {}
+[1.403624] (-) TimerEvent: {}
+[1.503923] (-) TimerEvent: {}
+[1.604240] (-) TimerEvent: {}
+[1.704563] (-) TimerEvent: {}
+[1.804840] (-) TimerEvent: {}
+[1.905079] (-) TimerEvent: {}
+[2.005357] (-) TimerEvent: {}
+[2.105600] (-) TimerEvent: {}
+[2.205888] (-) TimerEvent: {}
+[2.306190] (-) TimerEvent: {}
+[2.406479] (-) TimerEvent: {}
+[2.506771] (-) TimerEvent: {}
+[2.607089] (-) TimerEvent: {}
+[2.707414] (-) TimerEvent: {}
+[2.807696] (-) TimerEvent: {}
+[2.907977] (-) TimerEvent: {}
+[3.008301] (-) TimerEvent: {}
+[3.108591] (-) TimerEvent: {}
+[3.208854] (-) TimerEvent: {}
+[3.309099] (-) TimerEvent: {}
+[3.409347] (-) TimerEvent: {}
+[3.509652] (-) TimerEvent: {}
+[3.609914] (-) TimerEvent: {}
+[3.710154] (-) TimerEvent: {}
+[3.810899] (-) TimerEvent: {}
+[3.911185] (-) TimerEvent: {}
+[4.011453] (-) TimerEvent: {}
+[4.112059] (-) TimerEvent: {}
+[4.212390] (-) TimerEvent: {}
+[4.312698] (-) TimerEvent: {}
+[4.412967] (-) TimerEvent: {}
+[4.513231] (-) TimerEvent: {}
+[4.613493] (-) TimerEvent: {}
+[4.713790] (-) TimerEvent: {}
+[4.814095] (-) TimerEvent: {}
+[4.854825] (odom_map_for_rviz) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/src/local_map_on_odom.cpp:9\x1b[m\x1b[K:\n'}
+[4.855002] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KTfPublisher::TfPublisher(std::shared_ptr<rclcpp::Node>&, std::deque<odom::proto::Frame>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.855075] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:20:35:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KTfPublisher::node_\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[4.855139] (odom_map_for_rviz) StderrLine: {'line': b'   20 |     std::shared_ptr<rclcpp::Node> \x1b[01;35m\x1b[Knode_\x1b[m\x1b[K;\n'}
+[4.855176] (odom_map_for_rviz) StderrLine: {'line': b'      |                                   \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.855218] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:17:36:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::deque<odom::proto::Frame> TfPublisher::odom_frame_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[4.855258] (odom_map_for_rviz) StderrLine: {'line': b'   17 |     std::deque<odom::proto::Frame> \x1b[01;35m\x1b[Kodom_frame_\x1b[m\x1b[K;\n'}
+[4.855295] (odom_map_for_rviz) StderrLine: {'line': b'      |                                    \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.855347] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:25:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K-Wreorder\x1b[m\x1b[K]\n'}
+[4.855386] (odom_map_for_rviz) StderrLine: {'line': b'   25 | \x1b[01;35m\x1b[KTfPublisher\x1b[m\x1b[K::TfPublisher(std::shared_ptr<rclcpp::Node> &node,std::deque<odom::proto::Frame> odom_frame) : node_(node),odom_frame_(odom_frame)\n'}
+[4.855430] (odom_map_for_rviz) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.914211] (-) TimerEvent: {}
+[5.014540] (-) TimerEvent: {}
+[5.114859] (-) TimerEvent: {}
+[5.215226] (-) TimerEvent: {}
+[5.315526] (-) TimerEvent: {}
+[5.415861] (-) TimerEvent: {}
+[5.516116] (-) TimerEvent: {}
+[5.616419] (-) TimerEvent: {}
+[5.716726] (-) TimerEvent: {}
+[5.816963] (-) TimerEvent: {}
+[5.917217] (-) TimerEvent: {}
+[6.017509] (-) TimerEvent: {}
+[6.117804] (-) TimerEvent: {}
+[6.218096] (-) TimerEvent: {}
+[6.318403] (-) TimerEvent: {}
+[6.418704] (-) TimerEvent: {}
+[6.519003] (-) TimerEvent: {}
+[6.619272] (-) TimerEvent: {}
+[6.719642] (-) TimerEvent: {}
+[6.819944] (-) TimerEvent: {}
+[6.920283] (-) TimerEvent: {}
+[7.020588] (-) TimerEvent: {}
+[7.120867] (-) TimerEvent: {}
+[7.221119] (-) TimerEvent: {}
+[7.321372] (-) TimerEvent: {}
+[7.388134] (odom_map_for_rviz) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h:33\x1b[m\x1b[K,\n'}
+[7.388312] (odom_map_for_rviz) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/allocator.h:46\x1b[m\x1b[K,\n'}
+[7.388358] (odom_map_for_rviz) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/string:41\x1b[m\x1b[K,\n'}
+[7.388395] (odom_map_for_rviz) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/locale_classes.h:40\x1b[m\x1b[K,\n'}
+[7.388435] (odom_map_for_rviz) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/ios_base.h:41\x1b[m\x1b[K,\n'}
+[7.388469] (odom_map_for_rviz) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/ios:42\x1b[m\x1b[K,\n'}
+[7.388506] (odom_map_for_rviz) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/istream:38\x1b[m\x1b[K,\n'}
+[7.388542] (odom_map_for_rviz) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/fstream:38\x1b[m\x1b[K,\n'}
+[7.388577] (odom_map_for_rviz) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/odom_header.h:14\x1b[m\x1b[K,\n'}
+[7.388613] (odom_map_for_rviz) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/baselink_to_map_tf_for_rviz.hpp:10\x1b[m\x1b[K,\n'}
+[7.388650] (odom_map_for_rviz) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/src/local_map_on_odom.cpp:9\x1b[m\x1b[K:\n'}
+[7.388714] (odom_map_for_rviz) StderrLine: {'line': b'/usr/include/c++/9/ext/new_allocator.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = OdomPublisher; _Args = {std::shared_ptr<rclcpp::Node>&, const char (&)[6], int, std::deque<odom::proto::Frame, std::allocator<odom::proto::Frame> >&}; _Tp = OdomPublisher]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.388756] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/alloc_traits.h:483:4:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstatic void std::allocator_traits<std::allocator<_CharT> >::construct(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, _Up*, _Args&& ...) [with _Up = OdomPublisher; _Args = {std::shared_ptr<rclcpp::Node>&, const char (&)[6], int, std::deque<odom::proto::Frame, std::allocator<odom::proto::Frame> >&}; _Tp = OdomPublisher; std::allocator_traits<std::allocator<_CharT> >::allocator_type = std::allocator<OdomPublisher>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.388807] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr_base.h:548:39:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {std::shared_ptr<rclcpp::Node>&, const char (&)[6], int, std::deque<odom::proto::Frame, std::allocator<odom::proto::Frame> >&}; _Tp = OdomPublisher; _Alloc = std::allocator<OdomPublisher>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.388846] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr_base.h:679:16:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = OdomPublisher; _Alloc = std::allocator<OdomPublisher>; _Args = {std::shared_ptr<rclcpp::Node>&, const char (&)[6], int, std::deque<odom::proto::Frame, std::allocator<odom::proto::Frame> >&}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.388887] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr_base.h:1344:71:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<OdomPublisher>; _Args = {std::shared_ptr<rclcpp::Node>&, const char (&)[6], int, std::deque<odom::proto::Frame, std::allocator<odom::proto::Frame> >&}; _Tp = OdomPublisher; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.388925] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:359:59:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<OdomPublisher>; _Args = {std::shared_ptr<rclcpp::Node>&, const char (&)[6], int, std::deque<odom::proto::Frame, std::allocator<odom::proto::Frame> >&}; _Tp = OdomPublisher]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.388963] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:701:14:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<_Tp> std::allocate_shared(const _Alloc&, _Args&& ...) [with _Tp = OdomPublisher; _Alloc = std::allocator<OdomPublisher>; _Args = {std::shared_ptr<rclcpp::Node>&, const char (&)[6], int, std::deque<odom::proto::Frame, std::allocator<odom::proto::Frame> >&}]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.388999] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:717:39:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<_Tp> std::make_shared(_Args&& ...) [with _Tp = OdomPublisher; _Args = {std::shared_ptr<rclcpp::Node>&, const char (&)[6], int, std::deque<odom::proto::Frame, std::allocator<odom::proto::Frame> >&}]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.389036] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/src/local_map_on_odom.cpp:48:122:\x1b[m\x1b[K   required from here\n'}
+[7.389072] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/ext/new_allocator.h:146:4:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KOdomPublisher::OdomPublisher(std::shared_ptr<rclcpp::Node>&, const char [6], int, std::deque<odom::proto::Frame>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.389110] (odom_map_for_rviz) StderrLine: {'line': b'  146 |  { \x1b[01;31m\x1b[K::new((void *)__p) _Up(std::forward<_Args>(__args)...)\x1b[m\x1b[K; }\n'}
+[7.389145] (odom_map_for_rviz) StderrLine: {'line': b'      |    \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.389181] (odom_map_for_rviz) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[7.389217] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/odom_publisher_for_rviz.hpp:32:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KOdomPublisher::OdomPublisher(std::shared_ptr<rclcpp::Node>&, std::string, size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.389255] (odom_map_for_rviz) StderrLine: {'line': b'   32 | \x1b[01;36m\x1b[KOdomPublisher\x1b[m\x1b[K::OdomPublisher(std::shared_ptr<rclcpp::Node> &node,\n'}
+[7.389295] (odom_map_for_rviz) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.389331] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/odom_publisher_for_rviz.hpp:32:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 4 provided\n'}
+[7.389369] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/odom_publisher_for_rviz.hpp:11:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KOdomPublisher::OdomPublisher(const OdomPublisher&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.389408] (odom_map_for_rviz) StderrLine: {'line': b'   11 | class \x1b[01;36m\x1b[KOdomPublisher\x1b[m\x1b[K\n'}
+[7.389444] (odom_map_for_rviz) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.389479] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/odom_publisher_for_rviz.hpp:11:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 4 provided\n'}
+[7.389517] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/odom_publisher_for_rviz.hpp:11:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KOdomPublisher::OdomPublisher(OdomPublisher&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.389555] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/odom_publisher_for_rviz.hpp:11:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 1 argument, 4 provided\n'}
+[7.421467] (-) TimerEvent: {}
+[7.521699] (-) TimerEvent: {}
+[7.621999] (-) TimerEvent: {}
+[7.722298] (-) TimerEvent: {}
+[7.822571] (-) TimerEvent: {}
+[7.923008] (-) TimerEvent: {}
+[8.023312] (-) TimerEvent: {}
+[8.123554] (-) TimerEvent: {}
+[8.223864] (-) TimerEvent: {}
+[8.324192] (-) TimerEvent: {}
+[8.424554] (-) TimerEvent: {}
+[8.524841] (-) TimerEvent: {}
+[8.625120] (-) TimerEvent: {}
+[8.725382] (-) TimerEvent: {}
+[8.825696] (-) TimerEvent: {}
+[8.926017] (-) TimerEvent: {}
+[9.026324] (-) TimerEvent: {}
+[9.126614] (-) TimerEvent: {}
+[9.226910] (-) TimerEvent: {}
+[9.327221] (-) TimerEvent: {}
+[9.423025] (odom_map_for_rviz) StderrLine: {'line': b'make[2]: *** [CMakeFiles/odom_map_for_rviz.dir/build.make:76: CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o] Error 1\n'}
+[9.423317] (odom_map_for_rviz) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_for_rviz.dir/all] Error 2\n'}
+[9.423623] (odom_map_for_rviz) StderrLine: {'line': b'make: *** [Makefile:146: all] Error 2\n'}
+[9.424605] (odom_map_for_rviz) CommandEnded: {'returncode': 2}
+[9.427368] (-) TimerEvent: {}
+[9.477137] (odom_map_for_rviz) JobEnded: {'identifier': 'odom_map_for_rviz', 'rc': 2}
+[9.487380] (-) EventReactorShutdown: {}

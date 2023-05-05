@@ -1,0 +1,30 @@
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+   60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+      |                                 [01;35m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kextra tokens at end of #include directive
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+   60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+      |                                 [01;35m[K^[m[K
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:[m[K In member function ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, std::string)[m[K’:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:68:40:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 2 has type ‘[01m[Kgoogle::protobuf::uint64[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+   68 |             printf("chassis_time: [01;35m[K%20.9f[m[K\n",[32m[Kodom_input.at(i).header().sys_timestamp()[m[K);
+      |                                   [01;35m[K~~~~~^[m[K    [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                        [01;35m[K|[m[K                                           [32m[K|[m[K
+      |                                        [01;35m[Kdouble[m[K                                      [32m[Kgoogle::protobuf::uint64 {aka long unsigned int}[m[K
+      |                                   [32m[K%20.9ld[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:97:38:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 2 has type ‘[01m[Kgoogle::protobuf::uint64[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+   97 |             printf("wheel_time: [01;35m[K%20.9f[m[K\n",[32m[Kodom_input.at(i).header().sys_timestamp()[m[K);
+      |                                 [01;35m[K~~~~~^[m[K    [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                      [01;35m[K|[m[K                                           [32m[K|[m[K
+      |                                      [01;35m[Kdouble[m[K                                      [32m[Kgoogle::protobuf::uint64 {aka long unsigned int}[m[K
+      |                                 [32m[K%20.9ld[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:125:38:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects argument of type ‘[01m[Kdouble[m[K’, but argument 2 has type ‘[01m[Kgoogle::protobuf::uint64[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wformat=[m[K]
+  125 |             printf("wheel_time: [01;35m[K%20.9f[m[K\n",[32m[Kodom_input.at(i).header().sys_timestamp()[m[K);
+      |                                 [01;35m[K~~~~~^[m[K    [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                      [01;35m[K|[m[K                                           [32m[K|[m[K
+      |                                      [01;35m[Kdouble[m[K                                      [32m[Kgoogle::protobuf::uint64 {aka long unsigned int}[m[K
+      |                                 [32m[K%20.9ld[m[K
