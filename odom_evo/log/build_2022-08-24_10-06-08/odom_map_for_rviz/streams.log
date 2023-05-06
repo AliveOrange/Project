@@ -1,0 +1,7 @@
+[0.011s] Invoking command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz -- -j16 -l16
+[0.037s] [35m[1mConsolidate compiler generated dependencies of target odom_map_for_rviz[0m
+[0.083s] [  2%] [32mBuilding CXX object CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o[0m
+[4.519s] make[2]: *** [CMakeFiles/odom_map_for_rviz.dir/build.make:76: CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o] Interrupt
+[4.520s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_for_rviz.dir/all] Interrupt
+[4.520s] make: *** [Makefile:146: all] Interrupt
+[4.545s] Invoked command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz -- -j16 -l16

@@ -1,0 +1,4 @@
+Invoking command in '/home/alex/Documents/odom_evo/build/odom_map_tum': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/alex/Documents/odom_evo/build/odom_map_tum -- -j16 -l16
+Invoked command in '/home/alex/Documents/odom_evo/build/odom_map_tum' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/alex/Documents/odom_evo/build/odom_map_tum -- -j16 -l16
+Invoking command in '/home/alex/Documents/odom_evo/build/odom_map_tum': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/alex/Documents/odom_evo/build/odom_map_tum
+Invoked command in '/home/alex/Documents/odom_evo/build/odom_map_tum' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/alex/Documents/odom_evo/build/odom_map_tum

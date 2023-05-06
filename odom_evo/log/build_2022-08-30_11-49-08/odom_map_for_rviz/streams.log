@@ -1,0 +1,37 @@
+[0.013s] Invoking command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/build/odom_map_for_rviz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map:/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/build/odom_map_for_rviz -- -j16 -l16
+[0.040s] [35m[1mConsolidate compiler generated dependencies of target odom_map_for_rviz[0m
+[0.087s] [  2%] [32mBuilding CXX object CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o[0m
+[1.413s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/include/odom_ins_subscriber_for_rviz.hpp:9[m[K,
+[1.413s]                  from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/src/local_map_on_odom.cpp:9[m[K:
+[1.413s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+[1.413s]    60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+[1.413s]       |                                 [01;35m[K^[m[K
+[1.413s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kextra tokens at end of #include directive
+[1.460s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/src/local_map_on_odom.cpp:12[m[K:
+[1.461s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+[1.461s]    60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+[1.461s]       |                                 [01;35m[K^[m[K
+[17.530s] [  5%] [32m[1mLinking CXX executable odom_map_for_rviz[0m
+[19.301s] [100%] Built target odom_map_for_rviz
+[19.310s] Invoked command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/build/odom_map_for_rviz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map:/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/build/odom_map_for_rviz -- -j16 -l16
+[19.365s] Invoking command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/build/odom_map_for_rviz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map:/opt/ros/galactic /usr/local/bin/cmake --install /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/build/odom_map_for_rviz
+[19.368s] -- Install configuration: "RELEASE"
+[19.368s] -- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/lib/odom_map_for_rviz/odom_map_for_rviz
+[19.373s] -- Set runtime path of "/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/lib/odom_map_for_rviz/odom_map_for_rviz" to ""
+[19.373s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/ament_index/resource_index/package_run_dependencies/odom_map_for_rviz
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/ament_index/resource_index/parent_prefix_path/odom_map_for_rviz
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/ament_prefix_path.sh
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/ament_prefix_path.dsv
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/path.sh
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/environment/path.dsv
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.bash
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.sh
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.zsh
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/local_setup.dsv
+[19.374s] -- Installing: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/package.dsv
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/ament_index/resource_index/packages/odom_map_for_rviz
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/cmake/ament_cmake_export_dependencies-extras.cmake
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/cmake/odom_map_for_rvizConfig.cmake
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/cmake/odom_map_for_rvizConfig-version.cmake
+[19.374s] -- Up-to-date: /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map_for_rviz/share/odom_map_for_rviz/package.xml
+[19.375s] Invoked command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/build/odom_map_for_rviz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/install/odom_map:/opt/ros/galactic /usr/local/bin/cmake --install /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/build/odom_map_for_rviz

@@ -1,0 +1,8 @@
+source;share/odom_map_for_rviz/hook/cmake_prefix_path.ps1
+source;share/odom_map_for_rviz/hook/cmake_prefix_path.dsv
+source;share/odom_map_for_rviz/hook/cmake_prefix_path.sh
+source;share/odom_map_for_rviz/local_setup.bash
+source;share/odom_map_for_rviz/local_setup.dsv
+source;share/odom_map_for_rviz/local_setup.ps1
+source;share/odom_map_for_rviz/local_setup.sh
+source;share/odom_map_for_rviz/local_setup.zsh

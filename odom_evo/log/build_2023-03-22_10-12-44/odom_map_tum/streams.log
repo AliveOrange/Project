@@ -1,0 +1,23 @@
+[0.013s] Invoking command in '/home/alex/Documents/odom_evo/build/odom_map_tum': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/alex/Documents/odom_evo/build/odom_map_tum -- -j16 -l16
+[0.130s] [100%] Built target odom_map_tum
+[0.139s] Invoked command in '/home/alex/Documents/odom_evo/build/odom_map_tum' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --build /home/alex/Documents/odom_evo/build/odom_map_tum -- -j16 -l16
+[0.208s] Invoking command in '/home/alex/Documents/odom_evo/build/odom_map_tum': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/alex/Documents/odom_evo/build/odom_map_tum
+[0.214s] -- Install configuration: "RELEASE"
+[0.215s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/lib/odom_map_tum/odom_map_tum
+[0.215s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/ament_index/resource_index/package_run_dependencies/odom_map_tum
+[0.215s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/ament_index/resource_index/parent_prefix_path/odom_map_tum
+[0.215s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/environment/ament_prefix_path.sh
+[0.215s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/environment/ament_prefix_path.dsv
+[0.215s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/environment/path.sh
+[0.215s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/environment/path.dsv
+[0.215s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/local_setup.bash
+[0.215s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/local_setup.sh
+[0.215s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/local_setup.zsh
+[0.215s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/local_setup.dsv
+[0.215s] -- Installing: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/package.dsv
+[0.216s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/ament_index/resource_index/packages/odom_map_tum
+[0.216s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.216s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/cmake/odom_map_tumConfig.cmake
+[0.216s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/cmake/odom_map_tumConfig-version.cmake
+[0.216s] -- Up-to-date: /home/alex/Documents/odom_evo/install/odom_map_tum/share/odom_map_tum/package.xml
+[0.217s] Invoked command in '/home/alex/Documents/odom_evo/build/odom_map_tum' returned '0': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake --install /home/alex/Documents/odom_evo/build/odom_map_tum

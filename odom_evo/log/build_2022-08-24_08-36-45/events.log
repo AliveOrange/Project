@@ -1,0 +1,401 @@
+[0.000000] (-) TimerEvent: {}
+[0.000174] (odom_map_for_rviz) JobQueued: {'identifier': 'odom_map_for_rviz', 'dependencies': OrderedDict()}
+[0.000496] (odom_map_for_rviz) JobStarted: {'identifier': 'odom_map_for_rviz'}
+[0.009727] (odom_map_for_rviz) JobProgress: {'identifier': 'odom_map_for_rviz', 'progress': 'cmake'}
+[0.010391] (odom_map_for_rviz) Command: {'cmd': ['/usr/local/bin/cmake', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap', '-DCMAKE_INSTALL_PREFIX=/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map_for_rviz'], 'cwd': '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', ''), ('LANGUAGE', 'en_US:en'), ('USER', 'baixiaobo'), ('LC_TIME', 'en_US.UTF-8'), ('SSH_AGENT_PID', '1303'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar/lib:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/baixiaobo'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/baixiaobo/.local/share/Trash/files'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('MANAGERPID', '1106'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '9022'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install'), ('ROS_DISTRO', 'galactic'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'baixiaobo'), ('JOURNAL_STREAM', '8:42359'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'baixiaobo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/baixiaobo/anaconda3/bin:/home/baixiaobo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/baixiaobo/Qt7.0/6.2.0/gcc_64/bin/:/home/baixiaobo/Qt7.0/Tools/QtCreator/bin/'), ('SESSION_MANAGER', 'local/baixiaobo:@/tmp/.ICE-unix/1349,unix/baixiaobo:/tmp/.ICE-unix/1349'), ('INVOCATION_ID', '9eab0b8ed65c441e9d36cac62ee9f1d1'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/chassis_odom:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar:/opt/ros/galactic'), ('CONDA_PYTHON_EXE', '/home/baixiaobo/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:546a8e6d-a9c4-4bdf-90eb-810ff9f4a2d2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/baixiaobo/anaconda3/bin/conda'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar/lib/python3.7/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('CONDA_PREFIX', '/home/baixiaobo/anaconda3'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/odom_map:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/lidar:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/chassis_odom:/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/install/calmcar:/opt/ros/galactic')]), 'shell': False}
+[0.027684] (odom_map_for_rviz) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.5 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[0.042135] (odom_map_for_rviz) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/baixiaobo/anaconda3/bin/python3\n'}
+[0.094208] (odom_map_for_rviz) StdoutLine: {'line': b'-- Found rclcpp: 9.2.1 (/opt/ros/galactic/share/rclcpp/cmake)\n'}
+[0.099896] (-) TimerEvent: {}
+[0.116492] (odom_map_for_rviz) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.118277] (odom_map_for_rviz) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.2 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[0.200007] (-) TimerEvent: {}
+[0.201581] (odom_map_for_rviz) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.228616] (odom_map_for_rviz) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 3.3.1 (/opt/ros/galactic/share/rmw_implementation_cmake/cmake)\n'}
+[0.229593] (odom_map_for_rviz) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 0.22.5 (/opt/ros/galactic/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.238930] (odom_map_for_rviz) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.300101] (-) TimerEvent: {}
+[0.311403] (odom_map_for_rviz) StdoutLine: {'line': b'-- Found sensor_msgs: 2.2.4 (/opt/ros/galactic/share/sensor_msgs/cmake)\n'}
+[0.376984] (odom_map_for_rviz) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.3.4)\n'}
+[0.400204] (-) TimerEvent: {}
+[0.418376] (odom_map_for_rviz) StdoutLine: {'line': b'-- The imported target "vtkParseOGLExt" references the file\n'}
+[0.418644] (odom_map_for_rviz) StdoutLine: {'line': b'   "/usr/bin/vtkParseOGLExt-7.1"\n'}
+[0.418734] (odom_map_for_rviz) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.418909] (odom_map_for_rviz) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.418983] (odom_map_for_rviz) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.419026] (odom_map_for_rviz) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.419067] (odom_map_for_rviz) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.419106] (odom_map_for_rviz) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.419145] (odom_map_for_rviz) StdoutLine: {'line': b'\n'}
+[0.419184] (odom_map_for_rviz) StdoutLine: {'line': b'-- The imported target "vtkRenderingPythonTkWidgets" references the file\n'}
+[0.419222] (odom_map_for_rviz) StdoutLine: {'line': b'   "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"\n'}
+[0.419260] (odom_map_for_rviz) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.419298] (odom_map_for_rviz) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.419337] (odom_map_for_rviz) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.419376] (odom_map_for_rviz) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.419414] (odom_map_for_rviz) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.419451] (odom_map_for_rviz) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.419489] (odom_map_for_rviz) StdoutLine: {'line': b'\n'}
+[0.419527] (odom_map_for_rviz) StdoutLine: {'line': b'-- The imported target "vtk" references the file\n'}
+[0.419564] (odom_map_for_rviz) StdoutLine: {'line': b'   "/usr/bin/vtk"\n'}
+[0.419602] (odom_map_for_rviz) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.419641] (odom_map_for_rviz) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.419679] (odom_map_for_rviz) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.419718] (odom_map_for_rviz) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.419756] (odom_map_for_rviz) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.419794] (odom_map_for_rviz) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.419833] (odom_map_for_rviz) StdoutLine: {'line': b'\n'}
+[0.419872] (odom_map_for_rviz) StdoutLine: {'line': b'-- The imported target "pvtk" references the file\n'}
+[0.419911] (odom_map_for_rviz) StdoutLine: {'line': b'   "/usr/bin/pvtk"\n'}
+[0.419950] (odom_map_for_rviz) StdoutLine: {'line': b'but this file does not exist.  Possible reasons include:\n'}
+[0.419989] (odom_map_for_rviz) StdoutLine: {'line': b'* The file was deleted, renamed, or moved to another location.\n'}
+[0.420027] (odom_map_for_rviz) StdoutLine: {'line': b'* An install or uninstall procedure did not complete successfully.\n'}
+[0.420065] (odom_map_for_rviz) StdoutLine: {'line': b'* The installation package was faulty and contained\n'}
+[0.420103] (odom_map_for_rviz) StdoutLine: {'line': b'   "/usr/lib/cmake/vtk-7.1/VTKTargets.cmake"\n'}
+[0.420142] (odom_map_for_rviz) StdoutLine: {'line': b'but not all the files it references.\n'}
+[0.420179] (odom_map_for_rviz) StdoutLine: {'line': b'\n'}
+[0.428547] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.428665] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.428717] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[0.428759] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.428799] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.428838] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.428877] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[0.428915] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[0.428953] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[0.428991] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.429032] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.429081] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.429120] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.429312] (odom_map_for_rviz) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[0.432413] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.432499] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.432546] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI2).  This can lead to\n'}
+[0.432588] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.432628] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.432666] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.432705] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI2.cmake:28 (find_package_handle_standard_args)\n'}
+[0.432743] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:193 (find_package)\n'}
+[0.432781] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_openni2)\n'}
+[0.432824] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.432862] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.432900] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.432939] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.433248] (odom_map_for_rviz) StdoutLine: {'line': b'-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)\n'}
+[0.439142] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.439224] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (libusb-1.0)\n'}
+[0.439269] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.439309] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.439350] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.439390] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.439429] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:291 (find_package_handle_standard_args)\n'}
+[0.439471] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:338 (find_libusb)\n'}
+[0.439509] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.439546] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.439584] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.439620] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.442343] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.442430] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.442477] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[0.442529] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.442569] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.442613] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.442655] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[0.442694] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[0.442735] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[0.442778] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.442816] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.442854] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.442892] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.443056] (odom_map_for_rviz) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[0.446034] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.446116] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.446161] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI2).  This can lead to\n'}
+[0.446203] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.446243] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.446282] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.446319] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI2.cmake:28 (find_package_handle_standard_args)\n'}
+[0.446357] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:193 (find_package)\n'}
+[0.446395] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_openni2)\n'}
+[0.446433] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.446477] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.446514] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.446552] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.446735] (odom_map_for_rviz) StdoutLine: {'line': b'-- OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)\n'}
+[0.453389] (odom_map_for_rviz) StdoutLine: {'line': b'-- QHULL found (include: /usr/include, lib: optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so)\n'}
+[0.456373] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.456453] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (USB_10)\n'}
+[0.456498] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (OpenNI).  This can lead to\n'}
+[0.456538] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.456576] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.456614] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.456651] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindOpenNI.cmake:28 (find_package_handle_standard_args)\n'}
+[0.456689] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:179 (find_package)\n'}
+[0.456725] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:322 (find_openni)\n'}
+[0.456762] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:548 (find_external_library)\n'}
+[0.456798] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.456835] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.456872] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.457129] (odom_map_for_rviz) StdoutLine: {'line': b'-- OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)\n'}
+[0.462971] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.463069] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_COMMON)\n'}
+[0.463117] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.463204] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.463250] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.463289] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.463327] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.463369] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.463447] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.463486] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.463525] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.463564] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_KDTREE)\n'}
+[0.463640] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.463681] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.463719] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.463758] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.463795] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.463869] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.463909] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.463948] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.463986] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.464025] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_OCTREE)\n'}
+[0.464098] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.464136] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.464174] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.464213] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.464251] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.464321] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.464360] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.464398] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.464436] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.464474] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_SEARCH)\n'}
+[0.464542] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.464579] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.464615] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.464651] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.464723] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.464760] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.464798] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.464836] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.464874] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.464912] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.464982] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_SAMPLE_CONSENSUS) does not match the name of the calling package\n'}
+[0.465020] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL).  This can lead to problems in calling code that expects\n'}
+[0.465065] (odom_map_for_rviz) StderrLine: {'line': b'  `find_package` result variables (e.g., `_FOUND`) to follow a certain\n'}
+[0.465105] (odom_map_for_rviz) StderrLine: {'line': b'  pattern.\n'}
+[0.465143] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.465179] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.465219] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.465316] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.465357] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.465396] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.465437] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.465507] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_FILTERS) does not match the name of the calling package (PCL).  This\n'}
+[0.465546] (odom_map_for_rviz) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.465585] (odom_map_for_rviz) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.465623] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.465661] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.465698] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.465735] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.465808] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.465846] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.465884] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_2D)\n'}
+[0.465922] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.465960] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.465998] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.466038] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.466134] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.466172] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.466211] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.466248] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.466285] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.466355] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.466393] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_GEOMETRY) does not match the name of the calling package (PCL).  This\n'}
+[0.466430] (odom_map_for_rviz) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.466468] (odom_map_for_rviz) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.466506] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.466544] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.466581] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.466646] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.466684] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.466721] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.466758] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_IO)\n'}
+[0.466796] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.466833] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.466878] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.466945] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.466984] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.467021] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.467060] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.467098] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.467135] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.467205] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.467242] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_FEATURES) does not match the name of the calling package (PCL).  This\n'}
+[0.467283] (odom_map_for_rviz) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.467321] (odom_map_for_rviz) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.467359] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.467396] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.467434] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.467474] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.467550] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.467596] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.467652] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_ML)\n'}
+[0.467697] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.467771] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.467817] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.467863] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.467908] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.467954] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.468000] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.468046] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.468090] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.468135] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.468179] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_SEGMENTATION) does not match the name of the calling package (PCL).\n'}
+[0.468249] (odom_map_for_rviz) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.468289] (odom_map_for_rviz) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.468328] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.468366] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.468438] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.468479] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.468517] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.468554] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.468593] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.468663] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_VISUALIZATION) does not match the name of the calling package (PCL).\n'}
+[0.468702] (odom_map_for_rviz) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.468740] (odom_map_for_rviz) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.468776] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.468814] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.468852] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.468891] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.468959] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.468998] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.469038] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.469083] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_SURFACE) does not match the name of the calling package (PCL).  This\n'}
+[0.469122] (odom_map_for_rviz) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.469160] (odom_map_for_rviz) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.469197] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.469235] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.469272] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.469309] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.469346] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.469383] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.469420] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.469456] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_REGISTRATION) does not match the name of the calling package (PCL).\n'}
+[0.469494] (odom_map_for_rviz) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.469532] (odom_map_for_rviz) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.469568] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.469605] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.469643] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.469684] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.469723] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.469760] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.469798] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.469836] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_KEYPOINTS) does not match the name of the calling package (PCL).  This\n'}
+[0.469874] (odom_map_for_rviz) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.469910] (odom_map_for_rviz) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.469947] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.469985] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.470024] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.470061] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.470098] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.470135] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.470172] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.470209] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_TRACKING) does not match the name of the calling package (PCL).  This\n'}
+[0.470247] (odom_map_for_rviz) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.470284] (odom_map_for_rviz) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.470321] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.470357] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.470394] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.470432] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.470469] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.470506] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.470544] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.470582] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_RECOGNITION) does not match the name of the calling package (PCL).\n'}
+[0.470619] (odom_map_for_rviz) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.470655] (odom_map_for_rviz) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.470693] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.470730] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.470767] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.470804] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.470844] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.470881] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.470919] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_STEREO)\n'}
+[0.470956] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.470993] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.471029] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.471069] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.471106] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.471144] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.471181] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.471218] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.471254] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.471291] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_APPS)\n'}
+[0.471328] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.471365] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.471402] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.471441] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.471479] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.471517] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.471554] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.471592] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.471629] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.471666] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.471704] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_IN_HAND_SCANNER) does not match the name of the calling package (PCL).\n'}
+[0.471741] (odom_map_for_rviz) StderrLine: {'line': b'  This can lead to problems in calling code that expects `find_package`\n'}
+[0.471778] (odom_map_for_rviz) StderrLine: {'line': b'  result variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.471815] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.471854] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.471892] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.471928] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.471966] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.472003] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.472040] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.472078] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_POINT_CLOUD_EDITOR) does not match the name of the calling package\n'}
+[0.472115] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL).  This can lead to problems in calling code that expects\n'}
+[0.472152] (odom_map_for_rviz) StderrLine: {'line': b'  `find_package` result variables (e.g., `_FOUND`) to follow a certain\n'}
+[0.472188] (odom_map_for_rviz) StderrLine: {'line': b'  pattern.\n'}
+[0.472224] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.472261] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:619 (find_package_handle_standard_args)\n'}
+[0.472298] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.472334] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.472373] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.472410] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.472447] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args`\n'}
+[0.472485] (odom_map_for_rviz) StderrLine: {'line': b'  (PCL_OUTOFCORE) does not match the name of the calling package (PCL).  This\n'}
+[0.472522] (odom_map_for_rviz) StderrLine: {'line': b'  can lead to problems in calling code that expects `find_package` result\n'}
+[0.472563] (odom_map_for_rviz) StderrLine: {'line': b'  variables (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.472600] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.472637] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.472673] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.472711] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.472747] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.472784] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[0.472823] (odom_map_for_rviz) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (PCL_PEOPLE)\n'}
+[0.472860] (odom_map_for_rviz) StderrLine: {'line': b'  does not match the name of the calling package (PCL).  This can lead to\n'}
+[0.472898] (odom_map_for_rviz) StderrLine: {'line': b'  problems in calling code that expects `find_package` result variables\n'}
+[0.472936] (odom_map_for_rviz) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[0.472973] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.473010] (odom_map_for_rviz) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:616 (find_package_handle_standard_args)\n'}
+[0.473051] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:39 (find_package)\n'}
+[0.473092] (odom_map_for_rviz) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.473128] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.474308] (odom_map_for_rviz) StdoutLine: {'line': b'-- Found nav_msgs: 2.2.4 (/opt/ros/galactic/share/nav_msgs/cmake)\n'}
+[0.500281] (-) TimerEvent: {}
+[0.511632] (odom_map_for_rviz) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)\n'}
+[0.519786] (odom_map_for_rviz) StdoutLine: {'line': b'-- Found tf2: 0.17.3 (/opt/ros/galactic/share/tf2/cmake)\n'}
+[0.524751] (odom_map_for_rviz) StdoutLine: {'line': b'-- Found tf2_ros: 0.17.3 (/opt/ros/galactic/share/tf2_ros/cmake)\n'}
+[0.600402] (-) TimerEvent: {}
+[0.696058] (odom_map_for_rviz) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)\n'}
+[0.700461] (-) TimerEvent: {}
+[0.733666] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[31mCMake Error at /opt/ros/galactic/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:42 (message):\n'}
+[0.733868] (odom_map_for_rviz) StderrLine: {'line': b'  ament_target_dependencies() the first argument must be a valid target name\n'}
+[0.733945] (odom_map_for_rviz) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.733996] (odom_map_for_rviz) StderrLine: {'line': b'  CMakeLists.txt:93 (ament_target_dependencies)\n'}
+[0.734103] (odom_map_for_rviz) StderrLine: {'line': b'\n'}
+[0.734141] (odom_map_for_rviz) StderrLine: {'line': b'\x1b[0m\n'}
+[0.734177] (odom_map_for_rviz) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[0.734244] (odom_map_for_rviz) StdoutLine: {'line': b'See also "/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz/CMakeFiles/CMakeOutput.log".\n'}
+[0.734286] (odom_map_for_rviz) StdoutLine: {'line': b'See also "/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/build/odom_map_for_rviz/CMakeFiles/CMakeError.log".\n'}
+[0.741442] (odom_map_for_rviz) CommandEnded: {'returncode': 1}
+[0.759018] (odom_map_for_rviz) JobEnded: {'identifier': 'odom_map_for_rviz', 'rc': 1}
+[0.769429] (-) EventReactorShutdown: {}

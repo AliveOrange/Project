@@ -1,0 +1,35 @@
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9[m[K,
+                 from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+   60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+      |                                 [01;35m[K^[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kextra tokens at end of #include directive
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+   60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+      |                                 [01;35m[K^[m[K
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:[m[K In constructor ‘[01m[KOdomPublisher::OdomPublisher(std::shared_ptr<rclcpp::Node>&, std::string, size_t, std::string)[m[K’:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:30:35:[m[K [01;35m[Kwarning: [m[K‘[01m[KOdomPublisher::node_[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   30 |     std::shared_ptr<rclcpp::Node> [01;35m[Knode_[m[K;
+      |                                   [01;35m[K^~~~~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:29:17:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kstd::string OdomPublisher::topic_name_[m[K’ [[01;35m[K-Wreorder[m[K]
+   29 |     std::string [01;35m[Ktopic_name_[m[K;
+      |                 [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:35:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   35 | [01;35m[KOdomPublisher[m[K::OdomPublisher(std::shared_ptr<rclcpp::Node> &node,
+      | [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:29:17:[m[K [01;35m[Kwarning: [m[K‘[01m[KOdomPublisher::topic_name_[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   29 |     std::string [01;35m[Ktopic_name_[m[K;
+      |                 [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:26:9:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint OdomPublisher::buff_size_[m[K’ [[01;35m[K-Wreorder[m[K]
+   26 |     int [01;35m[Kbuff_size_[m[K;
+      |         [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:35:1:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   35 | [01;35m[KOdomPublisher[m[K::OdomPublisher(std::shared_ptr<rclcpp::Node> &node,
+      | [01;35m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:[m[K In member function ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, std::string)[m[K’:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:58:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktime[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   58 |     double [01;35m[Ktime[m[K = node_->now().seconds();
+      |            [01;35m[K^~~~[m[K

@@ -1,0 +1,18 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could NOT find Protobuf (missing: Protobuf_INCLUDE_DIR) 
+-- Configuring incomplete, errors occurred!
+See also "/home/alex/Documents/odom_evo/build/odom_map_tum/CMakeFiles/CMakeOutput.log".
+See also "/home/alex/Documents/odom_evo/build/odom_map_tum/CMakeFiles/CMakeError.log".

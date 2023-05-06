@@ -1,0 +1,9 @@
+/home/donghao/Documents/cakin_ws/install/_setup_util.py
+/home/donghao/Documents/cakin_ws/install/env.sh
+/home/donghao/Documents/cakin_ws/install/setup.bash
+/home/donghao/Documents/cakin_ws/install/local_setup.bash
+/home/donghao/Documents/cakin_ws/install/setup.sh
+/home/donghao/Documents/cakin_ws/install/local_setup.sh
+/home/donghao/Documents/cakin_ws/install/setup.zsh
+/home/donghao/Documents/cakin_ws/install/local_setup.zsh
+/home/donghao/Documents/cakin_ws/install/.rosinstall

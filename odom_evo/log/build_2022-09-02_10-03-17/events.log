@@ -1,0 +1,168 @@
+[0.000000] (-) TimerEvent: {}
+[0.000392] (odom_map_tum) JobQueued: {'identifier': 'odom_map_tum', 'dependencies': OrderedDict()}
+[0.000691] (odom_map_tum) JobStarted: {'identifier': 'odom_map_tum'}
+[0.008227] (odom_map_tum) JobProgress: {'identifier': 'odom_map_tum', 'progress': 'cmake'}
+[0.009598] (odom_map_tum) JobProgress: {'identifier': 'odom_map_tum', 'progress': 'build'}
+[0.010139] (odom_map_tum) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum', '--', '-j16', '-l16'], 'cwd': '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', ''), ('LANGUAGE', 'en_US:en'), ('USER', 'baixiaobo'), ('LC_TIME', 'en_US.UTF-8'), ('SSH_AGENT_PID', '1273'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/baixiaobo'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('CONDA_SHLVL', '1'), ('TERM_PROGRAM_VERSION', '1.63.2'), ('DESKTOP_SESSION', 'ubuntu'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1074'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=5c76c0f4ccf2637746456e6263114f84'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'galactic'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'baixiaobo'), ('JOURNAL_STREAM', '8:40435'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'baixiaobo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/baixiaobo/anaconda3/bin:/home/baixiaobo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/baixiaobo/Qt7.0/6.2.0/gcc_64/bin/:/home/baixiaobo/Qt7.0/Tools/QtCreator/bin/:/home/baixiaobo/Qt7.0/6.2.0/gcc_64/bin/:/home/baixiaobo/Qt7.0/Tools/QtCreator/bin/'), ('SESSION_MANAGER', 'local/baixiaobo:@/tmp/.ICE-unix/1319,unix/baixiaobo:/tmp/.ICE-unix/1319'), ('INVOCATION_ID', 'beae5b24a6e344d6a20f31fa4bb45594'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/67a1dedb_ce30_480c_83e1_634565396078'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-e60cc89f31.sock'), ('GNOME_TERMINAL_SERVICE', ':1.1894'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/galactic'), ('CONDA_PYTHON_EXE', '/home/baixiaobo/anaconda3/bin/python'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('NO_AT_BRIDGE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_tum'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/baixiaobo/anaconda3/bin/conda'), ('CLUTTER_IM_MODULE', 'fcitx'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=5c76c0f4ccf2637746456e6263114f84'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/galactic/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('BREAKPAD_DUMP_LOCATION', '/home/baixiaobo/.config/Code/exthost Crash Reports'), ('CONDA_PREFIX', '/home/baixiaobo/anaconda3'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/galactic')]), 'shell': False}
+[0.046893] (odom_map_tum) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target odom_map_tum\x1b[0m\n'}
+[0.095740] (odom_map_tum) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding CXX object CMakeFiles/odom_map_tum.dir/src/local_map_on_odom.cpp.o\x1b[0m\n'}
+[0.099030] (-) TimerEvent: {}
+[0.199237] (-) TimerEvent: {}
+[0.299487] (-) TimerEvent: {}
+[0.399750] (-) TimerEvent: {}
+[0.500146] (-) TimerEvent: {}
+[0.600417] (-) TimerEvent: {}
+[0.700697] (-) TimerEvent: {}
+[0.800990] (-) TimerEvent: {}
+[0.901392] (-) TimerEvent: {}
+[1.001789] (-) TimerEvent: {}
+[1.102104] (-) TimerEvent: {}
+[1.202337] (-) TimerEvent: {}
+[1.302590] (-) TimerEvent: {}
+[1.391321] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_subscriber_for_rviz.hpp:9\x1b[m\x1b[K,\n'}
+[1.391528] (odom_map_tum) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10\x1b[m\x1b[K:\n'}
+[1.391606] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmissing terminating " character\n'}
+[1.391668] (odom_map_tum) StderrLine: {'line': b'   60 | #include "nav_msgs/msg/path.hpp"\x1b[01;35m\x1b[K"\x1b[m\x1b[K\n'}
+[1.391729] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.391791] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kextra tokens at end of #include directive\n'}
+[1.402677] (-) TimerEvent: {}
+[1.452462] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12\x1b[m\x1b[K:\n'}
+[1.452648] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kmissing terminating " character\n'}
+[1.452715] (odom_map_tum) StderrLine: {'line': b'   60 | #include "nav_msgs/msg/path.hpp"\x1b[01;35m\x1b[K"\x1b[m\x1b[K\n'}
+[1.452758] (odom_map_tum) StderrLine: {'line': b'      |                                 \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[1.502809] (-) TimerEvent: {}
+[1.603123] (-) TimerEvent: {}
+[1.703435] (-) TimerEvent: {}
+[1.803739] (-) TimerEvent: {}
+[1.904024] (-) TimerEvent: {}
+[2.004303] (-) TimerEvent: {}
+[2.104571] (-) TimerEvent: {}
+[2.204801] (-) TimerEvent: {}
+[2.305100] (-) TimerEvent: {}
+[2.405387] (-) TimerEvent: {}
+[2.505634] (-) TimerEvent: {}
+[2.605926] (-) TimerEvent: {}
+[2.706230] (-) TimerEvent: {}
+[2.806663] (-) TimerEvent: {}
+[2.907123] (-) TimerEvent: {}
+[3.007482] (-) TimerEvent: {}
+[3.107766] (-) TimerEvent: {}
+[3.208055] (-) TimerEvent: {}
+[3.308345] (-) TimerEvent: {}
+[3.408659] (-) TimerEvent: {}
+[3.508968] (-) TimerEvent: {}
+[3.609250] (-) TimerEvent: {}
+[3.709503] (-) TimerEvent: {}
+[3.809752] (-) TimerEvent: {}
+[3.910023] (-) TimerEvent: {}
+[4.010267] (-) TimerEvent: {}
+[4.110525] (-) TimerEvent: {}
+[4.210769] (-) TimerEvent: {}
+[4.311043] (-) TimerEvent: {}
+[4.411279] (-) TimerEvent: {}
+[4.511566] (-) TimerEvent: {}
+[4.611849] (-) TimerEvent: {}
+[4.712112] (-) TimerEvent: {}
+[4.812433] (-) TimerEvent: {}
+[4.912728] (-) TimerEvent: {}
+[5.013279] (-) TimerEvent: {}
+[5.113556] (-) TimerEvent: {}
+[5.213853] (-) TimerEvent: {}
+[5.314180] (-) TimerEvent: {}
+[5.414448] (-) TimerEvent: {}
+[5.484221] (odom_map_tum) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:11\x1b[m\x1b[K:\n'}
+[5.484388] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, std::string)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.484463] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:110:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kfloat x\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.484511] (odom_map_tum) StderrLine: {'line': b'  110 |             float \x1b[01;31m\x1b[Kx\x1b[m\x1b[K = odom_input.at(i).odom().position().x()+20;\n'}
+[5.484608] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.484661] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:107:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfloat x\x1b[m\x1b[K\xe2\x80\x99 previously declared here\n'}
+[5.484707] (odom_map_tum) StderrLine: {'line': b'  107 |             float \x1b[01;36m\x1b[Kx\x1b[m\x1b[K = odom_input.at(i).odom().position().x();\n'}
+[5.484748] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.484792] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:111:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kfloat y\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.484836] (odom_map_tum) StderrLine: {'line': b'  111 |             float \x1b[01;31m\x1b[Ky\x1b[m\x1b[K = odom_input.at(i).odom().position().y()+20;\n'}
+[5.484876] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.484916] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:108:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfloat y\x1b[m\x1b[K\xe2\x80\x99 previously declared here\n'}
+[5.484965] (odom_map_tum) StderrLine: {'line': b'  108 |             float \x1b[01;36m\x1b[Ky\x1b[m\x1b[K = odom_input.at(i).odom().position().y();\n'}
+[5.485005] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.485045] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:112:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kfloat z\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.485089] (odom_map_tum) StderrLine: {'line': b'  112 |             float \x1b[01;31m\x1b[Kz\x1b[m\x1b[K = odom_input.at(i).odom().position().z()+20;\n'}
+[5.485130] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.485168] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:109:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfloat z\x1b[m\x1b[K\xe2\x80\x99 previously declared here\n'}
+[5.485209] (odom_map_tum) StderrLine: {'line': b'  109 |             float \x1b[01;36m\x1b[Kz\x1b[m\x1b[K = odom_input.at(i).odom().position().z();\n'}
+[5.485254] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.486122] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:144:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kfloat x\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.486293] (odom_map_tum) StderrLine: {'line': b'  144 |             float \x1b[01;31m\x1b[Kx\x1b[m\x1b[K = odom_input.at(i).odom().position().x() + 10;\n'}
+[5.486342] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.486386] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:141:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfloat x\x1b[m\x1b[K\xe2\x80\x99 previously declared here\n'}
+[5.486435] (odom_map_tum) StderrLine: {'line': b'  141 |             float \x1b[01;36m\x1b[Kx\x1b[m\x1b[K = odom_input.at(i).odom().position().x();\n'}
+[5.486477] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.486518] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:145:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kfloat y\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.486562] (odom_map_tum) StderrLine: {'line': b'  145 |             float \x1b[01;31m\x1b[Ky\x1b[m\x1b[K = odom_input.at(i).odom().position().y() + 10;\n'}
+[5.486603] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.486643] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:142:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfloat y\x1b[m\x1b[K\xe2\x80\x99 previously declared here\n'}
+[5.486684] (odom_map_tum) StderrLine: {'line': b'  142 |             float \x1b[01;36m\x1b[Ky\x1b[m\x1b[K = odom_input.at(i).odom().position().y();\n'}
+[5.486724] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.486764] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:146:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredeclaration of \xe2\x80\x98\x1b[01m\x1b[Kfloat z\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.486807] (odom_map_tum) StderrLine: {'line': b'  146 |             float \x1b[01;31m\x1b[Kz\x1b[m\x1b[K = odom_input.at(i).odom().position().z() + 10;\n'}
+[5.486862] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[5.486902] (odom_map_tum) StderrLine: {'line': b'\x1b[01m\x1b[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:143:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfloat z\x1b[m\x1b[K\xe2\x80\x99 previously declared here\n'}
+[5.486942] (odom_map_tum) StderrLine: {'line': b'  143 |             float \x1b[01;36m\x1b[Kz\x1b[m\x1b[K = odom_input.at(i).odom().position().z();\n'}
+[5.486990] (odom_map_tum) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[5.514498] (-) TimerEvent: {}
+[5.614696] (-) TimerEvent: {}
+[5.714943] (-) TimerEvent: {}
+[5.815240] (-) TimerEvent: {}
+[5.915531] (-) TimerEvent: {}
+[6.015806] (-) TimerEvent: {}
+[6.116052] (-) TimerEvent: {}
+[6.216361] (-) TimerEvent: {}
+[6.316616] (-) TimerEvent: {}
+[6.416880] (-) TimerEvent: {}
+[6.517160] (-) TimerEvent: {}
+[6.617422] (-) TimerEvent: {}
+[6.717796] (-) TimerEvent: {}
+[6.818087] (-) TimerEvent: {}
+[6.918351] (-) TimerEvent: {}
+[7.018580] (-) TimerEvent: {}
+[7.118824] (-) TimerEvent: {}
+[7.219110] (-) TimerEvent: {}
+[7.319410] (-) TimerEvent: {}
+[7.419665] (-) TimerEvent: {}
+[7.519901] (-) TimerEvent: {}
+[7.620154] (-) TimerEvent: {}
+[7.720555] (-) TimerEvent: {}
+[7.820844] (-) TimerEvent: {}
+[7.921120] (-) TimerEvent: {}
+[8.021433] (-) TimerEvent: {}
+[8.121724] (-) TimerEvent: {}
+[8.222026] (-) TimerEvent: {}
+[8.322337] (-) TimerEvent: {}
+[8.422641] (-) TimerEvent: {}
+[8.522895] (-) TimerEvent: {}
+[8.623163] (-) TimerEvent: {}
+[8.723407] (-) TimerEvent: {}
+[8.823658] (-) TimerEvent: {}
+[8.923920] (-) TimerEvent: {}
+[9.024201] (-) TimerEvent: {}
+[9.124501] (-) TimerEvent: {}
+[9.224767] (-) TimerEvent: {}
+[9.325047] (-) TimerEvent: {}
+[9.425291] (-) TimerEvent: {}
+[9.525617] (-) TimerEvent: {}
+[9.625899] (-) TimerEvent: {}
+[9.726171] (-) TimerEvent: {}
+[9.826415] (-) TimerEvent: {}
+[9.926730] (-) TimerEvent: {}
+[10.027144] (-) TimerEvent: {}
+[10.127441] (-) TimerEvent: {}
+[10.227746] (-) TimerEvent: {}
+[10.328076] (-) TimerEvent: {}
+[10.428347] (-) TimerEvent: {}
+[10.528597] (-) TimerEvent: {}
+[10.579274] (odom_map_tum) StderrLine: {'line': b'make[2]: *** [CMakeFiles/odom_map_tum.dir/build.make:76: CMakeFiles/odom_map_tum.dir/src/local_map_on_odom.cpp.o] Error 1\n'}
+[10.579462] (odom_map_tum) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_tum.dir/all] Error 2\n'}
+[10.579553] (odom_map_tum) StderrLine: {'line': b'make: *** [Makefile:146: all] Error 2\n'}
+[10.580660] (odom_map_tum) CommandEnded: {'returncode': 2}
+[10.628729] (-) TimerEvent: {}
+[10.637505] (odom_map_tum) JobEnded: {'identifier': 'odom_map_tum', 'rc': 2}
+[10.647954] (-) EventReactorShutdown: {}

@@ -1,0 +1,11 @@
+[35m[1mConsolidate compiler generated dependencies of target odom_map_for_rviz[0m
+[  2%] [32mBuilding CXX object CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o[0m
+In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/src/local_map_on_odom.cpp:11[m[K:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/odom_publisher_for_rviz.hpp:[m[K In member function ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&)[m[K’:
+[01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/ChassisOdomMap/include/odom_publisher_for_rviz.hpp:73:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktf_publisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_[m[K’?
+   73 |         [01;31m[Ktf_publisher_[m[K->sendTransform(trans);
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+      |         [32m[Kpublisher_[m[K
+make[2]: *** [CMakeFiles/odom_map_for_rviz.dir/build.make:76: CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_for_rviz.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

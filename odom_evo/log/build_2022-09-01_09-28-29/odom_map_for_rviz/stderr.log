@@ -1,0 +1,5 @@
+[0mCMake Error: The current CMakeCache.txt directory /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_for_rviz/CMakeCache.txt is different than the directory /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/build/odom_map_for_rviz where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+/bin/sh: 1: cd: can't cd to /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/build/odom_map_for_rviz
+make[2]: *** [CMakeFiles/odom_map_for_rviz.dir/build.make:1433: CMakeFiles/odom_map_for_rviz.dir/depend] Error 2
+make[1]: *** [CMakeFiles/Makefile2:136: CMakeFiles/odom_map_for_rviz.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

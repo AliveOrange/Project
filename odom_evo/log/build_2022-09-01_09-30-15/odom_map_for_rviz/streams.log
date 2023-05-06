@@ -1,0 +1,67 @@
+[0.012s] Invoking command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_for_rviz': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_for_rviz -- -j16 -l16
+[0.032s] [35m[1mConsolidate compiler generated dependencies of target odom_map_for_rviz[0m
+[0.077s] [  2%] [32mBuilding CXX object CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o[0m
+[1.275s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_ins_subscriber_for_rviz.hpp:9[m[K,
+[1.275s]                  from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:10[m[K:
+[1.275s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+[1.275s]    60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+[1.275s]       |                                 [01;35m[K^[m[K
+[1.275s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kextra tokens at end of #include directive
+[1.315s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:13[m[K:
+[1.315s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_header.h:60:33:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+[1.315s]    60 | #include "nav_msgs/msg/path.hpp"[01;35m[K"[m[K
+[1.315s]       |                                 [01;35m[K^[m[K
+[4.850s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[4.850s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:[m[K In constructor ‘[01m[KOdomPublisher::OdomPublisher(std::shared_ptr<rclcpp::Node>&, std::string, size_t)[m[K’:
+[4.850s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:47:37:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K;[m[K’ token
+[4.850s]    47 |     trans.transform.translation.y = [01;31m[K;[m[K
+[4.851s]       |                                     [01;31m[K^[m[K
+[4.851s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:48:37:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K;[m[K’ token
+[4.851s]    48 |     trans.transform.translation.z = [01;31m[K;[m[K
+[4.851s]       |                                     [01;31m[K^[m[K
+[4.851s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:49:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K;[m[K’ token
+[4.851s]    49 |     trans.transform.rotation.x = [01;31m[K;[m[K
+[4.851s]       |                                  [01;31m[K^[m[K
+[4.851s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:50:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K;[m[K’ token
+[4.851s]    50 |     trans.transform.rotation.y = [01;31m[K;[m[K
+[4.851s]       |                                  [01;31m[K^[m[K
+[4.851s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:51:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K;[m[K’ token
+[4.851s]    51 |     trans.transform.rotation.z = [01;31m[K;[m[K
+[4.851s]       |                                  [01;31m[K^[m[K
+[4.851s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:52:34:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K;[m[K’ token
+[4.851s]    52 |     trans.transform.rotation.w = [01;31m[K;[m[K
+[4.852s]       |                                  [01;31m[K^[m[K
+[4.852s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:[m[K At global scope:
+[4.852s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:55:73:[m[K [01;31m[Kerror: [m[K‘[01m[Kstdd[m[K’ has not been declared
+[4.852s]    55 | void OdomPublisher::Publish(std::deque<odom::proto::Frame> &odom_input, [01;31m[Kstdd[m[K::string odom_source)
+[4.852s]       |                                                                         [01;31m[K^~~~[m[K
+[4.852s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:55:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&, int)[m[K’
+[4.852s]    55 | void [01;31m[KOdomPublisher[m[K::Publish(std::deque<odom::proto::Frame> &odom_input, stdd::string odom_source)
+[4.852s]       |      [01;31m[K^~~~~~~~~~~~~[m[K
+[4.852s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:22:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&)[m[K’
+[4.852s]    22 |     void [01;36m[KPublish[m[K(std::deque<odom::proto::Frame> &odom_input);
+[4.852s]       |          [01;36m[K^~~~~~~[m[K
+[4.852s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:11:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass OdomPublisher[m[K’ defined here
+[4.852s]    11 | class [01;36m[KOdomPublisher[m[K
+[4.852s]       |       [01;36m[K^~~~~~~~~~~~~[m[K
+[4.862s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[4.862s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:33:78:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KOdomPublisher::Publish(std::deque<odom::proto::Frame>&, const char [13])[m[K’
+[4.863s]    33 |             odom_publisher_chassis->Publish(odom_frame_chassis,"chassis_odom"[01;31m[K)[m[K;
+[4.863s]       |                                                                              [01;31m[K^[m[K
+[4.863s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[4.863s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:22:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&)[m[K’
+[4.863s]    22 |     void [01;36m[KPublish[m[K(std::deque<odom::proto::Frame> &odom_input);
+[4.863s]       |          [01;36m[K^~~~~~~[m[K
+[4.863s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:22:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[4.863s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:38:66:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KOdomPublisher::Publish(std::deque<odom::proto::Frame>&, const char [9])[m[K’
+[4.863s]    38 |             odom_publisher_ins->Publish(odom_frame_ins,"ins_odom"[01;31m[K)[m[K;
+[4.863s]       |                                                                  [01;31m[K^[m[K
+[4.863s] In file included from [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/src/local_map_on_odom.cpp:12[m[K:
+[4.863s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:22:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid OdomPublisher::Publish(std::deque<odom::proto::Frame>&)[m[K’
+[4.863s]    22 |     void [01;36m[KPublish[m[K(std::deque<odom::proto::Frame> &odom_input);
+[4.863s]       |          [01;36m[K^~~~~~~[m[K
+[4.863s] [01m[K/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/include/odom_publisher_for_rviz.hpp:22:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[9.385s] make[2]: *** [CMakeFiles/odom_map_for_rviz.dir/build.make:76: CMakeFiles/odom_map_for_rviz.dir/src/local_map_on_odom.cpp.o] Error 1
+[9.386s] make[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/odom_map_for_rviz.dir/all] Error 2
+[9.386s] make: *** [Makefile:146: all] Error 2
+[9.387s] Invoked command in '/home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_for_rviz' returned '2': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/local/bin/cmake --build /home/baixiaobo/work/chassiss_odom_ws/ros2_for_rviz/odom_evo/build/odom_map_for_rviz -- -j16 -l16

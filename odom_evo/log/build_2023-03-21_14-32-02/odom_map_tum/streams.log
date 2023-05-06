@@ -1,0 +1,28 @@
+[0.011s] Invoking command in '/home/alex/Documents/odom_evo/build/odom_map_tum': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/alex/Documents/odom_evo -DCMAKE_INSTALL_PREFIX=/home/alex/Documents/odom_evo/install/odom_map_tum
+[0.104s] -- The C compiler identification is GNU 9.4.0
+[0.179s] -- The CXX compiler identification is GNU 9.4.0
+[0.183s] -- Check for working C compiler: /usr/bin/cc
+[0.237s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.238s] -- Detecting C compiler ABI info
+[0.287s] -- Detecting C compiler ABI info - done
+[0.297s] -- Detecting C compile features
+[0.297s] -- Detecting C compile features - done
+[0.298s] -- Check for working CXX compiler: /usr/bin/c++
+[0.356s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.357s] -- Detecting CXX compiler ABI info
+[0.412s] -- Detecting CXX compiler ABI info - done
+[0.420s] -- Detecting CXX compile features
+[0.420s] -- Detecting CXX compile features - done
+[0.646s] -- Could NOT find Protobuf (missing: Protobuf_INCLUDE_DIR) 
+[0.648s] CMake Error at /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:146 (message):
+[0.649s]   Could NOT find Protobuf (missing: Protobuf_INCLUDE_DIR)
+[0.649s] Call Stack (most recent call first):
+[0.649s]   /usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake:393 (_FPHSA_FAILURE_MESSAGE)
+[0.649s]   /usr/share/cmake-3.16/Modules/FindProtobuf.cmake:624 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+[0.649s]   CMakeLists.txt:34 (find_package)
+[0.649s] 
+[0.649s] 
+[0.649s] -- Configuring incomplete, errors occurred!
+[0.649s] See also "/home/alex/Documents/odom_evo/build/odom_map_tum/CMakeFiles/CMakeOutput.log".
+[0.649s] See also "/home/alex/Documents/odom_evo/build/odom_map_tum/CMakeFiles/CMakeError.log".
+[0.652s] Invoked command in '/home/alex/Documents/odom_evo/build/odom_map_tum' returned '1': CMAKE_PREFIX_PATH=/opt/ros/galactic /usr/bin/cmake /home/alex/Documents/odom_evo -DCMAKE_INSTALL_PREFIX=/home/alex/Documents/odom_evo/install/odom_map_tum

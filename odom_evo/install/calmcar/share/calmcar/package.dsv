@@ -1,0 +1,11 @@
+source;share/calmcar/hook/cmake_prefix_path.ps1
+source;share/calmcar/hook/cmake_prefix_path.dsv
+source;share/calmcar/hook/cmake_prefix_path.sh
+source;share/calmcar/hook/ld_library_path_lib.ps1
+source;share/calmcar/hook/ld_library_path_lib.dsv
+source;share/calmcar/hook/ld_library_path_lib.sh
+source;share/calmcar/local_setup.bash
+source;share/calmcar/local_setup.dsv
+source;share/calmcar/local_setup.ps1
+source;share/calmcar/local_setup.sh
+source;share/calmcar/local_setup.zsh

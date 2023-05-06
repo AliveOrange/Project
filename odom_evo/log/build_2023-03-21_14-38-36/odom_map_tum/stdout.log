@@ -1,0 +1,4 @@
+-- Could NOT find Protobuf (missing: Protobuf_INCLUDE_DIR) 
+-- Configuring incomplete, errors occurred!
+See also "/home/alex/Documents/odom_evo/build/odom_map_tum/CMakeFiles/CMakeOutput.log".
+See also "/home/alex/Documents/odom_evo/build/odom_map_tum/CMakeFiles/CMakeError.log".
