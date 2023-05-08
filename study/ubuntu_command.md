@@ -1,5 +1,16 @@
 http://172.18.1.11/CpApPosToEHP/CpApOdom.git
 
+**export命令可用于显示或设置环境变量**
+
+实例1：显示当前所有的环境变量
+```s
+$ export -p
+```
+实例2：设置环境变量
+```s
+$ export PATH=$PATH:/home/dabai/test/bin
+```
+
 ##vpn
 https://v2raya.org/
 

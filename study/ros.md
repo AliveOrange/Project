@@ -7,8 +7,8 @@ html:
 ```
 wget http://fishros.com/install -O fishros && . fishros 
 ```
-安装两个ros版本时每次启动终端都要选择。
-这里可以把这几行全注释掉，把（2）的source复制一行。就不用每次选择了。但是要使用到另一个版本就要手动改了。
+==安装两个ros版本时每次启动终端都要选择。==
+这里可以根目录中.bashrc文件里把这几行全注释掉，把（1）或（2）的source复制一行。就不用每次选择了。但是要使用到另一个版本就要手动改了。
 ![](images/2023-04-23-14-59-47.png)
 ![](images/2023-04-21-14-45-25.png)
 安装g++是c++的编译环境
@@ -761,3 +761,8 @@ rosrun learning_parameter parameter_config
     }
 ```
 **每次调用ros::spinOnce()都会执行与消息队列中缓存的信息数量相同次数的回调函数，只要回调函数执行够快的话，就能清空队列**
+## 启动rviz
+```
+ros core
+rosrun rviz rviz
+```
