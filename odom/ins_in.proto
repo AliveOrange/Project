@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+package ins_in.proto;
+
+message Ins {
+  message AngularVelocity{                      
+    double x = 1;
+    double y = 2;
+    double z = 3;
+  }
+  message LinearAcceleration{
+    double x = 1;
+    double y = 2;
+    double z = 3;
+  }
+  message Orientation{
+    double pitch = 1;
+    double roll = 2;
+    double heading = 3;
+  }
+  message Position{
+    double latitude = 1;
+    double longitude = 2;
+    double altitude = 3;
+  }
+  message Speed{
+    double east_spd = 1;
+    double north_spd = 2;
+    double to_ground_spd = 3;
+  }
+  message DataInfo{
+    uint32 gnss_age = 1;
+    uint32 car_status = 2;
+    uint32 gnss_flag_heading = 3;
+    uint32 num_sv = 4;
+    uint32 gnss_flag_pos = 5;
+    uint32 status = 6;
+  }
+  message Std{
+    double latitude_std = 1;
+    double longitude_std = 2;
+    double altitude_std = 3;
+    double heading_std = 4;
+  }
+  AngularVelocity angular_velocity = 1;
+  LinearAcceleration linear_acceleration = 2;
+  Orientation orientation = 3;
+  Position position = 4;
+  Speed speed = 5;
+  DataInfo data_info = 6;
+  Std std = 7;
+}
+
+message Frame{
+  message Header{       
+    uint32 ins_id = 1;                     //ins设备ID                  
+    uint64 timestamp = 2;                  //未使用
+    uint64 rolling_counter = 3;            //ins帧计数器
+    string frame_id = 4;
+  }                    
+  Header header = 1; 
+  uint64 sys_timestamp = 2;                //CAN转发的时候调用的系统时间            
+  Ins ins = 3;
+}

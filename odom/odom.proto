@@ -1,0 +1,85 @@
+syntax = "proto3";
+
+package odom.proto;
+
+message Odom {
+  message Position{
+    double x = 1;                       //单位：米
+    double y = 2;
+    double z = 3;
+  }
+  message PositionStd{
+    double x_std = 1;
+    double y_std = 2;
+    double z_std = 3;
+  }
+  message PoseQuaternion{
+    double w = 1;
+    double x = 2;
+    double y = 3;
+    double z = 4;
+  }
+  message PoseStd{
+    double roll_std  = 1;               //单位：deg
+    double pitch_std = 2;
+    double yaw_std   = 3;
+  }
+  message AngleSpeed{
+    double roll  = 1;                   //单位：deg/s
+    double pitch = 2;
+    double yaw   = 3;
+  }
+  message AngleSpeedStd{
+    double roll_std  = 1;
+    double pitch_std = 2;
+    double yaw_std   = 3;
+  }
+  message LinearSpeed{
+    double x = 1;                       //单位：m/s
+    double y = 2;
+    double z = 3;
+    double vehicle_speed = 4;
+  }
+  message LinearSpeedStd{
+    double x_std = 1;
+    double y_std = 2;
+    double z_std = 3;
+    double vehicle_speed_std = 4;
+  }
+  message TransformMatrix{                //变换矩阵
+    int32 rows           = 1;             //维度：4
+    int32 columns        = 2;             //维度：4
+    repeated double data = 3;             //{r,t} 4X4矩阵    
+  }
+  Position position                 = 1;
+  PositionStd position_std          = 2;
+  PoseQuaternion pose_quaternion    = 3;
+  PoseStd pose_std                  = 4;
+  AngleSpeed angle_speed            = 5;
+  AngleSpeedStd angle_speed_std     = 6;
+  LinearSpeed linear_speed          = 7;
+  LinearSpeedStd linear_speed_std   = 8;
+  TransformMatrix transform_matrix  = 9;
+}
+
+enum OdomId {
+  ODOM_CHASSIS = 0;
+  ODOM_INS = 1;
+}
+
+message Frame{
+  message Header{    
+    OdomId odom_id             = 1;            //odomID, eg:chassis_id:1  ins_odom_id:2                  
+    uint64 sys_timestamp       = 2;            //域控系统时间
+    uint64 rolling_counter     = 3;            //帧计数器
+    string frame_id            = 4;            //odom所属坐标系 topic_name ,chassis_odom or ins_odom
+    uint64 ins_utm_timestamp   = 5;            //惯导utm数据时间，底盘odom没有utm时间,默认为系统时间
+  }       
+  message Info{       
+    bool status            = 1;            //定位状态，true：信号有效/可用，但定位精度要看confidence和std评价，false：信号不可用，
+    double confidence      = 2; 
+  }                 
+  Header header            = 1; 
+  Info info                = 2;
+  Odom odom                = 3;
+}
