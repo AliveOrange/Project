@@ -29,7 +29,7 @@ cdp_dh remove
 cdp_dh run
 
 
-## 缺少yaml文件
+## rviz不显示rosbag文件,缺少yaml文件,
 ros2 bag reindex rosbag2_2023_03_29-14_27_34/ sqlite3  
 
 ##启动RoadTestAnalysis
