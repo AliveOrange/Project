@@ -1,1 +1,0 @@
-终端输入ghci进入haskell
