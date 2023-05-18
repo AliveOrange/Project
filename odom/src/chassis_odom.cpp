@@ -1,20 +1,26 @@
 /***
  * @Author       : baixiaobo
  * @Date         : 2022-06-28 13:02:42
- * @LastEditTime : 2022-07-10 20:41:56
+ * @LastEditTime : 2022-07-10 20:41:56/home/donghao/Documents/project/odom/src/common_odom.h
  * @Description  : 轮速里程计 100Hz
  * @FilePath     : /chassis_odom_map_ws/src/chassis_odom/src/include/wheel_speed_odom.hpp
  */
-#pragma once
+#pragma once                 //为了避免一个头文件被引用多次，与ifndef类似
 
 #include "common_odom.h"
 
-class ChassisDeadReckoning
+class ChassisDeadReckoning            //底盘 。。清算
 {
 public:
     ChassisDeadReckoning(double distance_f2r, double distance_fr2l, double distance_rr2l,
                          double r_rrw, double r_rlw, double r_frw, double r_flw,
                          double front_wheel_weight, double rear_wheel_weight, double steer_transmission_ratio,double yaw_rate_bias);
+/*
+这段代码是ChassisDeadReckoning类的构造函数。它接受11个参数并将它们赋值给类。
+逐步解说:
+1. 关键字“public:”表示其他类可以访问此构造函数。
+2. 构造函数接受11个参数。
+*/
     ChassisDeadReckoning() = default;
     struct Pose delta_dr_transform;                             //增量RT
     struct Pose last_dr_transform;                              //上帧RT
@@ -22,8 +28,8 @@ public:
     struct Pose result_dr_transform;                            // DR递推结果：相对初始位置世界坐标系下当前帧位置/姿态/速度
     struct VcuVehicleInfo vcu_vehicle_info;                     //底盘信号：时间戳、后轮轮速、角速度yaw/roll,档位，底盘车速
     std::deque<Calmcar::drivers::CHASIS::Chasis> chassis_queue; // CAN输入信号序列
-    std::deque<odom::proto::Frame> chassis_odom_queue;          //底盘里程计序列
-    std::deque<odom::proto::Frame> new_chassis_odom_queue;      //底盘里程计序列
+    std::deque<odom::proto::Frame> chassis_odom_queue;          //底盘里程计序列                     proto文件在此处
+    std::deque<odom::proto::Frame> new_chassis_odom_queue;      //底盘里程计序列			为何有两个？？？？？？？？？
     void DeadReckoningWithChassis();
     void delta_angle_to_rotation_matrix(Pose &delta_dr_transform);
     bool publish_chassis_odom(std::string type);

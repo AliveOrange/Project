@@ -1,0 +1,56 @@
+# ## VERSION 1
+# main: positionRelation.cpp point.cpp circle.cpp
+# 	g++ -o main positionRelation.cpp point.cpp circle.cpp
+
+# ## VERSION 2
+# CXX = g++
+# TARGET = main
+# OBJ = positionRelation.o point.o circle.o
+# $(TARGET): $(OBJ)               ##如果OBJ更新就会执行下面的编译。
+# 	$(CXX) -o $(TARGET) $(OBJ)
+
+# positionRelation.o :positionRelation.cpp
+# 	$(CXX) -c positionRelation.cpp
+
+# point.o: point.cpp
+# 	$(CXX) -c point.cpp
+
+# # circle.o: circle.cpp
+# # 	$(CXX) -c circle.cpp
+# ## VERSION 3
+# CXX = g++
+# TARGET = main
+# OBJ = positionRelation.o point.o circle.o
+
+# CXXFLAGS = -c -Wall
+
+# $(TARGET): $(OBJ)               ##如果OBJ更新就会执行下面的编译。
+# 	$(CXX) -o $@ $^             
+
+# %.o : %.cpp
+# 	$(CXX) $(CXXFLAGS) $< -o $@
+
+# .PHONY:clean
+# clean:
+# 	rm -f *.o $(TARGET)
+# ## $@表示的就是：前面的，$^表示：之后的依赖
+# ## ^代表依赖里所有的 <代表依赖里的第一个
+# ## .PHONY:clean 防止目录下有个名为clean的文件
+# ## -Wall warn all全部警告
+## VERSION 4
+CXX = g++
+TARGET = main
+SRC = $(wildcard *.cpp)
+OBJ = $(patsubst %.cpp, %.o, $)
+
+CXXFLAGS = -c -Wall
+
+$(TARGET): $(OBJ)               
+	$(CXX) -o $@ $^             
+
+%.o : %.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@
+
+.PHONY:clean
+clean:
+	rm -f *.o $(TARGET)

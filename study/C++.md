@@ -5784,12 +5784,290 @@ int main()
 设计一个圆形类（Circle），和一个点类（Point），计算点和圆的关系。
 
 本练习了解1.(在类中可以让另一个类作为本类的成员)
-		2.拆解文件
+		2.将不同类拆解成不同文件
 
 ![1545533829184](assets/1545533829184.png)
+```c++
+#include <iostream> 
+#include <string>
+using namespace std;
+
+//点的类
+class Point
+{
+public:
+//设置访问x坐标
+	void setm_x(int x)
+	{
+		m_x = x;
+	}
+	int getm_x()
+	{
+		return m_x;
+	}
+//设置访问y坐标
+	void setm_y(int y)
+	{
+		m_y = y;
+	}
+	int getm_y()
+	{
+		return m_y;
+	}
+private:
+	int m_x;
+	int m_y;
+};
+
+//圆的类
+class Circle
+{
+public:
+//设置访问圆的半径
+	void setm_r(int r)
+	{
+		m_r = r;
+	}
+	int getm_r()
+	{
+		return m_r;
+	}
+//设置访问圆的圆点
+	void setm_center(Point center)
+	{
+		m_center = center;
+	}
+	Point getm_center()
+	{
+		return m_center;
+	}
+private:
+	int m_r;
+	Point m_center;
+};
+
+//判断点与圆的位置关系
+void PositionRelation(Circle &c, Point &p )
+{	
+
+	int distance = (c.getm_center().getm_x() - p.getm_x())*(c.getm_center().getm_x() - p.getm_x())
+	 + (c.getm_center().getm_y() - p.getm_y())*(c.getm_center().getm_y() - p.getm_y());
+	cout<<distance<<endl;
+	int RR = c.getm_r()*c.getm_r();     
+	//千万要注意在c++中幂函数不能写成x^2这种，这里卡了一个小时。可以用math.h的库函数pow ；格式：int pow（int a，int b）
+
+	if (distance == RR)
+		{
+			cout << "点在圆上" << endl;
+		}
+	if (distance > RR)
+		{
+			cout << "点在圆外" << endl;
+		}
+	if (distance < RR)
+		{
+			cout << "点在圆内" << endl;
+		}
+}
+int main()
+{	
+	Point p1;
+	p1.setm_x(10);
+	p1.setm_y(10);
+	Point p2;
+	p2.setm_x(10);
+	p2.setm_y(0);
+	Circle c1;
+	c1.setm_center(p2);
+	c1.setm_r(10);
+
+	PositionRelation(c1,p1);
+
+	return 0;
+
+
+}
+```
+**将不同类拆解成不同文件**
+这里一共有五个文件分别是1.point_circle.cpp 2.circle.h 3.circle.cpp 4.point.h
+5.point.cpp
+```c++
+#include <iostream> 
+#include <string>
+#include "point.h"
+#include "circle.h"
+using namespace std;
+
+//判断点与圆的位置关系
+void PositionRelation(Circle &c, Point &p )
+{	
+
+	int distance = (c.getm_center().getm_x() - p.getm_x())*(c.getm_center().getm_x() - p.getm_x())
+	 + (c.getm_center().getm_y() - p.getm_y())*(c.getm_center().getm_y() - p.getm_y());
+	cout<<distance<<endl;
+	int RR = c.getm_r()*c.getm_r();     
+	//千万要注意在c++中幂函数不能写成x^2这种，这里卡了一个小时。可以用math.h的库函数pow ；格式：int pow（int a，int b）
+
+	if (distance == RR)
+		{
+			cout << "点在圆上" << endl;
+		}
+	if (distance > RR)
+		{
+			cout << "点在圆外" << endl;
+		}
+	if (distance < RR)
+		{
+			cout << "点在圆内" << endl;
+		}
+}
+int main()
+{	
+	Point p1;
+	p1.setm_x(10);
+	p1.setm_y(10);
+	Point p2;
+	p2.setm_x(10);
+	p2.setm_y(0);
+	Circle c1;
+	c1.setm_center(p2);
+	c1.setm_r(10);
+
+	PositionRelation(c1,p1);
+
+	return 0;
+
+
+}
+```
+```c++
+#pragma once
+#include <iostream>
+#include "point.h"
+using namespace std;
 
 
 
+
+//圆的类
+class Circle
+{
+public:
+//设置访问圆的半径
+	void setm_r(int r);
+
+	int getm_r();
+
+//设置访问圆的圆点
+	void setm_center(Point center);
+
+	Point getm_center();
+
+private:
+	int m_r;
+	Point m_center;
+};
+```
+```c++
+#pragma once
+#include <iostream>
+#include "point.h"
+using namespace std;
+
+
+
+
+//圆的类
+class Circle
+{
+public:
+//设置访问圆的半径
+	void setm_r(int r);
+
+	int getm_r();
+
+//设置访问圆的圆点
+	void setm_center(Point center);
+
+	Point getm_center();
+
+private:
+	int m_r;
+	Point m_center;
+};
+```
+```c++
+#include "circle.h"
+
+
+//设置访问圆的半径
+void Circle::setm_r(int r)
+{
+    m_r = r;
+}
+int Circle::getm_r()
+{
+    return m_r;
+}
+//设置访问圆的圆点
+void Circle::setm_center(Point center)
+{
+    m_center = center;
+}
+Point Circle::getm_center()
+{
+    return m_center;
+}
+
+```
+```c++
+#pragma once
+#include <iostream>
+using namespace std;
+
+class Point
+{
+public:
+//设置访问x坐标
+	void setm_x(int x);
+
+	int getm_x();
+
+//设置访问y坐标
+	void setm_y(int y);
+
+	int getm_y();
+
+private:
+	int m_x;
+	int m_y;
+};
+
+```
+```c++
+#include "point.h"
+
+
+//只需要留下成员函数的实现即可
+void Point::setm_x(int x)
+{
+    m_x = x;
+}
+int Point::getm_x()
+{
+    return m_x;
+}
+
+void Point::setm_y(int y)
+{
+    m_y = y;
+}
+int Point::getm_y()
+{
+    return m_y;
+}
+```
+运行时可对源文件进行编译生成可执行文件。
 
 
 
