@@ -6131,35 +6131,39 @@ c++利用了**构造函数**和**析构函数**解决上述问题，这两个函
 
 
 ```C++
+#include <iostream> 
+using namespace std;
+
+//对象的初始化和清理
+//1、构造函数 进行初始化操作
 class Person
 {
 public:
-	//构造函数
 	Person()
 	{
-		cout << "Person的构造函数调用" << endl;
+		cout <<"这是一个构造函数"<< endl;
 	}
-	//析构函数
 	~Person()
 	{
-		cout << "Person的析构函数调用" << endl;
+		cout << "这是一个析构函数的调用" << endl;
 	}
-
+//构造函数和析构函数都是必须有的实现，如果我们自己不提供，编译器会提供一个空实现的构造和析构
 };
 
 void test01()
 {
-	Person p;
+	Person p;         //在栈上的数据，test01执行完毕后，释放这个对象
 }
 
-int main() {
-	
-	test01();
-
-	system("pause");
+int main()
+{	
+	Person p1;
+//如果是Windows系统用system（“pause”）可以看到系统没有调用析构函数，因为这个main函数不执行完毕不会释放栈区的变量。
+	// //test01();            
 
 	return 0;
 }
+
 ```
 
 
@@ -6176,7 +6180,7 @@ int main() {
 
 两种分类方式：
 
-​	按参数分为： 有参构造和无参构造
+​	按参数分为： 有参构造和无参构造（默认构造，默认构造的函数无参数）
 
 ​	按类型分为： 普通构造和拷贝构造
 
@@ -6197,66 +6201,68 @@ int main() {
 // 按照参数分类分为 有参和无参构造   无参又称为默认构造函数
 // 按照类型分类分为 普通构造和拷贝构造
 
-class Person {
+#include <iostream> 
+using namespace std;
+
+
+class Person
+{
 public:
-	//无参（默认）构造函数
-	Person() {
-		cout << "无参构造函数!" << endl;
+	Person()
+	{
+		cout << "这是一个无参构造函数" << endl;
 	}
-	//有参构造函数
-	Person(int a) {
+	Person(int a)
+	{	
 		age = a;
-		cout << "有参构造函数!" << endl;
+		cout << "这是一个有参构造函数" << endl;
 	}
 	//拷贝构造函数
-	Person(const Person& p) {
+	Person(const Person &p)
+	{	
+		//将传入的人身上的所有属性，copy到我身上,记住这个结构，用到const是因为这个不能随意改变。
 		age = p.age;
-		cout << "拷贝构造函数!" << endl;
+		cout << "这是一个拷贝构造" << endl;
 	}
-	//析构函数
-	~Person() {
-		cout << "析构函数!" << endl;
+	~Person() 
+	{
+		cout << "这是一个析构函数!" << endl;
 	}
-public:
 	int age;
 };
 
-//2、构造函数的调用
-//调用无参构造函数
-void test01() {
-	Person p; //调用无参构造函数
+void test02()
+{	
+	// //1.括号法 
+	// Person p1;         //如果不输入参数，默认构造函数调用无参构造函数
+	// Person p2(10);     //传入参数就会调用有参构造函数
+	//Person p3(p2);		//当传入一个当前类的对象时，调用拷贝构造函数
+	// cout <<"p2的年龄为:"<< p2.age << endl;
+	// cout <<"p3的年龄为:"<< p3.age << endl;    //这里p3拷贝的p2的属性，所以年龄也为10；
+	// //注意调用构造函数时，不要加（）；比如上面p1后加（）写成Person p1();会被系统认为是一个函数的声明。
+	
+	
+	//2.显示法
+	// Person p1;
+	// Person p2 = Person(10); //有参构造
+	// Person p3 = Person(p2); //拷贝构造
+	//Person(10);               //匿名对象 特点：当前行执行结束后，系统会立即回收掉匿名对象
+	//注意事项2 不要利用拷贝构造函数初始化匿名对象
+	//Person(p3);   //编译器会认为这是一个对象声明 和上面的Person p3(p2)重复了
+
+
+	//3.隐式转换法
+	Person p4 = 10; //相当于写了Person p4 = Person(10);
+	Person p5 = p4; //拷贝构造
+	
 }
 
-//调用有参的构造函数
-void test02() {
+int main()
+{	
 
-	//2.1  括号法，常用
-	Person p1(10);
-	//注意1：调用无参构造函数不能加括号，如果加了编译器认为这是一个函数声明
-	//Person p2();
-
-	//2.2 显式法
-	Person p2 = Person(10); 
-	Person p3 = Person(p2);
-	//Person(10)单独写就是匿名对象  当前行结束之后，马上析构
-
-	//2.3 隐式转换法
-	Person p4 = 10; // Person p4 = Person(10); 
-	Person p5 = p4; // Person p5 = Person(p4); 
-
-	//注意2：不能利用 拷贝构造函数 初始化匿名对象 编译器认为是对象声明
-	//Person p5(p4);
-}
-
-int main() {
-
-	test01();
-	//test02();
-
-	system("pause");
-
+	test02();
 	return 0;
-}
+} 
 ```
 
 
@@ -6320,7 +6326,7 @@ void test01() {
 void doWork(Person p1) {}
 void test02() {
 	Person p; //无参构造函数
-	doWork(p);
+	doWork(p);  //这里会调用拷贝构造函数，因为值传递的过程其实就是copy出一份放在内存里，地址传递不会copy
 }
 
 //3. 以值方式返回局部对象
@@ -6328,7 +6334,7 @@ Person doWork2()
 {
 	Person p1;
 	cout << (int *)&p1 << endl;
-	return p1;
+	return p1;          //这里会调用拷贝函数 因为上面的p1是局部变量 
 }
 
 void test03()
@@ -6368,10 +6374,10 @@ int main() {
 
 构造函数调用规则如下：
 
-* 如果用户定义有参构造函数，c++不在提供默认无参构造，但是会提供默认拷贝构造
+* **如果用户定义有参构造函数，c++不在提供默认无参构造，但是会提供默认拷贝构造**
 
 
-* 如果用户定义拷贝构造函数，c++不会再提供其他构造函数
+* **如果用户定义拷贝构造函数，c++不会再提供其他构造函数**
 
 
 
@@ -6405,7 +6411,7 @@ public:
 void test01()
 {
 	Person p1(18);
-	//如果不写拷贝构造，编译器会自动添加拷贝构造，并且做浅拷贝操作
+	//如果不写拷贝构造，编译器会自动添加拷贝构造，并且做浅拷贝操作（所有的属性都做了赋值操作）
 	Person p2(p1);
 
 	cout << "p2的年龄为： " << p2.age << endl;
@@ -6414,7 +6420,7 @@ void test01()
 void test02()
 {
 	//如果用户提供有参构造，编译器不会提供默认构造，会提供拷贝构造
-	Person p1; //此时如果用户自己没有提供默认构造，会出错
+	Person p1; //此时如果用户自己没有提供默认构造（提供了有参构造），会出错
 	Person p2(10); //用户提供的有参
 	Person p3(p2); //此时如果用户没有提供拷贝构造，编译器会提供
 
@@ -6454,7 +6460,7 @@ int main() {
 
 
 
-深拷贝：在堆区重新申请空间，进行拷贝操作
+深拷贝：**在堆区重新申请空间，进行拷贝操作**
 
 
 
@@ -6481,6 +6487,7 @@ public:
 		cout << "拷贝构造函数!" << endl;
 		//如果不利用深拷贝在堆区创建新内存，会导致浅拷贝带来的重复释放堆区问题
 		m_age = p.m_age;
+		m_height = p.m_height;  //浅拷贝 在多次调用析构函数释放数据时会报错。
 		m_height = new int(*p.m_height);
 		
 	}
@@ -6488,6 +6495,7 @@ public:
 	//析构函数
 	~Person() {
 		cout << "析构函数!" << endl;
+		//析构代码，将对去开辟的数据做释放
 		if (m_height != NULL)
 		{
 			delete m_height;
@@ -6549,7 +6557,7 @@ C++提供了初始化列表语法，用来初始化属性
 class Person {
 public:
 
-	////传统方式初始化
+	////传统方式初始化（构造函数做初始化）
 	//Person(int a, int b, int c) {
 	//	m_A = a;
 	//	m_B = b;
@@ -6609,7 +6617,7 @@ B类中有对象A作为成员，A为对象成员
 
 
 
-那么当创建B对象时，A与B的构造和析构的顺序是谁先谁后？
+那么当创建B对象时，A与B的构造和析构的顺序是谁先谁后？==(这有什么实际应用呢)==
 
 
 
@@ -6699,11 +6707,11 @@ int main() {
 
 
 *  静态成员变量
-   *  所有对象共享同一份数据
+   *  **所有对象共享同一份数据**
    *  在编译阶段分配内存
    *  类内声明，类外初始化
 *  静态成员函数
-   *  所有对象共享同一个函数
+   *  ==所有对象共享同一个函数==？？？
    *  静态成员函数只能访问静态成员变量
 
 
@@ -6744,7 +6752,7 @@ void test01()
 
 	Person p2;
 	p2.m_A = 200;
-	cout << "p1.m_A = " << p1.m_A << endl; //共享同一份数据
+	cout << "p1.m_A = " << p1.m_A << endl; //共享同一份数据，所以这里会打印200
 	cout << "p2.m_A = " << p2.m_A << endl;
 
 	//2、通过类名
@@ -6781,7 +6789,7 @@ public:
 	static void func()
 	{
 		cout << "func调用" << endl;
-		m_A = 100;
+		m_A = 100;   //共享数据 并不需要实例化对象
 		//m_B = 100; //错误，不可以访问非静态成员变量
 	}
 
@@ -6800,7 +6808,7 @@ int Person::m_A = 10;
 
 void test01()
 {
-	//静态成员变量两种访问方式
+	//静态成员函数两种访问方式
 
 	//1、通过对象
 	Person p1;
@@ -6810,7 +6818,7 @@ void test01()
 	Person::func();
 
 
-	//Person::func2(); //私有权限访问不到
+	//Person::func2(); //私有权限，类外访问不到
 }
 
 int main() {
@@ -6866,7 +6874,9 @@ public:
 
 int main() {
 
-	cout << sizeof(Person) << endl;
+	cout << sizeof(Person) << endl;//空对象占一个字节，上述不是空对象，有一个非静态成员int，因此分配4个字节，有多个成员就依次累加计算。
+//c++编译器为每个空对象也分配一个字节空间，是为了区分空对象占内存的位置
+//每个空对象也应该有一个独一无二的内存地址
 
 	system("pause");
 
@@ -6906,6 +6916,9 @@ this指针的用途：
 *  在类的非静态成员函数中返回对象本身，可使用return *this
 
 ```C++
+#include <iostream> 
+using namespace std;
+
 class Person
 {
 public:
@@ -6913,10 +6926,12 @@ public:
 	Person(int age)
 	{
 		//1、当形参和成员变量同名时，可用this指针来区分
+
 		this->age = age;
 	}
 
-	Person& PersonAddPerson(Person p)
+	Person& PersonAddPerson(Person p) 
+	//返回对象本身要用返回引用的方式，如果这里返回Person是返回值的方式，相当于创建了一个新对象
 	{
 		this->age += p.age;
 		//返回对象本身
@@ -6930,10 +6945,12 @@ void test01()
 {
 	Person p1(10);
 	cout << "p1.age = " << p1.age << endl;
+	// this指针指向 被调用的成员函数 所属的对象
 
 	Person p2(10);
 	p2.PersonAddPerson(p1).PersonAddPerson(p1).PersonAddPerson(p1);
-	cout << "p2.age = " << p2.age << endl;
+	//这里函数调用之后返回的是对象本身，因此可以继续调用函数
+	cout << "p2.age = " << p2.age << endl; //cout也是调用之后可以追加调用
 }
 
 int main() {
@@ -6981,7 +6998,7 @@ public:
 		if (this == NULL) {
 			return;
 		}
-		cout << mAge << endl;
+		cout << mAge << endl; //每一个函数调用的成员变量前面都默认有this->指针，只是被省略了。
 	}
 
 public:
@@ -7019,7 +7036,7 @@ int main() {
 
 **常函数：**
 
-* 成员函数后加const后我们称为这个函数为**常函数**
+* 成员==函数后加const==后我们称为这个函数为**常函数**
 * 常函数内不可以修改成员属性
 * 成员属性声明时加关键字mutable后，在常函数中依然可以修改
 
@@ -7076,7 +7093,8 @@ void test01() {
 	person.m_B = 100; //但是常对象可以修改mutable修饰成员变量
 
 	//常对象访问成员函数
-	person.MyFunc(); //常对象不能调用const的函数
+	person.MyFunc(); 
+	//常对象只能调用常函数。（因为普通函数可以修改成员属性，所以常对象不能调用普通成员函数）
 
 }
 
@@ -7113,7 +7131,7 @@ int main() {
 
 
 
-友元的目的就是让一个函数或者类 访问另一个类中私有成员
+**友元的目的就是让一个函数或者类 访问另一个类中私有成员**
 
 
 
@@ -7137,7 +7155,7 @@ int main() {
 class Building
 {
 	//告诉编译器 goodGay全局函数 是 Building类的好朋友，可以访问类中的私有内容
-	friend void goodGay(Building * building);
+	friend void goodGay(Building * building);//（格式：friend+全局函数的声明）
 
 public:
 
@@ -7212,7 +7230,7 @@ private:
 	string m_BedRoom;//卧室
 };
 
-Building::Building()
+Building::Building()             //也可以类外写成员函数的实现
 {
 	this->m_SittingRoom = "客厅";
 	this->m_BedRoom = "卧室";
@@ -7356,7 +7374,7 @@ public:
 		this->m_B = b;
 	}
 	//成员函数实现 + 号运算符重载
-	Person operator+(const Person& p) {
+	Person operator+(const Person& p) {    //operator+是c++定义的函数名
 		Person temp;
 		temp.m_A = this->m_A + p.m_A;
 		temp.m_B = this->m_B + p.m_B;
@@ -7392,10 +7410,10 @@ void test() {
 	Person p2(20, 20);
 
 	//成员函数方式
-	Person p3 = p2 + p1;  //相当于 p2.operaor+(p1)
+	Person p3 = p2 + p1;  //相当于 p2.operaor+(p1)（当使用编译器定义的这种函数名后即可简化成+）
 	cout << "mA:" << p3.m_A << " mB:" << p3.m_B << endl;
 
-
+	//全局函数方式
 	Person p4 = p3 + 10; //相当于 operator+(p3,10)
 	cout << "mA:" << p4.m_A << " mB:" << p4.m_B << endl;
 
@@ -7413,9 +7431,9 @@ int main() {
 
 
 
-> 总结1：对于内置的数据类型的表达式的的运算符是不可能改变的
+> 总结1：对于内置的数据类型的表达式的的运算符是不可能改变的（比如1+1=2不能乱改）
 
-> 总结2：不要滥用运算符重载
+> 总结2：不要滥用运算符重载（相加实现相减等等，会让别人看不懂自己代码）
 
 
 
@@ -7616,6 +7634,7 @@ public:
 	//重载赋值运算符 
 	Person& operator=(Person &p)
 	{
+		//应该先判断是否有属性在堆区，如果有删除
 		if (m_Age != NULL)
 		{
 			delete m_Age;
@@ -7962,11 +7981,11 @@ void test01()
 
 	//C++页面
 	cout << "C++下载视频页面如下： " << endl;
-	CPP cp;
-	cp.header();
-	cp.footer();
-	cp.left();
-	cp.content();
+	CPP cpp;
+	cpp.header();
+	cpp.footer();
+	cpp.left();
+	cpp.content();
 
 }
 
@@ -8006,7 +8025,7 @@ public:
 };
 
 //Java页面
-class Java : public BasePage
+class Java : public BasePage       //继承的结构
 {
 public:
 	void content()
@@ -8080,7 +8099,7 @@ int main() {
 
 继承的好处：==可以减少重复的代码==
 
-class A : public B; 
+class A : public B;     ==//继承的语法==
 
 A 类称为子类 或 派生类
 
@@ -8254,7 +8273,7 @@ public:
 
 void test01()
 {
-	cout << "sizeof Son = " << sizeof(Son) << endl;
+	cout << "sizeof Son = " << sizeof(Son) << endl; //4个int类型=16
 }
 
 int main() {
@@ -8358,7 +8377,7 @@ public:
 
 void test01()
 {
-	//继承中 先调用父类构造函数，再调用子类构造函数，析构顺序与构造相反
+	//继承中 先调用父类构造函数（得现有父类才能进行继承），再调用子类构造函数，析构顺序与构造相反，（B类中有对象A作为成员的情况相反）
 	Son s;
 }
 
@@ -8431,8 +8450,8 @@ public:
 		m_A = 200;
 	}
 
-	//当子类与父类拥有同名的成员函数，子类会隐藏父类中所有版本的同名成员函数
-	//如果想访问父类中被隐藏的同名成员函数，需要加父类的作用域
+	//当子类与父类拥有同名的成员函数，子类会隐藏父类中所有版本的同名成员函数（包括重载版本的）
+	//如果想访问父类中被隐藏的同名成员函数，需要加父类的作用域（同名变量同理）
 	void func()
 	{
 		cout << "Son - func()调用" << endl;
@@ -8446,7 +8465,7 @@ void test01()
 	Son s;
 
 	cout << "Son下的m_A = " << s.m_A << endl;
-	cout << "Base下的m_A = " << s.Base::m_A << endl;
+	cout << "Base下的m_A = " << s.Base::m_A << endl;  //加作用域
 
 	s.func();
 	s.Base::func();
@@ -8554,7 +8573,7 @@ void test02()
 	cout << "通过类名访问： " << endl;
 	Son::func();
 	Son::Base::func();
-	//出现同名，子类会隐藏掉父类中所有同名成员函数，需要加作作用域访问
+	//出现同名，子类会隐藏掉父类中所有同名成员函数（包括重载成员函数），需要加作作用域访问
 	Son::Base::func(100);
 }
 int main() {
@@ -8568,7 +8587,7 @@ int main() {
 }
 ```
 
-> 总结：同名静态成员处理方式和非静态处理方式一样，只不过有两种访问的方式（通过对象 和 通过类名）
+> 总结：同名静态成员处理方式和非静态处理方式一样，==只不过有两种访问的方式（通过对象 和 通过类名）==
 
 
 
@@ -8594,7 +8613,7 @@ C++允许**一个类继承多个类**
 
 
 
-多继承可能会引发父类中有同名成员出现，需要加作用域区分
+多继承可能会引发不同父类中有同名成员出现，需要加作用域区分
 
 
 
@@ -8730,10 +8749,10 @@ void test01()
 	SheepTuo st;
 	st.Sheep::m_Age = 100;
 	st.Tuo::m_Age = 200;
-
-	cout << "st.Sheep::m_Age = " << st.Sheep::m_Age << endl;
-	cout << "st.Tuo::m_Age = " <<  st.Tuo::m_Age << endl;
-	cout << "st.m_Age = " << st.m_Age << endl;
+	// 当菱形继承，两个父类拥有相同的数据，需要加以作用域区分
+	cout << "st.Sheep::m_Age = " << st.Sheep::m_Age << endl;  //200
+	cout << "st.Tuo::m_Age = " <<  st.Tuo::m_Age << endl;     //200
+	cout << "st.m_Age = " << st.m_Age << endl;				  //200
 }
 
 
@@ -8752,7 +8771,7 @@ int main() {
 总结：
 
 * 菱形继承带来的主要问题是子类继承两份相同的数据，导致资源浪费以及毫无意义
-* 利用虚继承可以解决菱形继承问题
+* 利用虚继承可以解决菱形继承问题，虚继承会只保留一个同名数据
 
 
 
@@ -8803,7 +8822,7 @@ class Animal
 {
 public:
 	//Speak函数就是虚函数
-	//函数前面加上virtual关键字，变成虚函数，那么编译器在编译的时候就不能确定函数调用了。
+	//函数前面加上virtual关键字，变成虚函数，那么编译器在编译的时候就不能确定函数调用了。（地址晚绑定）
 	virtual void speak()
 	{
 		cout << "动物在说话" << endl;
@@ -8840,14 +8859,14 @@ void DoSpeak(Animal & animal)
 //
 //多态满足条件： 
 //1、有继承关系
-//2、子类重写父类中的虚函数
+//2、子类重写父类中的虚函数（函数名 返回值 参数值完全一致是重写 ）
 //多态使用：
 //父类指针或引用指向子类对象
 
 void test01()
 {
 	Cat cat;
-	DoSpeak(cat);
+	DoSpeak(cat);         //ful
 
 
 	Dog dog;
@@ -8864,7 +8883,9 @@ int main() {
 	return 0;
 }
 ```
-
+vfptr -虚函数（表）指针
+vftable 虚函数表里记录虚函数的地址 比如：&Animal::speak
+![](images/2023-05-23-10-54-24.png)
 总结：
 
 多态满足条件
@@ -8922,6 +8943,8 @@ public:
 			return m_Num1 * m_Num2;
 		}
 		//如果要提供新的运算，需要修改源码
+		//在真实开发中 提倡开闭原则
+		//开闭原则：对扩展进行开发，对修改进行关闭
 	}
 public:
 	int m_Num1;
@@ -8993,6 +9016,7 @@ public:
 void test02()
 {
 	//创建加法计算器
+	//父类指针或引用指向子类对象
 	AbstractCalculator *abc = new AddCalculator;
 	abc->m_Num1 = 10;
 	abc->m_Num2 = 10;
@@ -9210,8 +9234,9 @@ public:
 };
 
 //业务函数
-void DoWork(AbstractDrinking* drink) {
-	drink->MakeDrink();
+void DoWork(AbstractDrinking* drink) {     
+// 这里试了一下，用引用也可以 就不用delete删除了堆区数据了，下面传入的改成子类的实例化对象
+	drink->MakeDrink();     
 	delete drink;
 }
 
@@ -9281,7 +9306,7 @@ int main() {
 
 ` virtual ~类名() = 0;`
 
-`类名::~类名(){}`
+`类名::~类名(){}` （类外写纯虚析构的实现）
 
 
 
@@ -9307,7 +9332,7 @@ public:
 	virtual ~Animal() = 0;
 };
 
-Animal::~Animal()
+Animal::~Animal()             //虚析构和纯虚析构都需要代码实现 不然无法释放内存
 {
 	cout << "Animal 纯虚析构函数调用！" << endl;
 }
@@ -9398,7 +9423,7 @@ int main() {
 创建电脑类提供让电脑工作的函数，并且调用每个零件工作的接口
 
 测试时组装三台不同的电脑进行工作
-
+![](images/2023-05-23-14-05-47.png)
 
 
 
@@ -9609,7 +9634,7 @@ C++中对文件操作需要包含头文件 ==&lt; fstream &gt;==
 
 操作文件的三大类:
 
-1. ofstream：写操作
+1. ofstream：写操作  (output file stream)
 2. ifstream： 读操作
 3. fstream ： 读写操作
 
@@ -9669,9 +9694,9 @@ C++中对文件操作需要包含头文件 ==&lt; fstream &gt;==
 
 void test01()
 {
-	ofstream ofs;
-	ofs.open("test.txt", ios::out);
-
+	ofstream ofs;  //也可以用fstream类
+	ofs.open("/home/donghao/Documents/project/study/test.txt", ios::out);
+//使用vscode时最好写绝对路径，只写文件名会被写到gcc编译器所在文件夹里
 	ofs << "姓名：张三" << endl;
 	ofs << "性别：男" << endl;
 	ofs << "年龄：18" << endl;
@@ -9753,7 +9778,7 @@ int main() {
 void test01()
 {
 	ifstream ifs;
-	ifs.open("test.txt", ios::in);
+	ifs.open("/home/donghao/Documents/project/study/test.txt", ios::in);
 
 	if (!ifs.is_open())
 	{
@@ -9761,29 +9786,29 @@ void test01()
 		return;
 	}
 
-	//第一种方式
-	//char buf[1024] = { 0 };
-	//while (ifs >> buf)
-	//{
-	//	cout << buf << endl;
-	//}
+	// //第一种方式
+	// char buf[1024] = { 0 };
+	// while (ifs >> buf)
+	// {
+	// 	cout << buf << endl;
+	// }
 
-	//第二种
-	//char buf[1024] = { 0 };
-	//while (ifs.getline(buf,sizeof(buf)))
-	//{
-	//	cout << buf << endl;
-	//}
+	// // 第二种
+	// char buf[1024] = { 0 };
+	// while (ifs.getline(buf,sizeof(buf)))
+	// {
+	// 	cout << buf << endl;
+	// }
 
-	//第三种
-	//string buf;
-	//while (getline(ifs, buf))
-	//{
-	//	cout << buf << endl;
-	//}
+	// //第三种
+	// string buf;
+	// while (getline(ifs, buf))
+	// {
+	// 	cout << buf << endl;
+	// }
 
-	char c;
-	while ((c = ifs.get()) != EOF)
+	char c;  //一个一个字符读取 效率太慢 不太实用
+	while ((c = ifs.get()) != EOF) //EOF end of file 文件尾
 	{
 		cout << c;
 	}
@@ -9805,8 +9830,8 @@ int main() {
 
 总结：
 
-- 读文件可以利用 ifstream  ，或者fstream类
-- 利用is_open函数可以判断文件是否打开成功
+- 读文件可以利用 ifstream  ，或者fstream类 
+- 利用is_open函数可以判断文件是否打开成功 
 - close 关闭文件 
 
 
@@ -9860,7 +9885,7 @@ void test01()
 	//1、包含头文件
 
 	//2、创建输出流对象
-	ofstream ofs("person.txt", ios::out | ios::binary);
+	ofstream ofs("person.txt", ios::out | ios::binary); //有构造函数
 	
 	//3、打开文件
 	//ofs.open("person.txt", ios::out | ios::binary);
@@ -9868,7 +9893,7 @@ void test01()
 	Person p = {"张三"  , 18};
 
 	//4、写文件
-	ofs.write((const char *)&p, sizeof(p));
+	ofs.write((const char *)&p, sizeof(p)); //const char * 强转型
 
 	//5、关闭文件
 	ofs.close();
@@ -9931,6 +9956,7 @@ void test01()
 	ifs.read((char *)&p, sizeof(p));
 
 	cout << "姓名： " << p.m_Name << " 年龄： " << p.m_Age << endl;
+	ifs.close();
 }
 
 int main() {
@@ -11914,7 +11940,7 @@ int main() {
 
 * 函数模板利用关键字 template
 * 使用函数模板有两种方式：自动类型推导、显示指定类型
-* 模板的目的是为了提高复用性，将类型参数化
+* 模板的目的是为了将类型参数化，提高复用性
 
 
 
@@ -11939,7 +11965,7 @@ int main() {
 
 ```C++
 //利用模板提供通用的交换函数
-template<class T>
+template<class T>         //typename可以替换为class，效果一样
 void mySwap(T& a, T& b)
 {
 	T temp = a;
@@ -12163,7 +12189,7 @@ int main() {
 1. 如果函数模板和普通函数都可以实现，优先调用普通函数
 2. 可以通过空模板参数列表来强制调用函数模板
 3. 函数模板也可以发生重载
-4. 如果函数模板可以产生更好的匹配,优先调用函数模板
+4. ==如果函数模板可以产生更好的匹配,优先调用函数模板==
 
 
 
@@ -12308,8 +12334,8 @@ bool myCompare(T& a, T& b)
 }
 
 
-//具体化，显示具体化的原型和定意思以template<>开头，并通过名称来指出类型
-//具体化优先于常规模板
+//具体化模板，显示具体化的原型和定意思以template<>开头，并通过名称来指出类型
+//具体化模板优先于常规模板，如果是具体化的类型会比常规模板优先调用
 template<> bool myCompare(Person &p1, Person &p2)
 {
 	if ( p1.m_Name  == p2.m_Name && p1.m_Age == p2.m_Age)
@@ -12465,7 +12491,7 @@ int main() {
 
 类模板与函数模板区别主要有两点：
 
-1. 类模板没有自动类型推导的使用方式
+1. 类模板没有自动类型推导的使用方式（类模板只有显示类型）
 2. 类模板在模板参数列表中可以有默认参数
 
 
@@ -12654,7 +12680,7 @@ public:
 };
 
 //1、指定传入的类型
-void printPerson1(Person<string, int> &p) 
+void printPerson1(Person<string, int> &p) //类模板中的对象做函数的参数传入的方法
 {
 	p.showPerson();
 }
@@ -12669,7 +12695,7 @@ template <class T1, class T2>
 void printPerson2(Person<T1, T2>&p)
 {
 	p.showPerson();
-	cout << "T1的类型为： " << typeid(T1).name() << endl;
+	cout << "T1的类型为： " << typeid(T1).name() << endl; //typeid可查看类型
 	cout << "T2的类型为： " << typeid(T2).name() << endl;
 }
 void test02()
@@ -12707,7 +12733,7 @@ int main() {
 总结：
 
 * 通过类模板创建的对象，可以有三种方式向函数中进行传参
-* 使用比较广泛是第一种：指定传入的类型
+* 使用比较广泛是第一种：指定传入的类型（后两种是函数模板混合类模板）
 
 
 
@@ -12757,12 +12783,14 @@ public:
 	{
 		cout << typeid(T1).name() << endl;
 		cout << typeid(T2).name() << endl;
+	//类模板的成员函数只有在实例化的时候才会被调用
 	}
 };
 
 void test02()
 {
 	Son2<int, char> child1;
+	
 }
 
 

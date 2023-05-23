@@ -1,32 +1,48 @@
 #include <iostream> 
-#include <string>
+#include <string.h>
 using namespace std;
+#include <fstream>
 
-//对象的初始化和清理
-//1、构造函数 进行初始化操作
+template<class NameType, class AgeType = int> 
 class Person
 {
 public:
-	Person()
+	Person(NameType name, AgeType age)
 	{
-		cout <<"这是一个构造函数"<< endl;
+		this->mName = name;
+		this->mAge = age;
 	}
-	~Person()
+	void showPerson()
 	{
-		cout << "这是一个析构函数的调用" << endl;
+		cout << "name: " << this->mName << " age: " << this->mAge << endl;
 	}
-//构造函数和析构函数都是必须有的实现，如果我们自己不提供，编译器会提供一个空实现的构造和析构
+public:
+	NameType mName;
+	AgeType mAge;
 };
 
+//1、类模板没有自动类型推导的使用方式
 void test01()
 {
-	Person p;         //在栈上的数据，test01执行完毕后，释放这个对象
+	// Person p("孙悟空", 1000); // 错误 类模板使用时候，不可以用自动类型推导
+	Person <string ,int>p("孙悟空", 1000); //必须使用显示指定类型的方式，使用类模板
+	p.showPerson();
 }
 
-int main()
-{	
-	Person p1;
-	// //test01();
-	pause();
+//2、类模板在模板参数列表中可以有默认参数
+void test02()
+{
+	Person <string> p("猪八戒", 999); //类模板中的模板参数列表 可以指定默认参数
+	p.showPerson();
+}
+
+int main() {
+
+	test01();
+
+	test02();
+
+	system("pause");
+
 	return 0;
 }

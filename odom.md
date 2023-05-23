@@ -143,3 +143,20 @@ D. 指出作用域的范围
 ————————————————
 版权声明：本文为CSDN博主「fengbingchun」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/fengbingchun/article/details/72757856
+
+cpapodom      白
+cpapinstoehr 白
+cpaplocation... 江
+三个
+
+
+在自己电脑编译arm 上传arm版本
+**可执行程序 configure配置文件 放到一个文件夹里压缩一下zip**
+curl - （zip） http：。。。。piolt/ （zip）
+写个txt说明文件  
+20230519改动了CpApPosToEHP中的CMakeLists中的HDMapToRviz的编译
+![](images/2023-05-19-10-26-33.png)
+odom航迹推算 刚体运动 等等 基础知识
+
+侯杰的c++书籍 快速浏览
+国产int8做量化 nvidia fp32
