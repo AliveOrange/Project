@@ -3666,838 +3666,6 @@ int main() {
 	return 0;
 }
 ```
-# 通讯录管理系统
-
-
-
-## 1、系统需求
-
-通讯录是一个可以记录亲人、好友信息的工具。
-
-本教程主要利用C++来实现一个通讯录管理系统
-
-系统中需要实现的功能如下：
-
-* 添加联系人：向通讯录中添加新人，信息包括（姓名、性别、年龄、联系电话、家庭住址）最多记录1000人
-* 显示联系人：显示通讯录中所有联系人信息
-* 删除联系人：按照姓名进行删除指定联系人
-* 查找联系人：按照姓名查看指定联系人信息
-* 修改联系人：按照姓名重新修改指定联系人
-* 清空联系人：清空通讯录中所有信息
-* 退出通讯录：退出当前使用的通讯录
-
-
-
-
-
-
-
-
-
-## 2、创建项目
-
-创建项目步骤如下：
-
-* 创建新项目
-* 添加文件
-
-### 2.1 创建项目
-
-打开vs2017后，点击创建新项目，创建新的C++项目
-
-![1544151401138](assets/1544151401138.png)
-
-
-
-填写项目名称，选择项目路径
-
-![1544151579620](assets/1544151579620.png)
-
-### 2.2添加文件
-
-![1544161551746](assets/1544161551746.png)
-
-
-
-![1544161648175](assets/1544161648175.png)
-
-添加成功后，效果如图：
-
-![1544162344057](assets/1544162344057.png)
-
-
-
-至此，项目已创建完毕
-
-
-
-
-
-
-
-## 3、菜单功能
-
-**功能描述：** 用户选择功能的界面
-
-菜单界面效果如下图：
-
-
-
-![1544149559893](assets/1544149559893.png)
-
-**步骤：**
-
-* 封装函数显示该界面  如 `void showMenu()`
-* 在main函数中调用封装好的函数
-
-
-
-**代码：**
-
-```C++
-#include<iostream>
-using namespace std;
-
-//菜单界面
-void showMenu()
-{
-	cout << "***************************" << endl;
-	cout << "*****  1、添加联系人  *****" << endl;
-	cout << "*****  2、显示联系人  *****" << endl;
-	cout << "*****  3、删除联系人  *****" << endl;
-	cout << "*****  4、查找联系人  *****" << endl;
-	cout << "*****  5、修改联系人  *****" << endl;
-	cout << "*****  6、清空联系人  *****" << endl;
-	cout << "*****  0、退出通讯录  *****" << endl;
-	cout << "***************************" << endl;
-}
-
-int main() {
-
-	showMenu();
-
-	system("pause");
-
-	return 0;
-}
-```
-
-
-
-
-
-
-
-
-
-## 4、退出功能
-
-功能描述：退出通讯录系统
-
-
-
-思路：根据用户不同的选择，进入不同的功能，可以选择switch分支结构，将整个架构进行搭建
-
-
-
-当用户选择0时候，执行退出，选择其他先不做操作，也不会退出程序
-
-
-
-**代码：**
-
-```C++
-int main() {
-
-	int select = 0;
-
-	while (true)
-	{
-		showMenu();
-
-		cin >> select;
-		
-		switch (select)
-		{
-		case 1:  //添加联系人
-			break;
-		case 2:  //显示联系人
-			break;
-		case 3:  //删除联系人
-			break;
-		case 4:  //查找联系人
-			break;
-		case 5:  //修改联系人
-			break;
-		case 6:  //清空联系人
-			break;
-		case 0:  //退出通讯录
-			cout << "欢迎下次使用" << endl;
-			system("pause");
-			return 0;
-			break;
-		default:
-			break;
-		}
-	}
-
-	system("pause");
-
-	return 0;
-}
-```
-
-
-
-效果图：
-
-![1544163868043](assets/1544163868043.png)
-
-
-
-
-
-
-
-
-
-
-
-## 5、添加联系人
-
-功能描述：
-
-实现添加联系人功能，联系人上限为1000人，联系人信息包括（姓名、性别、年龄、联系电话、家庭住址）
-
-
-
-添加联系人实现步骤：
-
-* 设计联系人结构体
-* 设计通讯录结构体
-* main函数中创建通讯录
-* 封装添加联系人函数
-* 测试添加联系人功能
-
-
-
-### 5.1 设计联系人结构体
-
-联系人信息包括：姓名、性别、年龄、联系电话、家庭住址
-
-设计如下：
-
-```C++
-#include <string>  //string头文件
-//联系人结构体
-struct Person
-{
-	string m_Name; //姓名
-	int m_Sex; //性别：1男 2女
-	int m_Age; //年龄
-	string m_Phone; //电话
-	string m_Addr; //住址
-};
-```
-
-
-
-### 5.2 设计通讯录结构体
-
-设计时候可以在通讯录结构体中，维护一个容量为1000的存放联系人的数组，并记录当前通讯录中联系人数量
-
-设计如下
-
-```C++
-#define MAX 1000 //最大人数
-
-//通讯录结构体
-struct Addressbooks
-{
-	struct Person personArray[MAX]; //通讯录中保存的联系人数组
-	int m_Size; //通讯录中人员个数
-};
-```
-
-
-
-### 5.3 main函数中创建通讯录
-
-
-
-添加联系人函数封装好后，在main函数中创建一个通讯录变量，这个就是我们需要一直维护的通讯录
-
-
-
-```c++
-mian函数起始位置添加：
-
-	//创建通讯录
-	Addressbooks abs;
-	//初始化通讯录中人数
-	abs.m_Size = 0;
-```
-
-
-
-
-
-### 5.4 封装添加联系人函数
-
-
-
-思路：添加联系人前先判断通讯录是否已满，如果满了就不再添加，未满情况将新联系人信息逐个加入到通讯录
-
-
-
-添加联系人代码：
-
-
-
-```C++
-//1、添加联系人信息
-void addPerson(Addressbooks *abs)
-{
-	//判断电话本是否满了
-	if (abs->m_Size == MAX)
-	{
-		cout << "通讯录已满，无法添加" << endl;
-		return;
-	}
-	else
-	{
-		//姓名
-		string name;
-		cout << "请输入姓名：" << endl;
-		cin >> name;
-		abs->personArray[abs->m_Size].m_Name = name;
-
-		cout << "请输入性别：" << endl;
-		cout << "1 -- 男" << endl;
-		cout << "2 -- 女" << endl;
-
-		//性别
-		int sex = 0;
-		while (true)
-		{
-			cin >> sex;
-			if (sex == 1 || sex == 2)
-			{
-				abs->personArray[abs->m_Size].m_Sex = sex;
-				break;
-			}
-			cout << "输入有误，请重新输入";
-		}
-
-		//年龄
-		cout << "请输入年龄：" << endl;
-		int age = 0;
-		cin >> age;
-		abs->personArray[abs->m_Size].m_Age = age;
-
-		//联系电话
-		cout << "请输入联系电话：" << endl;
-		string phone = "";
-		cin >> phone;
-		abs->personArray[abs->m_Size].m_Phone = phone;
-
-		//家庭住址
-		cout << "请输入家庭住址：" << endl;
-		string address;
-		cin >> address;
-		abs->personArray[abs->m_Size].m_Addr = address;
-
-		//更新通讯录人数
-		abs->m_Size++;
-
-		cout << "添加成功" << endl;
-		system("pause"); //请按任意键继续
-		system("cls");   //清屏操作
-	}
-}
-```
-
-
-
-
-
-
-
-### 5.5 测试添加联系人功能
-
-选择界面中，如果玩家选择了1，代表添加联系人，我们可以测试下该功能
-
-
-
-在switch case 语句中，case1里添加：
-
-```C++
-case 1:  //添加联系人
-	addPerson(&abs);
-	break;
-```
-
-
-
-测试效果如图：
-
-![1544165554002](assets/1544165554002.png)
-
-
-
-
-
-
-
-
-
-## 6、显示联系人
-
-功能描述：显示通讯录中已有的联系人信息
-
-
-
-显示联系人实现步骤：
-
-* 封装显示联系人函数
-* 测试显示联系人功能
-
-### 6.1 封装显示联系人函数
-
-
-
-思路：判断如果当前通讯录中没有人员，就提示记录为空，人数大于0，显示通讯录中信息
-
-
-
-显示联系人代码：
-
-```C++
-//2、显示所有联系人信息
-void showPerson(Addressbooks * abs)
-{
-	if (abs->m_Size == 0)
-	{
-		cout << "当前记录为空" << endl;
-	}
-	else
-	{
-		for (int i = 0; i < abs->m_Size; i++)
-		{
-			cout << "姓名：" << abs->personArray[i].m_Name << "\t";
-			cout << "性别：" << (abs->personArray[i].m_Sex == 1 ? "男" : "女") << "\t";
-			cout << "年龄：" << abs->personArray[i].m_Age << "\t";
-			cout << "电话：" << abs->personArray[i].m_Phone << "\t";
-			cout << "住址：" << abs->personArray[i].m_Addr << endl;
-		}
-	}
-	
-	system("pause");
-	system("cls");
-
-}
-```
-
-
-
-
-
-### 6.2 测试显示联系人功能
-
-
-
-在switch case语句中，case 2 里添加
-
-```C++
-case 2:  //显示联系人
-	showPerson(&abs);
-	break;
-```
-
-
-
-测试效果如图：
-
-![1544166401582](assets/1544166401582.png)
-
-
-
-
-
-
-
-
-
-## 7、删除联系人
-
-功能描述：按照姓名进行删除指定联系人
-
-
-
-删除联系人实现步骤：
-
-* 封装检测联系人是否存在
-* 封装删除联系人函数
-* 测试删除联系人功能
-
-
-
-
-
-### 7.1  封装检测联系人是否存在
-
-设计思路：
-
-
-
-删除联系人前，我们需要先判断用户输入的联系人是否存在，如果存在删除，不存在提示用户没有要删除的联系人
-
-因此我们可以把检测联系人是否存在封装成一个函数中，如果存在，返回联系人在通讯录中的位置，不存在返回-1
-
-
-
-检测联系人是否存在代码：
-
-```C++
-//判断是否存在查询的人员，存在返回在数组中索引位置，不存在返回-1
-int isExist(Addressbooks * abs, string name)
-{
-	for (int i = 0; i < abs->m_Size; i++)
-	{
-		if (abs->personArray[i].m_Name == name)
-		{
-			return i;
-		}
-	}
-	return -1;
-}
-
-```
-
-
-
-### 7.2 封装删除联系人函数
-
-
-
-根据用户输入的联系人判断该通讯录中是否有此人
-
-查找到进行删除，并提示删除成功
-
-查不到提示查无此人。
-
-
-
-```C++
-//3、删除指定联系人信息
-void deletePerson(Addressbooks * abs)
-{
-	cout << "请输入您要删除的联系人" << endl;
-	string name;
-	cin >> name;
-
-	int ret = isExist(abs, name);
-	if (ret != -1)
-	{
-		for (int i = ret; i < abs->m_Size; i++)
-		{
-			abs->personArray[i] = abs->personArray[i + 1];
-		}
-         abs->m_Size--;
-		cout << "删除成功" << endl;
-	}
-	else
-	{
-		cout << "查无此人" << endl;
-	}
-
-	system("pause");
-	system("cls");
-}
-```
-==上述代码中最后一个联系人不是重复了吗==
-
-
-### 7.3 测试删除联系人功能
-
-在switch case 语句中，case3里添加：
-
-```C++
-case 3:  //删除联系人
-	deletePerson(&abs);
-	break;
-```
-
-测试效果如图：
-
-存在情况：
-
-![1544167951559](assets/1544167951559.png)
-
-不存在情况：
-
-![1544168010831](assets/1544168010831.png)
-
-
-
-
-
-
-
-
-
-## 8、查找联系人
-
-功能描述：按照姓名查看指定联系人信息
-
-查找联系人实现步骤
-
-* 封装查找联系人函数
-* 测试查找指定联系人
-
-### 8.1 封装查找联系人函数
-
-实现思路：判断用户指定的联系人是否存在，如果存在显示信息，不存在则提示查无此人。
-
-查找联系人代码：
-
-```C++
-//4、查找指定联系人信息
-void findPerson(Addressbooks * abs)
-{
-	cout << "请输入您要查找的联系人" << endl;
-	string name;
-	cin >> name;
-
-	int ret = isExist(abs, name);
-	if (ret != -1)
-	{
-		cout << "姓名：" << abs->personArray[ret].m_Name << "\t";
-		cout << "性别：" << abs->personArray[ret].m_Sex << "\t";
-		cout << "年龄：" << abs->personArray[ret].m_Age << "\t";
-		cout << "电话：" << abs->personArray[ret].m_Phone << "\t";
-		cout << "住址：" << abs->personArray[ret].m_Addr << endl;
-	}
-	else
-	{
-		cout << "查无此人" << endl;
-	}
-
-	system("pause");
-	system("cls");
-
-}
-```
-
-
-
-### 8.2 测试查找指定联系人
-
-在switch case 语句中，case4里添加：
-
-```C++
-case 4:  //查找联系人
-	findPerson(&abs);
-	break;
-```
-
-
-
-测试效果如图
-
-存在情况：
-
-![1544170057646](assets/1544170057646.png)
-
-
-
-不存在情况：
-
-![1544170254021](assets/1544170254021.png)
-
-
-
-
-
-
-
-
-
-## 9、修改联系人
-
-功能描述：按照姓名重新修改指定联系人
-
-修改联系人实现步骤
-
-* 封装修改联系人函数
-* 测试修改联系人功能
-
-
-
-### 9.1 封装修改联系人函数
-
-实现思路：查找用户输入的联系人，如果查找成功进行修改操作，查找失败提示查无此人
-
-
-
-修改联系人代码：
-
-```C++
-//5、修改指定联系人信息
-void modifyPerson(Addressbooks * abs)
-{
-	cout << "请输入您要修改的联系人" << endl;
-	string name;
-	cin >> name;
-
-	int ret = isExist(abs, name);
-	if (ret != -1)
-	{
-		//姓名
-		string name;
-		cout << "请输入姓名：" << endl;
-		cin >> name;
-		abs->personArray[ret].m_Name = name;
-
-		cout << "请输入性别：" << endl;
-		cout << "1 -- 男" << endl;
-		cout << "2 -- 女" << endl;
-
-		//性别
-		int sex = 0;
-		while (true)
-		{
-			cin >> sex;
-			if (sex == 1 || sex == 2)
-			{
-				abs->personArray[ret].m_Sex = sex;
-				break;
-			}
-			cout << "输入有误，请重新输入";
-		}
-
-		//年龄
-		cout << "请输入年龄：" << endl;
-		int age = 0;
-		cin >> age;
-		abs->personArray[ret].m_Age = age;
-
-		//联系电话
-		cout << "请输入联系电话：" << endl;
-		string phone = "";
-		cin >> phone;
-		abs->personArray[ret].m_Phone = phone;
-
-		//家庭住址
-		cout << "请输入家庭住址：" << endl;
-		string address;
-		cin >> address;
-		abs->personArray[ret].m_Addr = address;
-
-		cout << "修改成功" << endl;
-	}
-	else
-	{
-		cout << "查无此人" << endl;
-	}
-
-	system("pause");
-	system("cls");
-
-}
-```
-
-
-
-
-
-### 9.2 测试修改联系人功能
-
-在switch case 语句中，case 5里添加：
-
-```C++
-case 5:  //修改联系人
-	modifyPerson(&abs);
-	break;
-```
-
-
-
-测试效果如图：
-
-查不到指定联系人情况：
-
-![1544172265676](assets/1544172265676.png)
-
-查找到联系人，并修改成功：
-
-![1544172164141](assets/1544172164141.png)
-
-再次查看通讯录，确认修改完毕
-
-![1544172228627](assets/1544172228627.png)
-
-
-
-
-
-
-
-
-
-## 10、清空联系人
-
-功能描述：清空通讯录中所有信息
-
-清空联系人实现步骤
-
-* 封装清空联系人函数
-* 测试清空联系人
-
-### 10.1 封装清空联系人函数
-
-实现思路： 将通讯录所有联系人信息清除掉，只要将通讯录记录的联系人数量置为0，做逻辑清空即可。
-
-清空联系人代码：
-
-```C++
-//6、清空所有联系人
-void cleanPerson(Addressbooks * abs)
-{
-	abs->m_Size = 0;
-	cout << "通讯录已清空" << endl;
-	system("pause");
-	system("cls");
-}
-```
-
-
-
-### 10.2  测试清空联系人
-
-在switch case 语句中，case 6 里添加：
-
-```C++
-case 6:  //清空联系人
-	cleanPerson(&abs);
-	break;
-```
-
-
-
-测试效果如图：
-
-清空通讯录
-
-![1544172909693](assets/1544172909693.png)
-
-再次查看信息，显示记录为空
-
-![1544172943653](assets/1544172943653.png)
-
-
-
-**至此，通讯录管理系统完成！**
 # C++核心编程
 
 本阶段主要针对C++==面向对象==编程技术做详细讲解，探讨C++中的核心和精髓。
@@ -9973,1820 +9141,6 @@ int main() {
 
 - 文件输入流对象 可以通过read函数，以二进制方式读数据
 
-# 职工管理系统
-
-## 1、管理系统需求
-
-职工管理系统可以用来管理公司内所有员工的信息
-
-本教程主要利用C++来实现一个基于多态的职工管理系统
-
-
-
-公司中职工分为三类：普通员工、经理、老板，显示信息时，需要显示职工编号、职工姓名、职工岗位、以及职责
-
-普通员工职责：完成经理交给的任务
-
-经理职责：完成老板交给的任务，并下发任务给员工
-
-老板职责：管理公司所有事务
-
-
-
-管理系统中需要实现的功能如下：
-
-* 退出管理程序：退出当前管理系统
-
-- 增加职工信息：实现批量添加职工功能，将信息录入到文件中，职工信息为：职工编号、姓名、部门编号
-- 显示职工信息：显示公司内部所有职工的信息
-- 删除离职职工：按照编号删除指定的职工
-- 修改职工信息：按照编号修改职工个人信息
-- 查找职工信息：按照职工的编号或者职工的姓名进行查找相关的人员信息
-- 按照编号排序：按照职工编号，进行排序，排序规则由用户指定
-- 清空所有文档：清空文件中记录的所有职工信息 （清空前需要再次确认，防止误删）
-
-
-
-系统界面效果图如下：
-
-![1546511409198](assets/1546511409198.png)
-
-需根据用户不同的选择，完成不同的功能！
-
-
-
-
-
-
-
-
-
-## 2、创建项目
-
-创建项目步骤如下：
-
-- 创建新项目
-- 添加文件
-
-
-
-### 2.1 创建项目
-
-打开vs2017后，点击创建新项目，创建新的C++项目
-
-![1544151201465](assets/1544151201465.png)
-
-
-
-填写项目名称以及项目路径，点击确定
-
-![1546349209805](assets/1546349209805.png)
-
-
-
-### 2.2 添加文件
-
-右键源文件，进行添加文件操作
-
-![1546349360960](assets/1546349360960.png)
-
-
-
-![1546349421496](assets/1546349421496.png)
-
-
-
-![1546349488752](assets/1546349488752.png)
-
-
-
-至此，项目已创建完毕
-
-
-
-
-
-
-
-## 3、创建管理类
-
-​	管理类负责的内容如下：
-
-* 与用户的沟通菜单界面
-* 对职工增删改查的操作
-* 与文件的读写交互
-
-
-
-### 3.1创建文件 
-
-在头文件和源文件的文件夹下分别创建workerManager.h 和 workerManager.cpp文件
-
-![1546349904944](assets/1546349904944.png)
-
-### 3.2 头文件实现
-
-在workerManager.h中设计管理类
-
-代码如下：
-
-```C++
-#pragma once
-#include<iostream>
-using namespace std;
-
-
-class WorkerManager
-{
-public:
-
-	//构造函数
-	WorkerManager();
-
-	//析构函数
-	~WorkerManager();
-
-};
-```
-
-### 3.3 源文件实现
-
-在workerManager.cpp中将构造和析构函数空实现补全
-
-```C++
-#include "workerManager.h"
-
-WorkerManager::WorkerManager()
-{
-}
-
-WorkerManager::~WorkerManager()
-{
-}
-
-```
-
-
-
-至此职工管理类以创建完毕
-
-
-
-
-
-
-
-
-
-## 4、菜单功能
-
-功能描述：与用户的沟通界面
-
-### 4.1 添加成员函数
-
-在管理类workerManager.h中添加成员函数  `void Show_Menu();`
-
-![1546351543942](assets/1546351543942.png)
-
- 
-
-
-
-### 4.2 菜单功能实现
-
-在管理类workerManager.cpp中实现  Show_Menu()函数
-
-```C++
-void WorkerManager::Show_Menu()
-{
-	cout << "********************************************" << endl;
-	cout << "*********  欢迎使用职工管理系统！ **********" << endl;
-	cout << "*************  0.退出管理程序  *************" << endl;
-	cout << "*************  1.增加职工信息  *************" << endl;
-	cout << "*************  2.显示职工信息  *************" << endl;
-	cout << "*************  3.删除离职职工  *************" << endl;
-	cout << "*************  4.修改职工信息  *************" << endl;
-	cout << "*************  5.查找职工信息  *************" << endl;
-	cout << "*************  6.按照编号排序  *************" << endl;
-	cout << "*************  7.清空所有文档  *************" << endl;
-	cout << "********************************************" << endl;
-	cout << endl;
-}
-```
-
-
-
-### 4.3 测试菜单功能
-
-在职工管理系统.cpp中测试菜单功能
-
-代码：
-
-```C++
-#include<iostream>
-using namespace std;
-#include "workerManager.h"
-
-int main() {
-
-	WorkerManager wm;
-
-	wm.Show_Menu();
-
-	system("pause");
-
-	return 0;
-}
-```
-
-运行效果如图：
-
-![1546352771191](assets/1546352771191.png)
-
-
-
-
-
-
-
-
-
-
-
-## 5、退出功能
-
-### 5.1  提供功能接口
-
-在main函数中提供分支选择，提供每个功能接口
-
-代码：
-
-```C++
-int main() {
-
-	WorkerManager wm;
-	int choice = 0;
-	while (true)
-	{
-		//展示菜单
-		wm.Show_Menu();
-		cout << "请输入您的选择:" << endl;
-		cin >> choice;
-
-		switch (choice)
-		{
-		case 0: //退出系统
-			break;
-		case 1: //添加职工
-			break;
-		case 2: //显示职工
-			break;
-		case 3: //删除职工
-			break;
-		case 4: //修改职工
-			break;
-		case 5: //查找职工
-			break;
-		case 6: //排序职工
-			break;
-		case 7: //清空文件
-			break;
-		default:
-			system("cls");
-			break;
-		}
-	}
-
-	system("pause");
-	return 0;
-}
-```
-
-
-
-### 5.2 实现退出功能
-
-在workerManager.h中提供退出系统的成员函数 `	void exitSystem();`
-
-在workerManager.cpp中提供具体的功能实现
-
-```C++
-void WorkerManager::exitSystem()
-{
-	cout << "欢迎下次使用" << endl;
-	system("pause");
-	exit(0);
-}
-```
-
-
-
-### 5.3测试功能
-
-在main函数分支 0  选项中，调用退出程序的接口
-
-![1546353199424](assets/1546353199424.png)
-
-
-
-运行测试效果如图：
-
-![1546353155490](assets/1546353155490.png)
-
-
-
-
-
-
-
-
-
-
-
-## 6、创建职工类
-
-### 6.1 创建职工抽象类
-
-职工的分类为：普通员工、经理、老板
-
-将三种职工抽象到一个类（worker）中,利用多态管理不同职工种类
-
-职工的属性为：职工编号、职工姓名、职工所在部门编号
-
-职工的行为为：岗位职责信息描述，获取岗位名称
-
-
-
-头文件文件夹下  创建文件worker.h  文件并且添加如下代码：
-
-```C++
-#pragma once
-#include<iostream>
-#include<string>
-using namespace std;
-
-//职工抽象基类
-class Worker
-{
-public:
-
-	//显示个人信息
-	virtual void showInfo() = 0;
-	//获取岗位名称
-	virtual string getDeptName() = 0;
-
-	int m_Id; //职工编号
-	string m_Name; //职工姓名
-	int m_DeptId; //职工所在部门名称编号
-};
-```
-
-
-
-### 6.2 创建普通员工类
-
-普通员工类**继承**职工抽象类，并重写父类中纯虚函数
-
-在头文件和源文件的文件夹下分别创建employee.h 和 employee.cpp文件
-
-
-
-employee.h中代码如下：
-
-```C++
-#pragma once 
-#include<iostream>
-using namespace std;
-#include "worker.h"
-
-//员工类
-class Employee :public Worker
-{
-public:
-
-	//构造函数
-	Employee(int id, string name, int dId);
-
-	//显示个人信息
-	virtual void showInfo();
-
-	//获取职工岗位名称
-	virtual string getDeptName();
-};
-```
-
-employee.cpp中代码如下：
-
-```C++
-#include "employee.h"
-
-Employee::Employee(int id, string name, int dId)
-{
-	this->m_Id = id;
-	this->m_Name = name;
-	this->m_DeptId = dId;
-}
-
-void Employee::showInfo()
-{
-	cout << "职工编号： " << this->m_Id
-		<< " \t职工姓名： " << this->m_Name
-		<< " \t岗位：" << this->getDeptName()
-		<< " \t岗位职责：完成经理交给的任务" << endl;
-}
-
-
-string Employee::getDeptName()
-{
-	return string("员工");
-}
-
-
-```
-
-
-
-
-
-### 6.3 创建经理类
-
-经理类**继承**职工抽象类，并重写父类中纯虚函数，和普通员工类似
-
-在头文件和源文件的文件夹下分别创建manager.h 和 manager.cpp文件
-
-
-
-manager.h中代码如下：
-
-```c++
-#pragma once
-#include<iostream>
-using namespace std;
-#include "worker.h"
-
-//经理类
-class Manager :public Worker
-{
-public:
-
-	Manager(int id, string name, int dId);
-
-	//显示个人信息
-	virtual void showInfo();
-
-	//获取职工岗位名称
-	virtual string getDeptName();
-};
-```
-
-manager.cpp中代码如下：
-
-```c++
-#include "manager.h"
-
-Manager::Manager(int id, string name, int dId)
-{
-	this->m_Id = id;
-	this->m_Name = name;
-	this->m_DeptId = dId;
-
-}
-
-void Manager::showInfo()
-{
-	cout << "职工编号： " << this->m_Id
-		<< " \t职工姓名： " << this->m_Name
-		<< " \t岗位：" << this->getDeptName()
-		<< " \t岗位职责：完成老板交给的任务,并下发任务给员工" << endl;
-}
-
-string Manager::getDeptName()
-{
-	return string("经理");
-}
-
-
-```
-
-
-
-### 6.4 创建老板类
-
-老板类**继承**职工抽象类，并重写父类中纯虚函数，和普通员工类似
-
-在头文件和源文件的文件夹下分别创建boss.h 和 boss.cpp文件
-
-
-
-boss.h中代码如下：
-
-```c++
-#pragma once
-#include<iostream>
-using namespace std;
-#include "worker.h"
-
-//老板类
-class Boss :public Worker
-{
-public:
-
-	Boss(int id, string name, int dId);
-
-	//显示个人信息
-	virtual void showInfo();
-
-	//获取职工岗位名称
-	virtual string getDeptName();
-};
-```
-
-boss.cpp中代码如下：
-
-```c++
-#include "boss.h"
-
-Boss::Boss(int id, string name, int dId)
-{
-	this->m_Id = id;
-	this->m_Name = name;
-	this->m_DeptId = dId;
-
-}
-
-void Boss::showInfo()
-{
-	cout << "职工编号： " << this->m_Id
-		<< " \t职工姓名： " << this->m_Name
-		<< " \t岗位：" << this->getDeptName()
-		<< " \t岗位职责：管理公司所有事务" << endl;
-}
-
-string Boss::getDeptName()
-{
-	return string("总裁");
-}
-
-```
-
-
-
-
-
-### 6.5 测试多态
-
-在职工管理系统.cpp中添加测试函数，并且运行能够产生多态
-
-
-
-测试代码如下：
-
-```C++
-#include "worker.h"
-#include "employee.h"
-#include "manager.h"
-#include "boss.h"
-
-
-void test()
-{
-	Worker * worker = NULL;
-	worker = new Employee(1, "张三", 1);
-	worker->showInfo();
-	delete worker;
-	
-	worker = new Manager(2, "李四", 2);
-	worker->showInfo();
-	delete worker;
-
-	worker = new Boss(3, "王五", 3);
-	worker->showInfo();
-	delete worker;
-}
-
-```
-
-
-
-运行效果如图：
-
-![1546398236081](assets/1546398236081.png)
-
-测试成功后，测试代码可以注释保留，或者选择删除
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 7、添加职工
-
-功能描述：批量添加职工，并且保存到文件中
-
-### 7.1 功能分析
-
-分析：
-
-用户在批量创建时，可能会创建不同种类的职工
-
-如果想将所有不同种类的员工都放入到一个数组中，可以将所有员工的指针维护到一个数组里
-
-如果想在程序中维护这个不定长度的数组，可以将数组创建到堆区，并利用Worker **的指针维护
-
-![1546399491099](assets/1546399491099.png)
-
-### 7.2 功能实现
-
-在WokerManager.h头文件中添加成员属性 代码：
-
-```C++
-	//记录文件中的人数个数
-	int m_EmpNum;
-
-	//员工数组的指针
-	Worker ** m_EmpArray;
-```
-
-
-
-在WorkerManager构造函数中初始化属性
-
-```C++
-WorkerManager::WorkerManager()
-{
-	//初始化人数
-	this->m_EmpNum = 0;
-
-	//初始化数组指针
-	this->m_EmpArray = NULL;
-}
-```
-
-
-
-在workerManager.h中添加成员函数
-
-```C++
-	//增加职工
-	void Add_Emp();
-```
-
-
-
-workerManager.cpp中实现该函数
-
-```C++
-//增加职工
-void WorkerManager::Add_Emp()
-{
-	cout << "请输入增加职工数量： " << endl;
-
-	int addNum = 0;
-	cin >> addNum;
-
-	if (addNum > 0)
-	{
-		//计算新空间大小
-		int newSize = this->m_EmpNum + addNum;
-
-		//开辟新空间
-		Worker ** newSpace = new Worker*[newSize];
-
-		//将原空间下内容存放到新空间下
-		if (this->m_EmpArray != NULL)
-		{
-			for (int i = 0; i < this->m_EmpNum; i++)
-			{
-				newSpace[i] = this->m_EmpArray[i];
-			}
-		}
-
-		//输入新数据
-		for (int i = 0; i < addNum; i++)
-		{
-			int id;
-			string name;
-			int dSelect;
-
-			cout << "请输入第 " << i + 1 << " 个新职工编号：" << endl;
-			cin >> id;
-
-
-			cout << "请输入第 " << i + 1 << " 个新职工姓名：" << endl;
-			cin >> name;
-
-
-			cout << "请选择该职工的岗位：" << endl;
-			cout << "1、普通职工" << endl;
-			cout << "2、经理" << endl;
-			cout << "3、老板" << endl;
-			cin >> dSelect;
-
-
-			Worker * worker = NULL;
-			switch (dSelect)
-			{
-			case 1: //普通员工
-				worker = new Employee(id, name, 1);
-				break;
-			case 2: //经理
-				worker = new Manager(id, name, 2);
-				break;
-			case 3:  //老板
-				worker = new Boss(id, name, 3);
-				break;
-			default:
-				break;
-			}
-
-
-			newSpace[this->m_EmpNum + i] = worker;
-		}
-
-		//释放原有空间
-		delete[] this->m_EmpArray;
-
-		//更改新空间的指向
-		this->m_EmpArray = newSpace;
-
-		//更新新的个数
-		this->m_EmpNum = newSize;
-
-		//提示信息
-		cout << "成功添加" << addNum << "名新职工！" << endl;
-	}
-	else
-	{
-		cout << "输入有误" << endl;
-	}
-
-	system("pause");
-	system("cls");
-}
-```
-
-
-
-在WorkerManager.cpp的析构函数中，释放堆区数据
-
-```C++
-WorkerManager::~WorkerManager()
-{
-	if (this->m_EmpArray != NULL)
-	{
-		delete[] this->m_EmpArray;
-	}
-}
-
-```
-
-
-
-
-
-### 7.3 测试添加
-
-在main函数分支 1  选项中，调用添加职工接口
-
-![1546401705277](assets/1546401705277.png)
-
-效果如图：
-
-![1546401763461](assets/1546401763461.png)
-
-至此，添加职工到程序中功能实现完毕
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 8、文件交互 - 写文件
-
-功能描述：对文件进行读写
-
-​	在上一个添加功能中，我们只是将所有的数据添加到了内存中，一旦程序结束就无法保存了
-
-​	因此文件管理类中需要一个与文件进行交互的功能，对于文件进行读写操作
-
-
-
-### 8.1 设定文件路径
-
-首先我们将文件路径，在workerManager.h中添加宏常量,并且包含头文件 fstream
-
-```C++
-#include <fstream>
-#define  FILENAME "empFile.txt"
-```
-
-
-
-### 8.2 成员函数声明
-
-在workerManager.h中类里添加成员函数 `void save()`
-
-```C++
-//保存文件
-void save();
-```
-
-
-
-### 8.3 保存文件功能实现
-
-```C++
-void WorkerManager::save()
-{
-	ofstream ofs;
-	ofs.open(FILENAME, ios::out);
-
-
-	for (int i = 0; i < this->m_EmpNum; i++)
-	{
-		ofs << this->m_EmpArray[i]->m_Id << " " 
-			<< this->m_EmpArray[i]->m_Name << " " 
-			<< this->m_EmpArray[i]->m_DeptId << endl;
-	}
-
-	ofs.close();
-}
-```
-
-
-
-### 8.4 保存文件功能测试
-
-在添加职工功能中添加成功后添加保存文件函数
-
-
-
-![1546432469465](assets/1546432469465.png)
-
-
-
-再次运行代码，添加职工
-
-![1546401763461](assets/1546401763461.png)
-
-
-
-同级目录下多出文件，并且保存了添加的信息
-
-![1546432343078](assets/1546432343078.png)
-
-
-
-## 9、文件交互 - 读文件
-
-功能描述：将文件中的内容读取到程序中
-
-虽然我们实现了添加职工后保存到文件的操作，但是每次开始运行程序，并没有将文件中数据读取到程序中
-
-而我们的程序功能中还有清空文件的需求
-
-因此构造函数初始化数据的情况分为三种
-
-
-
-1. 第一次使用，文件未创建
-2. 文件存在，但是数据被用户清空
-3. 文件存在，并且保存职工的所有数据
-
-
-
-### 9.1 文件未创建
-
-在workerManager.h中添加新的成员属性 m_FileIsEmpty标志文件是否为空
-
-```C++
-	//标志文件是否为空
-	bool m_FileIsEmpty;
-```
-
-
-
-修改WorkerManager.cpp中构造函数代码
-
-```C++
-WorkerManager::WorkerManager()
-{
-	ifstream ifs;
-	ifs.open(FILENAME, ios::in);
-
-	//文件不存在情况
-	if (!ifs.is_open())
-	{
-		cout << "文件不存在" << endl; //测试输出
-		this->m_EmpNum = 0;  //初始化人数
-		this->m_FileIsEmpty = true; //初始化文件为空标志
-		this->m_EmpArray = NULL; //初始化数组
-		ifs.close(); //关闭文件
-		return;
-	}
-}
-```
-
-
-
-删除文件后，测试文件不存在时初始化数据功能
-
-
-
-### 9.2 文件存在且数据为空
-
-在workerManager.cpp中的构造函数追加代码：
-
-```C++
-	//文件存在，并且没有记录
-	char ch;
-	ifs >> ch;
-	if (ifs.eof())
-	{
-		cout << "文件为空!" << endl;
-		this->m_EmpNum = 0;
-		this->m_FileIsEmpty = true;
-		this->m_EmpArray = NULL;
-		ifs.close();
-		return;
-	}
-```
-
-追加代码位置如图：
-
-![1546435197575](assets/1546435197575.png)
-
-将文件创建后清空文件内容，并测试该情况下初始化功能
-
-
-
-我们发现文件不存在或者为空清空 m_FileIsEmpty 判断文件是否为空的标志都为真，那何时为假？
-
-成功添加职工后，应该更改文件不为空的标志
-
-在`void WorkerManager::Add_Emp() `成员函数中添加：
-
-```C++
-		//更新职工不为空标志
-		this->m_FileIsEmpty = false;
-```
-
-![1546656256176](assets/1546656256176.png)
-
-
-
-
-
-
-
-### 9.3 文件存在且保存职工数据
-
-#### 9.3.1 获取记录的职工人数
-
-在workerManager.h中添加成员函数 ` int get_EmpNum();`
-
-```C++
-	//统计人数
-	int get_EmpNum();
-```
-
-workerManager.cpp中实现
-
-```C++
-int WorkerManager::get_EmpNum()
-{
-	ifstream ifs;
-	ifs.open(FILENAME, ios::in);
-
-	int id;
-	string name;
-	int dId;
-
-	int num = 0;
-
-	while (ifs >> id && ifs >> name && ifs >> dId)
-	{
-        //记录人数
-		num++;
-	}
-	ifs.close();
-
-	return num;
-}
-```
-
-在workerManager.cpp构造函数中继续追加代码：
-
-```C++
-	int num =  this->get_EmpNum();
-	cout << "职工个数为：" << num << endl;  //测试代码
-	this->m_EmpNum = num;  //更新成员属性 
-```
-
-
-
-手动添加一些职工数据，测试获取职工数量函数
-
-![1546436429055](assets/1546436429055.png)
-
-![1546436385793](assets/1546436385793.png)
-
-
-
-#### 9.3.2 初始化数组
-
-根据职工的数据以及职工数据，初始化workerManager中的Worker ** m_EmpArray 指针
-
-
-
-在WorkerManager.h中添加成员函数  `void init_Emp();`
-
-```C++
-	//初始化员工
-	void init_Emp();
-```
-
-
-
-在WorkerManager.cpp中实现
-
-```C++
-void WorkerManager::init_Emp()
-{
-	ifstream ifs;
-	ifs.open(FILENAME, ios::in);
-
-	int id;
-	string name;
-	int dId;
-	
-	int index = 0;
-	while (ifs >> id && ifs >> name && ifs >> dId)
-	{
-		Worker * worker = NULL;
-		//根据不同的部门Id创建不同对象
-		if (dId == 1)  // 1普通员工
-		{
-			worker = new Employee(id, name, dId);
-		}
-		else if (dId == 2) //2经理
-		{
-			worker = new Manager(id, name, dId);
-		}
-		else //总裁
-		{
-			worker = new Boss(id, name, dId);
-		}
-		//存放在数组中
-		this->m_EmpArray[index] = worker;
-		index++;
-	}
-}
-```
-
-
-
-在workerManager.cpp构造函数中追加代码
-
-```C++
-	//根据职工数创建数组
-	this->m_EmpArray = new Worker *[this->m_EmpNum];
-	//初始化职工
-	init_Emp();
-
-	//测试代码
-	for (int i = 0; i < m_EmpNum; i++)
-	{
-		cout << "职工号： " << this->m_EmpArray[i]->m_Id
-			<< " 职工姓名： " << this->m_EmpArray[i]->m_Name
-			<< " 部门编号： " << this->m_EmpArray[i]->m_DeptId << endl;
-	}
-```
-
-
-
-运行程序，测试从文件中获取的数据
-
-![1546436938152](assets/1546436938152.png)
-
-至此初始化数据功能完毕，测试代码可以注释或删除掉！
-
-
-
-
-
-
-
-
-
-## 10、显示职工
-
-功能描述：显示当前所有职工信息
-
-#### 10.1 显示职工函数声明
-
-在workerManager.h中添加成员函数  `void Show_Emp();`
-
-```C++
-	//显示职工
-	void Show_Emp();
-```
-
-
-
-#### 10.2 显示职工函数实现
-
-在workerManager.cpp中实现成员函数 `void Show_Emp();`
-
-```C++
-//显示职工
-void WorkerManager::Show_Emp()
-{
-	if (this->m_FileIsEmpty)
-	{
-		cout << "文件不存在或记录为空！" << endl;
-	}
-	else
-	{
-		for (int i = 0; i < m_EmpNum; i++)
-		{
-			//利用多态调用接口
-			this->m_EmpArray[i]->showInfo();
-		}
-	}
-
-	system("pause");
-	system("cls");
-}
-```
-
-
-
-#### 10.3 测试显示职工
-
-在main函数分支 2  选项中，调用显示职工接口
-
-![1546497336465](assets/1546497336465.png)
-
-
-
-测试时分别测试 文件为空和文件不为空两种情况
-
-测试效果：
-
-测试1-文件不存在或者为空情况
-
-![1546497082135](assets/1546497082135.png)
-
-测试2 - 文件存在且有记录情况
-
-![1546496947671](assets/1546496947671.png)
-
-
-
-测试完毕，至此，显示所有职工信息功能实现
-
-
-
-
-
-
-
-
-
-
-
-## 11、删除职工
-
-功能描述：按照职工的编号进行删除职工操作
-
-
-
-#### 11.1 删除职工函数声明
-
-在workerManager.h中添加成员函数  `void Del_Emp();`
-
-```C++
-	//删除职工
-	void Del_Emp();
-```
-
-
-
-#### 11.2 职工是否存在函数声明
-
-很多功能都需要用到根据职工是否存在来进行操作如：删除职工、修改职工、查找职工
-
-因此添加该公告函数，以便后续调用
-
-在workerManager.h中添加成员函数  `int IsExist(int id);`
-
-```C++
-	//按照职工编号判断职工是否存在,若存在返回职工在数组中位置，不存在返回-1
-	int IsExist(int id);
-```
-
-
-
-#### 11.3 职工是否存在函数实现
-
-在workerManager.cpp中实现成员函数 `int IsExist(int id);`
-
-```C++
-int WorkerManager::IsExist(int id)
-{
-	int index = -1;
-
-	for (int i = 0; i < this->m_EmpNum; i++)
-	{
-		if (this->m_EmpArray[i]->m_Id == id)
-		{
-			index = i;
-
-			break;
-		}
-	}
-
-	return index;
-}
-```
-
-
-
-
-
-#### 11.4 删除职工函数实现
-
-在workerManager.cpp中实现成员函数 ` void Del_Emp();`
-
-```C++
-//删除职工
-void WorkerManager::Del_Emp()
-{
-	if (this->m_FileIsEmpty)
-	{
-		cout << "文件不存在或记录为空！" << endl;
-	}
-	else
-	{
-		//按职工编号删除
-		cout << "请输入想要删除的职工号：" << endl;
-		int id = 0;
-		cin >> id;
-
-		int index = this->IsExist(id);
-
-		if (index != -1)  //说明index上位置数据需要删除
-		{
-			for (int i = index; i < this->m_EmpNum - 1; i++)
-			{
-				this->m_EmpArray[i] = this->m_EmpArray[i + 1];
-			}
-			this->m_EmpNum--;
-
-			this->save(); //删除后数据同步到文件中
-			cout << "删除成功！" << endl;
-		}
-		else
-		{
-			cout << "删除失败，未找到该职工" << endl;
-		}
-	}
-	
-	system("pause");
-	system("cls");
-}
-```
-
-
-
-#### 11.5 测试删除职工
-
-在main函数分支 3  选项中，调用删除职工接口
-
-![1546502698622](assets/1546502698622.png)
-
-测试1 - 删除不存在职工情况
-
-![1546500324196](assets/1546500324196.png)
-
-测试2 - 删除存在的职工情况
-
-删除成功提示图：
-
-![1546500350526](assets/1546500350526.png)
-
-再次显示所有职工信息，确保已经删除
-
-![1546500361889](assets/1546500361889.png)
-
-查看文件中信息，再次核实员工已被完全删除
-
-![1546500383570](assets/1546500383570.png)
-
-至此，删除职工功能实现完毕！
-
-
-
-
-
-
-
-
-
-## 12、修改职工
-
-功能描述：能够按照职工的编号对职工信息进行修改并保存
-
-#### 12.1 修改职工函数声明
-
-在workerManager.h中添加成员函数  `void Mod_Emp();`
-
-```C++
-	//修改职工
-	void Mod_Emp();
-```
-
-
-
-#### 12.2 修改职工函数实现
-
-在workerManager.cpp中实现成员函数 ` void Mod_Emp();`
-
-```C++
-//修改职工
-void WorkerManager::Mod_Emp()
-{
-	if (this->m_FileIsEmpty)
-	{
-		cout << "文件不存在或记录为空！" << endl;
-	}
-	else
-	{
-		cout << "请输入修改职工的编号：" << endl;
-		int id;
-		cin >> id;
-
-		int ret = this->IsExist(id);
-		if (ret != -1)
-		{ 
-			//查找到编号的职工
-
-			delete this->m_EmpArray[ret];
-			
-			int newId = 0;
-			string newName = "";
-			int dSelect = 0;
-
-			cout << "查到： " << id << "号职工，请输入新职工号： " << endl;
-			cin >> newId;
-
-			cout << "请输入新姓名： " << endl;
-			cin >> newName;
-
-			cout << "请输入岗位： " << endl;
-			cout << "1、普通职工" << endl;
-			cout << "2、经理" << endl;
-			cout << "3、老板" << endl;
-			cin >> dSelect;
-
-			Worker * worker = NULL;
-			switch (dSelect)
-			{
-			case1:
-				worker = new Employee(newId, newName, dSelect);
-				break;
-			case2:
-				worker = new Manager(newId, newName, dSelect);
-				break;
-			case 3:
-				worker = new Boss(newId, newName, dSelect);
-				break;
-			default:
-				break;
-			}
-
-			//更改数据 到数组中
-			this->m_EmpArray[ret]= worker;
-			
-			cout << "修改成功！" << endl;
-
-			//保存到文件中
-			this->save();
-		}
-		else
-		{
-			cout << "修改失败，查无此人" << endl;
-		}
-	}
-
-	//按任意键 清屏
-	system("pause");
-	system("cls");
-}
-
-```
-
-
-
-
-
-#### 12.3 测试修改职工
-
-在main函数分支 4  选项中，调用修改职工接口
-
-![1546502651922](assets/1546502651922.png)
-
-
-
-测试1 - 修改不存在职工情况
-
-![1546502759643](assets/1546502759643.png)
-
-测试2 - 修改存在职工情况，例如将职工 "李四" 改为 "赵四"
-
-![1546502830350](assets/1546502830350.png)
-
-修改后再次查看所有职工信息，并确认修改成功
-
-![1546502865443](assets/1546502865443.png)
-
-再次确认文件中信息也同步更新
-
-![1546502898653](assets/1546502898653.png)
-
-至此，修改职工功能已实现！
-
-
-
-
-
-
-
-
-
-
-
-## 13、查找职工
-
-功能描述：提供两种查找职工方式，一种按照职工编号，一种按照职工姓名
-
-#### 13.1 查找职工函数声明
-
-在workerManager.h中添加成员函数  `void Find_Emp();`
-
-```c++
-	//查找职工
-	void Find_Emp();
-```
-
-
-
-#### 13.2 查找职工函数实现
-
-在workerManager.cpp中实现成员函数 ` void Find_Emp();`
-
-```C++
-//查找职工
-void WorkerManager::Find_Emp()
-{
-	if (this->m_FileIsEmpty)
-	{
-		cout << "文件不存在或记录为空！" << endl;
-	}
-	else
-	{
-		cout << "请输入查找的方式：" << endl;
-		cout << "1、按职工编号查找" << endl;
-		cout << "2、按姓名查找" << endl;
-
-		int select = 0;
-		cin >> select;
-
-
-		if (select == 1) //按职工号查找
-		{
-			int id;
-			cout << "请输入查找的职工编号：" << endl;
-			cin >> id;
-
-			int ret = IsExist(id);
-			if (ret != -1)
-			{
-				cout << "查找成功！该职工信息如下：" << endl;
-				this->m_EmpArray[ret]->showInfo();
-			}
-			else
-			{
-				cout << "查找失败，查无此人" << endl;
-			}
-		}
-		else if(select == 2) //按姓名查找
-		{
-			string name;
-			cout << "请输入查找的姓名：" << endl;
-			cin >> name;
-
-			bool flag = false;  //查找到的标志
-			for (int i = 0; i < m_EmpNum; i++)
-			{
-				if (m_EmpArray[i]->m_Name == name)
-				{
-					cout << "查找成功,职工编号为："
-                           << m_EmpArray[i]->m_Id
-                           << " 号的信息如下：" << endl;
-					
-					flag = true;
-
-					this->m_EmpArray[i]->showInfo();
-				}
-			}
-			if (flag == false)
-			{
-				//查无此人
-				cout << "查找失败，查无此人" << endl;
-			}
-		}
-		else
-		{
-			cout << "输入选项有误" << endl;
-		}
-	}
-
-
-	system("pause");
-	system("cls");
-}
-```
-
-
-
-
-
-#### 13.3 测试查找职工
-
-在main函数分支 5  选项中，调用查找职工接口
-
-![1546504714318](assets/1546504714318.png)
-
-测试1 - 按照职工编号查找 - 查找不存在职工
-
-![1546504767229](assets/1546504767229.png)
-
-测试2 - 按照职工编号查找 -  查找存在职工
-
-![1546505046521](assets/1546505046521.png)
-
-测试3 - 按照职工姓名查找 - 查找不存在职工
-
-![1546505115610](assets/1546505115610.png)
-
-
-
-测试4 - 按照职工姓名查找 - 查找存在职工（如果出现重名，也一并显示，在文件中可以添加重名职工）
-
-例如 添加两个王五的职工，然后按照姓名查找王五
-
-![1546507850441](assets/1546507850441.png)
-
-![1546507760284](assets/1546507760284.png)
-
-至此，查找职工功能实现完毕！
-
-
-
-
-
-
-
-## 14、排序
-
-功能描述：按照职工编号进行排序，排序的顺序由用户指定
-
-#### 14.1 排序函数声明
-
-在workerManager.h中添加成员函数  `void Sort_Emp();`
-
-```C++
-	//排序职工
-	void Sort_Emp();
-```
-
-
-
-#### 14.2 排序函数实现
-
-在workerManager.cpp中实现成员函数 ` void Sort_Emp();`
-
-```C++
-//排序职工
-void WorkerManager::Sort_Emp()
-{
-	if (this->m_FileIsEmpty)
-	{
-		cout << "文件不存在或记录为空！" << endl;
-		system("pause");
-		system("cls");
-	}
-	else
-	{
-		cout << "请选择排序方式： " << endl;
-		cout << "1、按职工号进行升序" << endl;
-		cout << "2、按职工号进行降序" << endl;
-
-		int select = 0;
-		cin >> select;
-
-
-		for (int i = 0; i < m_EmpNum; i++)
-		{
-			int minOrMax = i;
-			for (int j = i + 1; j < m_EmpNum; j++)
-			{
-				if (select == 1) //升序
-				{
-					if (m_EmpArray[minOrMax]->m_Id > m_EmpArray[j]->m_Id)
-					{
-						minOrMax = j;
-					}
-				}
-				else  //降序
-				{
-					if (m_EmpArray[minOrMax]->m_Id < m_EmpArray[j]->m_Id)
-					{
-						minOrMax = j;
-					}
-				}
-			}
-
-			if (i != minOrMax)
-			{
-				Worker * temp = m_EmpArray[i];
-				m_EmpArray[i] = m_EmpArray[minOrMax];
-				m_EmpArray[minOrMax] = temp;
-			}
-
-		}
-
-		cout << "排序成功,排序后结果为：" << endl;
-		this->save();
-		this->Show_Emp();
-	}
-
-}
-```
-
-
-
-
-
-#### 14.3 测试排序功能
-
-在main函数分支 6  选项中，调用排序职工接口
-
-![1546510145181](assets/1546510145181.png)
-
-测试：
-
-首先我们添加一些职工，序号是无序的，例如：
-
-![1546658169987](assets/1546658169987.png)
-
-
-
-测试 - 升序排序
-
-![1546658190479](assets/1546658190479.png)
-
-文件同步更新
-
-![1546658273581](assets/1546658273581.png)
-
-
-
-
-
-测试 - 降序排序
-
-![1546658288936](assets/1546658288936.png)
-
-文件同步更新
-
-![1546658313704](assets/1546658313704.png)
-
-至此，职工按照编号排序的功能实现完毕！
-
-
-
-
-
-
-
-
-
-
-
-## 15、清空文件
-
-功能描述：将文件中记录数据清空
-
-
-
-#### 15.1 清空函数声明
-
-在workerManager.h中添加成员函数  `void Clean_File();`
-
-```C++
-	//清空文件
-	void Clean_File();
-```
-
-
-
-
-
-#### 15.2 清空函数实现
-
-在workerManager.cpp中实现员函数 ` void Clean_File();`
-
-```C++
-//清空文件
-void WorkerManager::Clean_File()
-{
-	cout << "确认清空？" << endl;
-	cout << "1、确认" << endl;
-	cout << "2、返回" << endl;
-
-	int select = 0;
-	cin >> select;
-
-	if (select == 1)
-	{
-		//打开模式 ios::trunc 如果存在删除文件并重新创建
-		ofstream ofs(FILENAME, ios::trunc);
-		ofs.close();
-
-		if (this->m_EmpArray != NULL)
-		{
-            for (int i = 0; i < this->m_EmpNum; i++)
-			{
-				if (this->m_EmpArray[i] != NULL)
-				{
-					delete this->m_EmpArray[i];
-				}
-			}
-			this->m_EmpNum = 0;
-			delete[] this->m_EmpArray;
-			this->m_EmpArray = NULL;
-			this->m_FileIsEmpty = true;
-		}
-		cout << "清空成功！" << endl;
-	}
-
-	system("pause");
-	system("cls");
-}
-```
-
-
-
-
-
-#### 15.3 测试清空文件
-
-在main函数分支 7  选项中，调用清空文件接口
-
-![1546511085541](assets/1546511085541.png)
-
-测试：确认清空文件
-
-![1546510976745](assets/1546510976745.png)
-
-再次查看文件中数据，记录已为空
-
-![1546510994196](assets/1546510994196.png)
-
-打开文件，里面数据已确保清空，该功能需要慎用！
-
-![1546511018517](assets/1546511018517.png)
-
-
-
-随着清空文件功能实现，本案例制作完毕  ^ _ ^  
 # C++提高编程
 
 
@@ -12944,7 +10298,7 @@ void Person<T1, T2>::showPerson() {
 #include<iostream>
 using namespace std;
 
-//#include "person.h"
+//#include "person.h"  //注意类模板函数的创建时期是在调用阶段
 #include "person.cpp" //解决方式1，包含cpp源文件
 
 //解决方式2，将声明和实现写到一起，文件后缀名改为.hpp
@@ -13019,7 +10373,7 @@ class Person
 
 
 	//全局函数配合友元  类外实现
-	friend void printPerson2<>(Person<T1, T2> & p);
+	friend void printPerson2<>(Person<T1, T2> & p);  //参数列表要写
 
 public:
 
@@ -13369,7 +10723,7 @@ STL**容器**就是将运用**最广泛的一些数据结构**实现出来
 这些容器分为**序列式容器**和**关联式容器**两种:
 
 ​	**序列式容器**:强调值的排序，序列式容器中的每个元素均有固定的位置。
-	**关联式容器**:二叉树结构，各元素之间没有严格的物理上的顺序关系
+	**关联式容器**:二叉树结构，各元素之间没有严格的物理上的顺序关系（有点类似于python的字典，没有顺序和索引）
 
 
 
@@ -13379,9 +10733,9 @@ STL**容器**就是将运用**最广泛的一些数据结构**实现出来
 
 算法分为:**质变算法**和**非质变算法**。
 
-质变算法：是指运算过程中会更改区间内的元素的内容。例如拷贝，替换，删除等等
+质变算法：是指运算过程中会更改区间内的元素的内容。例如拷贝（12345->1122334455），替换，删除等等
 
-非质变算法：是指运算过程中不会更改区间内的元素内容，例如查找、计数、遍历、寻找极值等等
+非质变算法：是指运算过程中不会更改区间内的元素内容，例如查找、计数、遍历、寻找极值等等.
 
 
 
@@ -13457,7 +10811,7 @@ void test01() {
 	v.push_back(40);
 
 	//每一个容器都有自己的迭代器，迭代器是用来遍历容器中的元素
-	//v.begin()返回迭代器，这个迭代器指向容器中第一个数据
+	//v.begin()返回迭代器，这个迭代器指向容器中第一个数据(返回的类似指针类型)
 	//v.end()返回迭代器，这个迭代器指向容器元素的最后一个元素的下一个位置
 	//vector<int>::iterator 拿到vector<int>这种容器的迭代器类型
 
@@ -13472,7 +10826,8 @@ void test01() {
 
 	
 	//第二种遍历方式：
-	for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {
+	for (vector<int>::iterator it = v.begin(); it != v.end(); it++) {  
+		//it != v.end?? v.end不用写vector<int>::iterator ？？？吗
 		cout << *it << endl;
 	}
 	cout << endl;
@@ -13507,6 +10862,7 @@ int main() {
 ```c++
 #include <vector>
 #include <string>
+#include <algorithm>
 
 //自定义数据类型
 class Person {
@@ -13519,10 +10875,15 @@ public:
 	string mName;
 	int mAge;
 };
+
+void myprint(Person* val)
+{
+	cout << "Name:" << val->mName << " Age:" << val->mAge << endl;
+}
 //存放对象
 void test01() {
 
-	vector<Person> v;
+	vector<Person*> v;
 
 	//创建数据
 	Person p1("aaa", 10);
@@ -13531,16 +10892,17 @@ void test01() {
 	Person p4("ddd", 40);
 	Person p5("eee", 50);
 
-	v.push_back(p1);
-	v.push_back(p2);
-	v.push_back(p3);
-	v.push_back(p4);
-	v.push_back(p5);
+	v.push_back(&p1);
+	v.push_back(&p2);
+	v.push_back(&p3);
+	v.push_back(&p4);
+	v.push_back(&p5);
 
-	for (vector<Person>::iterator it = v.begin(); it != v.end(); it++) {
-		cout << "Name:" << (*it).mName << " Age:" << (*it).mAge << endl;
+	// for (vector<Person>::iterator it = v.begin(); it != v.end(); it++) {
+	// 	cout << "Name:" << (*it).mName << " Age:" << (*it).mAge << endl;
 
-	}
+	// }
+	for_each(v.begin(), v.end(), myprint); //这里改成for_each算法实现 ,特别注意的是打印函数不要加括号
 }
 
 
@@ -13596,48 +10958,7 @@ int main() {
 ```C++
 #include <vector>
 
-//容器嵌套容器
-void test01() {
-
-	vector< vector<int> >  v;
-
-	vector<int> v1;
-	vector<int> v2;
-	vector<int> v3;
-	vector<int> v4;
-
-	for (int i = 0; i < 4; i++) {
-		v1.push_back(i + 1);
-		v2.push_back(i + 2);
-		v3.push_back(i + 3);
-		v4.push_back(i + 4);
-	}
-
-	//将容器元素插入到vector v中
-	v.push_back(v1);
-	v.push_back(v2);
-	v.push_back(v3);
-	v.push_back(v4);
-
-
-	for (vector<vector<int>>::iterator it = v.begin(); it != v.end(); it++) {
-
-		for (vector<int>::iterator vit = (*it).begin(); vit != (*it).end(); vit++) {
-			cout << *vit << " ";
-		}
-		cout << endl;
-	}
-
-}
-
-int main() {
-
-	test01();
-
-	system("pause");
-
-	return 0;
-}
+ 
 ```
 
 
@@ -13887,7 +11208,7 @@ int main() {
 
 **函数原型：**
 
-* `int find(const string& str, int pos = 0) const;`              //查找str第一次出现位置,从pos开始查找
+* `int find(const string& str, int pos = 0) const;`              //查找str第一次出现位置,从pos开始查找，pos默认为0
 * `int find(const char* s, int pos = 0) const; `                     //查找s第一次出现位置,从pos开始查找
 * `int find(const char* s, int pos, int n) const; `               //从pos位置查找s的前n个字符第一次位置
 * `int find(const char c, int pos = 0) const; `                       //查找字符c第一次出现位置
@@ -13908,9 +11229,9 @@ int main() {
 void test01()
 {
 	//查找
-	string str1 = "abcdefgde";
+	string str1 = "abcdefgde"; 
 
-	int pos = str1.find("de");
+	int pos = str1.find("de");        //找不到的情况下，pos返回-1
 
 	if (pos == -1)
 	{
@@ -14060,7 +11381,7 @@ void test01()
 {
 	string str = "hello world";
 
-	for (int i = 0; i < str.size(); i++)
+	for (int i = 0; i < str.size(); i++) //size函数访问字符串长度
 	{
 		cout << str[i] << " ";
 	}
@@ -14224,7 +11545,7 @@ int main() {
 
 **动态扩展：**
 
-* 并不是在原空间之后续接新空间，而是找更大的内存空间，然后将原数据拷贝新空间，释放原空间
+* 并不是在原空间之后续接新空间，而是找更大的内存空间(大小并不固定），然后将原数据拷贝新空间，释放原空间
 
 
 
@@ -14232,7 +11553,7 @@ int main() {
 
 
 
-* vector容器的迭代器是支持随机访问的迭代器
+* vector容器的迭代器是支持随机访问的迭代器（最强悍的迭代器 可以跳着访问）
 
 
 
@@ -14251,7 +11572,7 @@ int main() {
 **函数原型：**
 
 * `vector<T> v; `               		     //采用模板实现类实现，默认构造函数
-* `vector(v.begin(), v.end());   `       //将v[begin(), end())区间中的元素拷贝给本身。
+* `vector(v.begin(), v.end());   `       //将v[begin(), end())区间中的元素拷贝给本身。前闭后开区间
 * `vector(n, elem);`                            //构造函数将n个elem拷贝给本身。
 * `vector(const vector &vec);`         //拷贝构造函数。
 
@@ -14301,7 +11622,7 @@ int main() {
 }
 ```
 
-**总结：**vector的多种构造方式没有可比性，灵活使用即可
+**总结：**vector的多种构造方式没有可比性，灵活使用即可，拷贝构造用的较多。
 
 
 
@@ -14404,7 +11725,7 @@ int main() {
 
 * `size();`                              //返回容器中元素的个数
 
-* `resize(int num);`             //重新指定容器的长度为num，若容器变长，则以默认值填充新位置。
+* `resize(int num);`             //重新指定容器的长度为num，若容器变长，则以默认值填充新位置。 默认值为0来填充
 
   ​					      //如果容器变短，则末尾超出容器长度的元素被删除。
 
@@ -14550,7 +11871,7 @@ void test01()
 
 	//清空
 	v1.erase(v1.begin(), v1.end());
-	v1.clear();
+	v1.clear();                    //和上一行代码效果相同
 	printVector(v1);
 }
 
@@ -14728,7 +12049,7 @@ void test02()
 	cout << "v的大小为：" << v.size() << endl;
 
 	//收缩内存
-	vector<int>(v).swap(v); //匿名对象
+	vector<int>(v).swap(v); //匿名对象 在调用后就会立即回收内存 vector<int>(v)是匿名对象
 
 	cout << "v的容量为：" << v.capacity() << endl;
 	cout << "v的大小为：" << v.size() << endl;
@@ -14781,7 +12102,7 @@ void test01()
 	vector<int> v;
 
 	//预留空间
-	v.reserve(100000);
+	v.reserve(100000); //如果没有这一行代码预留指定的空间 下面的num可能是很多次，重新开辟很多次空间。
 
 	int num = 0;
 	int* p = NULL;
@@ -14832,7 +12153,7 @@ int main() {
 
 **deque与vector区别：**
 
-* vector对于头部的插入删除效率低，数据量越大，效率越低
+* vector对于头部的插入删除效率低，数据量越大，效率越低（比如10万个数据 要先把10万个数据向后复制一个空间再把第一个空间赋值）
 * deque相对而言，对头部的插入删除速度回比vector快
 * vector访问元素时的速度会比deque快,这和两者内部实现有关
 
@@ -14844,7 +12165,7 @@ deque内部工作原理:
 
 deque内部有个**中控器**，维护每段缓冲区中的内容，缓冲区中存放真实数据
 
-中控器维护的是每个缓冲区的地址，使得使用deque时像一片连续的内存空间
+中控器维护的是每个缓冲区的地址，使得使用deque时像一片连续的内存空间（如果前后空间不够会再找一小段作为储存空间，然后把这一小段地址记录再中控器里，它访问的速度不如vector快）
 
 ![clip_image002-1547547896341](assets/clip_image002-1547547896341.jpg)
 
@@ -14876,9 +12197,9 @@ deque内部有个**中控器**，维护每段缓冲区中的内容，缓冲区�
 ```C++
 #include <deque>
 
-void printDeque(const deque<int>& d) 
+void printDeque(const deque<int>& d)  //限制容器里的数据为可读状态
 {
-	for (deque<int>::const_iterator it = d.begin(); it != d.end(); it++) {
+	for (deque<int>::const_iterator it = d.begin(); it != d.end(); it++) { //const_iterator 只读迭代器
 		cout << *it << " ";
 
 	}
@@ -15010,7 +12331,7 @@ int main() {
 
 **函数原型：**
 
-* `deque.empty();`                       //判断容器是否为空
+* `deque.empty();`                       //判断容器是否为空，返回bool类型
 
 * `deque.size();`                         //返回容器中元素的个数
 
@@ -15022,6 +12343,7 @@ int main() {
 
   ​                                                     //如果容器变短，则末尾超出容器长度的元素被删除。
 
+deque容器没有容量的概念，可以无限扩展，这一点跟vector容器不同
   ​
 
 
@@ -15224,7 +12546,7 @@ int main() {
 
 总结：
 
-* 插入和删除提供的位置是迭代器！
+* 插入和删除提供的位置是迭代器！（不要提供索引值，索引值是不可以的）
 * 尾插   ---  push_back
 * 尾删   ---  pop_back
 * 头插   ---  push_front
@@ -15338,7 +12660,7 @@ int main() {
 
 **算法：**
 
-* `sort(iterator beg, iterator end)`  //对beg和end区间内元素进行排序
+* `sort(iterator beg, iterator end)`  //对beg和end区间内元素进行排序,注意这里是迭代器
 
 
 
@@ -15384,7 +12706,7 @@ int main() {
 }
 ```
 
-总结：sort算法非常实用，使用时包含头文件 algorithm即可
+总结：sort算法非常实用，使用时包含头文件 algorithm即可 
 
 
 
@@ -15477,7 +12799,7 @@ void setScore(vector<Person>&v)
 
 		//去除最高和最低分
 		d.pop_back();
-		d.pop_front();
+		d.pop_front();       //需要对头端进行操作时用deque容器比较合适
 
 		//取平均分
 		int sum = 0;
@@ -15543,7 +12865,7 @@ int main() {
 
 
 
-**概念：**stack是一种**先进后出**(First In Last Out,FILO)的数据结构，它只有一个出口
+**概念：**stack是一种**先进后出**(First In Last Out,FILO)的数据结构，它只有一个出口（需要下面的元素都出去了才能出去）
 
 
 
@@ -15595,7 +12917,7 @@ int main() {
 大小操作：
 
 * `empty();`            //判断堆栈是否为空
-* `size(); `              //返回栈的大小
+* `size(); `              //返回栈的大小（入栈的时候进行记录的）
 
 
 
@@ -15664,7 +12986,7 @@ int main() {
 **概念：**Queue是一种**先进先出**(First In First Out,FIFO)的数据结构，它有两个出口
 
 
-
+队头只能弹出数据，队尾只能进入数据
 
 
 
@@ -15827,7 +13149,7 @@ int main() {
 
 
 
-STL中的链表是一个双向循环链表
+STL中的链表是一个双向循环链表（每个节点即记录下一个节点位置又记录上一个节点的位置）
 
 
 
@@ -16153,7 +13475,7 @@ int main() {
 * erase(beg,end);//删除[beg,end)区间的数据，返回下一个数据的位置。
 * erase(pos);//删除pos位置的数据，返回下一个数据的位置。
 * remove(elem);//删除容器中所有与elem值匹配的元素。
-
+insert erase 都应该放入迭代器
 
 
 
@@ -16268,7 +13590,7 @@ int main() {
 * `back();`         //返回最后一个元素。
 
 
-
+list本质上一个链表，不是连续的空间储存数据，所以不支持随机访问（不支持索引）迭代器支持++ -- 但不支持 +1 -1 这种因为这种属于随机访问
 
 
 **示例：**
@@ -16407,7 +13729,7 @@ int main() {
 
 案例描述：将Person自定义数据类型进行排序，Person中属性有姓名、年龄、身高
 
-排序规则：按照年龄进行升序，如果年龄相同按照身高进行降序
+排序规则：按照年龄进行升序，如果年龄相同按照身高进行降序（注意sort函数的成员函数的实现怎么写）
 
 
 
@@ -16518,7 +13840,7 @@ int main() {
 
 **简介：**
 
-* 所有元素都会在插入时自动被排序
+* 特点：所有元素都会在插入时自动被排序
 
 
 
@@ -16556,6 +13878,8 @@ int main() {
 
 * `set& operator=(const set &st);`    //重载等号操作符
 
+插值
+只有insert()
 
 
 **示例：**
@@ -16606,7 +13930,7 @@ int main() {
 总结：
 
 * set容器插入数据时用insert
-* set容器插入数据的数据会自动排序
+* set容器插入数据的数据会自动排序(不允许插入)
 
 
 
@@ -16628,7 +13952,7 @@ int main() {
 
 **函数原型：**
 
-* `size();`          //返回容器中元素的数目
+* `size();`          //返回容器中元素的数目 set容器不允许resize，因为会有重复数据
 * `empty();`        //判断容器是否为空
 * `swap(st);`      //交换两个集合容器
 
@@ -16830,7 +14154,7 @@ int main() {
 **函数原型：**
 
 * `find(key);`                  //查找key是否存在,若存在，返回该键的元素的迭代器；若不存在，返回set.end();
-* `count(key);`                //统计key的元素个数
+* `count(key);`                //统计key的元素个数（对于set容器只返回0或1）
 
 
 
@@ -16926,7 +14250,8 @@ int main() {
 void test01()
 {
 	set<int> s;
-	pair<set<int>::iterator, bool>  ret = s.insert(10);
+	//set的insert会返回一个对组的数据类型，两个数据为迭代器和bool，下面相当于ret有两个元素，第一个是迭代器，第二个是bool
+	pair<set<int>::iterator, bool>  ret = s.insert(10);  
 	if (ret.second) {
 		cout << "第一次插入成功!" << endl;
 	}
@@ -17169,7 +14494,7 @@ int main() {
 
 总结：
 
-对于自定义数据类型，set必须指定排序规则才可以插入数据
+对于自定义数据类型，set必须指定排序规则才可以插入数据。不然set不知道怎么进行排序
 
 
 
@@ -17187,7 +14512,7 @@ int main() {
 
 **简介：**
 
-* map中所有元素都是pair
+* map中所有元素都是pair（对组）
 * pair中第一个元素为key（键值），起到索引作用，第二个元素为value（实值）
 * 所有元素都会根据元素的键值自动排序
 
@@ -17251,7 +14576,7 @@ void printMap(map<int,int>&m)
 void test01()
 {
 	map<int,int>m; //默认构造
-	m.insert(pair<int, int>(1, 10));
+	m.insert(pair<int, int>(1, 10));  //注意map插入值的方式
 	m.insert(pair<int, int>(2, 20));
 	m.insert(pair<int, int>(3, 30));
 	printMap(m);
@@ -17435,7 +14760,7 @@ void test01()
 	//第三种插入方式
 	m.insert(map<int, int>::value_type(3, 30));
 	//第四种插入方式
-	m[4] = 40; 
+	m[4] = 40;     //不建议插入，[]可以利用key访问value
 	printMap(m);
 
 	//删除
@@ -17463,7 +14788,7 @@ int main() {
 
 总结：
 
-* map插入方式很多，记住其一即可
+* map插入方式很多，记住其一即可，第一种第二中即可
 
 - 插入   --- insert 
 - 删除   --- erase
@@ -17510,7 +14835,7 @@ void test01()
 	m.insert(pair<int, int>(3, 30));
 
 	//查找
-	map<int, int>::iterator pos = m.find(3);
+	map<int, int>::iterator pos = m.find(3); //find返回的是迭代器
 
 	if (pos != m.end())
 	{
@@ -17522,7 +14847,7 @@ void test01()
 	}
 
 	//统计
-	int num = m.count(3);
+	int num = m.count(3);   // map只能返回0或1，mutlimap结果可能大于1.
 	cout << "num = " << num << endl;
 }
 
@@ -17786,7 +15111,7 @@ int main() {
 
 ## 4 STL- 函数对象
 
-### 4.1 函数对象
+### 4.1 函数对象（仿函数）
 
 #### 4.1.1 函数对象概念
 
@@ -17939,7 +15264,7 @@ void test01() {
 	{
 		v.push_back(i);
 	}
-
+	//GreaterFive()匿名的函数对象
 	vector<int>::iterator it = find_if(v.begin(), v.end(), GreaterFive());
 	if (it == v.end()) {
 		cout << "没找到!" << endl;
@@ -20206,6 +17531,2655 @@ int main() {
 - 求差集的两个集合必须的有序序列
 - 目标容器开辟空间需要从**两个容器取较大值**
 - set_difference返回值既是差集中最后一个元素的位置
+
+# 通讯录管理系统
+
+
+
+## 1、系统需求
+
+通讯录是一个可以记录亲人、好友信息的工具。
+
+本教程主要利用C++来实现一个通讯录管理系统
+
+系统中需要实现的功能如下：
+
+* 添加联系人：向通讯录中添加新人，信息包括（姓名、性别、年龄、联系电话、家庭住址）最多记录1000人
+* 显示联系人：显示通讯录中所有联系人信息
+* 删除联系人：按照姓名进行删除指定联系人
+* 查找联系人：按照姓名查看指定联系人信息
+* 修改联系人：按照姓名重新修改指定联系人
+* 清空联系人：清空通讯录中所有信息
+* 退出通讯录：退出当前使用的通讯录
+
+
+
+
+
+
+
+
+
+## 2、创建项目
+
+创建项目步骤如下：
+
+* 创建新项目
+* 添加文件
+
+### 2.1 创建项目
+
+打开vs2017后，点击创建新项目，创建新的C++项目
+
+![1544151401138](assets/1544151401138.png)
+
+
+
+填写项目名称，选择项目路径
+
+![1544151579620](assets/1544151579620.png)
+
+### 2.2添加文件
+
+![1544161551746](assets/1544161551746.png)
+
+
+
+![1544161648175](assets/1544161648175.png)
+
+添加成功后，效果如图：
+
+![1544162344057](assets/1544162344057.png)
+
+
+
+至此，项目已创建完毕
+
+
+
+
+
+
+
+## 3、菜单功能
+
+**功能描述：** 用户选择功能的界面
+
+菜单界面效果如下图：
+
+
+
+![1544149559893](assets/1544149559893.png)
+
+**步骤：**
+
+* 封装函数显示该界面  如 `void showMenu()`
+* 在main函数中调用封装好的函数
+
+
+
+**代码：**
+
+```C++
+#include<iostream>
+using namespace std;
+
+//菜单界面
+void showMenu()
+{
+	cout << "***************************" << endl;
+	cout << "*****  1、添加联系人  *****" << endl;
+	cout << "*****  2、显示联系人  *****" << endl;
+	cout << "*****  3、删除联系人  *****" << endl;
+	cout << "*****  4、查找联系人  *****" << endl;
+	cout << "*****  5、修改联系人  *****" << endl;
+	cout << "*****  6、清空联系人  *****" << endl;
+	cout << "*****  0、退出通讯录  *****" << endl;
+	cout << "***************************" << endl;
+}
+
+int main() {
+
+	showMenu();
+
+	system("pause");
+
+	return 0;
+}
+```
+
+
+
+
+
+
+
+
+
+## 4、退出功能
+
+功能描述：退出通讯录系统
+
+
+
+思路：根据用户不同的选择，进入不同的功能，可以选择switch分支结构，将整个架构进行搭建
+
+
+
+当用户选择0时候，执行退出，选择其他先不做操作，也不会退出程序
+
+
+
+**代码：**
+
+```C++
+int main() {
+
+	int select = 0;
+
+	while (true)
+	{
+		showMenu();
+
+		cin >> select;
+		
+		switch (select)
+		{
+		case 1:  //添加联系人
+			break;
+		case 2:  //显示联系人
+			break;
+		case 3:  //删除联系人
+			break;
+		case 4:  //查找联系人
+			break;
+		case 5:  //修改联系人
+			break;
+		case 6:  //清空联系人
+			break;
+		case 0:  //退出通讯录
+			cout << "欢迎下次使用" << endl;
+			system("pause");
+			return 0;
+			break;
+		default:
+			break;
+		}
+	}
+
+	system("pause");
+
+	return 0;
+}
+```
+
+
+
+效果图：
+
+![1544163868043](assets/1544163868043.png)
+
+
+
+
+
+
+
+
+
+
+
+## 5、添加联系人
+
+功能描述：
+
+实现添加联系人功能，联系人上限为1000人，联系人信息包括（姓名、性别、年龄、联系电话、家庭住址）
+
+
+
+添加联系人实现步骤：
+
+* 设计联系人结构体
+* 设计通讯录结构体
+* main函数中创建通讯录
+* 封装添加联系人函数
+* 测试添加联系人功能
+
+
+
+### 5.1 设计联系人结构体
+
+联系人信息包括：姓名、性别、年龄、联系电话、家庭住址
+
+设计如下：
+
+```C++
+#include <string>  //string头文件
+//联系人结构体
+struct Person
+{
+	string m_Name; //姓名
+	int m_Sex; //性别：1男 2女
+	int m_Age; //年龄
+	string m_Phone; //电话
+	string m_Addr; //住址
+};
+```
+
+
+
+### 5.2 设计通讯录结构体
+
+设计时候可以在通讯录结构体中，维护一个容量为1000的存放联系人的数组，并记录当前通讯录中联系人数量
+
+设计如下
+
+```C++
+#define MAX 1000 //最大人数
+
+//通讯录结构体
+struct Addressbooks
+{
+	struct Person personArray[MAX]; //通讯录中保存的联系人数组
+	int m_Size; //通讯录中人员个数
+};
+```
+
+
+
+### 5.3 main函数中创建通讯录
+
+
+
+添加联系人函数封装好后，在main函数中创建一个通讯录变量，这个就是我们需要一直维护的通讯录
+
+
+
+```c++
+mian函数起始位置添加：
+
+	//创建通讯录
+	Addressbooks abs;
+	//初始化通讯录中人数
+	abs.m_Size = 0;
+```
+
+
+
+
+
+### 5.4 封装添加联系人函数
+
+
+
+思路：添加联系人前先判断通讯录是否已满，如果满了就不再添加，未满情况将新联系人信息逐个加入到通讯录
+
+
+
+添加联系人代码：
+
+
+
+```C++
+//1、添加联系人信息
+void addPerson(Addressbooks *abs)
+{
+	//判断电话本是否满了
+	if (abs->m_Size == MAX)
+	{
+		cout << "通讯录已满，无法添加" << endl;
+		return;
+	}
+	else
+	{
+		//姓名
+		string name;
+		cout << "请输入姓名：" << endl;
+		cin >> name;
+		abs->personArray[abs->m_Size].m_Name = name;
+
+		cout << "请输入性别：" << endl;
+		cout << "1 -- 男" << endl;
+		cout << "2 -- 女" << endl;
+
+		//性别
+		int sex = 0;
+		while (true)
+		{
+			cin >> sex;
+			if (sex == 1 || sex == 2)
+			{
+				abs->personArray[abs->m_Size].m_Sex = sex;
+				break;
+			}
+			cout << "输入有误，请重新输入";
+		}
+
+		//年龄
+		cout << "请输入年龄：" << endl;
+		int age = 0;
+		cin >> age;
+		abs->personArray[abs->m_Size].m_Age = age;
+
+		//联系电话
+		cout << "请输入联系电话：" << endl;
+		string phone = "";
+		cin >> phone;
+		abs->personArray[abs->m_Size].m_Phone = phone;
+
+		//家庭住址
+		cout << "请输入家庭住址：" << endl;
+		string address;
+		cin >> address;
+		abs->personArray[abs->m_Size].m_Addr = address;
+
+		//更新通讯录人数
+		abs->m_Size++;
+
+		cout << "添加成功" << endl;
+		system("pause"); //请按任意键继续
+		system("cls");   //清屏操作
+	}
+}
+```
+
+
+
+
+
+
+
+### 5.5 测试添加联系人功能
+
+选择界面中，如果玩家选择了1，代表添加联系人，我们可以测试下该功能
+
+
+
+在switch case 语句中，case1里添加：
+
+```C++
+case 1:  //添加联系人
+	addPerson(&abs);
+	break;
+```
+
+
+
+测试效果如图：
+
+![1544165554002](assets/1544165554002.png)
+
+
+
+
+
+
+
+
+
+## 6、显示联系人
+
+功能描述：显示通讯录中已有的联系人信息
+
+
+
+显示联系人实现步骤：
+
+* 封装显示联系人函数
+* 测试显示联系人功能
+
+### 6.1 封装显示联系人函数
+
+
+
+思路：判断如果当前通讯录中没有人员，就提示记录为空，人数大于0，显示通讯录中信息
+
+
+
+显示联系人代码：
+
+```C++
+//2、显示所有联系人信息
+void showPerson(Addressbooks * abs)
+{
+	if (abs->m_Size == 0)
+	{
+		cout << "当前记录为空" << endl;
+	}
+	else
+	{
+		for (int i = 0; i < abs->m_Size; i++)
+		{
+			cout << "姓名：" << abs->personArray[i].m_Name << "\t";
+			cout << "性别：" << (abs->personArray[i].m_Sex == 1 ? "男" : "女") << "\t";
+			cout << "年龄：" << abs->personArray[i].m_Age << "\t";
+			cout << "电话：" << abs->personArray[i].m_Phone << "\t";
+			cout << "住址：" << abs->personArray[i].m_Addr << endl;
+		}
+	}
+	
+	system("pause");
+	system("cls");
+
+}
+```
+
+
+
+
+
+### 6.2 测试显示联系人功能
+
+
+
+在switch case语句中，case 2 里添加
+
+```C++
+case 2:  //显示联系人
+	showPerson(&abs);
+	break;
+```
+
+
+
+测试效果如图：
+
+![1544166401582](assets/1544166401582.png)
+
+
+
+
+
+
+
+
+
+## 7、删除联系人
+
+功能描述：按照姓名进行删除指定联系人
+
+
+
+删除联系人实现步骤：
+
+* 封装检测联系人是否存在
+* 封装删除联系人函数
+* 测试删除联系人功能
+
+
+
+
+
+### 7.1  封装检测联系人是否存在
+
+设计思路：
+
+
+
+删除联系人前，我们需要先判断用户输入的联系人是否存在，如果存在删除，不存在提示用户没有要删除的联系人
+
+因此我们可以把检测联系人是否存在封装成一个函数中，如果存在，返回联系人在通讯录中的位置，不存在返回-1
+
+
+
+检测联系人是否存在代码：
+
+```C++
+//判断是否存在查询的人员，存在返回在数组中索引位置，不存在返回-1
+int isExist(Addressbooks * abs, string name)
+{
+	for (int i = 0; i < abs->m_Size; i++)
+	{
+		if (abs->personArray[i].m_Name == name)
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+
+```
+
+
+
+### 7.2 封装删除联系人函数
+
+
+
+根据用户输入的联系人判断该通讯录中是否有此人
+
+查找到进行删除，并提示删除成功
+
+查不到提示查无此人。
+
+
+
+```C++
+//3、删除指定联系人信息
+void deletePerson(Addressbooks * abs)
+{
+	cout << "请输入您要删除的联系人" << endl;
+	string name;
+	cin >> name;
+
+	int ret = isExist(abs, name);
+	if (ret != -1)
+	{
+		for (int i = ret; i < abs->m_Size; i++)
+		{
+			abs->personArray[i] = abs->personArray[i + 1];
+		}
+         abs->m_Size--;
+		cout << "删除成功" << endl;
+	}
+	else
+	{
+		cout << "查无此人" << endl;
+	}
+
+	system("pause");
+	system("cls");
+}
+```
+==上述代码中最后一个联系人不是重复了吗==
+
+
+### 7.3 测试删除联系人功能
+
+在switch case 语句中，case3里添加：
+
+```C++
+case 3:  //删除联系人
+	deletePerson(&abs);
+	break;
+```
+
+测试效果如图：
+
+存在情况：
+
+![1544167951559](assets/1544167951559.png)
+
+不存在情况：
+
+![1544168010831](assets/1544168010831.png)
+
+
+
+
+
+
+
+
+
+## 8、查找联系人
+
+功能描述：按照姓名查看指定联系人信息
+
+查找联系人实现步骤
+
+* 封装查找联系人函数
+* 测试查找指定联系人
+
+### 8.1 封装查找联系人函数
+
+实现思路：判断用户指定的联系人是否存在，如果存在显示信息，不存在则提示查无此人。
+
+查找联系人代码：
+
+```C++
+//4、查找指定联系人信息
+void findPerson(Addressbooks * abs)
+{
+	cout << "请输入您要查找的联系人" << endl;
+	string name;
+	cin >> name;
+
+	int ret = isExist(abs, name);
+	if (ret != -1)
+	{
+		cout << "姓名：" << abs->personArray[ret].m_Name << "\t";
+		cout << "性别：" << abs->personArray[ret].m_Sex << "\t";
+		cout << "年龄：" << abs->personArray[ret].m_Age << "\t";
+		cout << "电话：" << abs->personArray[ret].m_Phone << "\t";
+		cout << "住址：" << abs->personArray[ret].m_Addr << endl;
+	}
+	else
+	{
+		cout << "查无此人" << endl;
+	}
+
+	system("pause");
+	system("cls");
+
+}
+```
+
+
+
+### 8.2 测试查找指定联系人
+
+在switch case 语句中，case4里添加：
+
+```C++
+case 4:  //查找联系人
+	findPerson(&abs);
+	break;
+```
+
+
+
+测试效果如图
+
+存在情况：
+
+![1544170057646](assets/1544170057646.png)
+
+
+
+不存在情况：
+
+![1544170254021](assets/1544170254021.png)
+
+
+
+
+
+
+
+
+
+## 9、修改联系人
+
+功能描述：按照姓名重新修改指定联系人
+
+修改联系人实现步骤
+
+* 封装修改联系人函数
+* 测试修改联系人功能
+
+
+
+### 9.1 封装修改联系人函数
+
+实现思路：查找用户输入的联系人，如果查找成功进行修改操作，查找失败提示查无此人
+
+
+
+修改联系人代码：
+
+```C++
+//5、修改指定联系人信息
+void modifyPerson(Addressbooks * abs)
+{
+	cout << "请输入您要修改的联系人" << endl;
+	string name;
+	cin >> name;
+
+	int ret = isExist(abs, name);
+	if (ret != -1)
+	{
+		//姓名
+		string name;
+		cout << "请输入姓名：" << endl;
+		cin >> name;
+		abs->personArray[ret].m_Name = name;
+
+		cout << "请输入性别：" << endl;
+		cout << "1 -- 男" << endl;
+		cout << "2 -- 女" << endl;
+
+		//性别
+		int sex = 0;
+		while (true)
+		{
+			cin >> sex;
+			if (sex == 1 || sex == 2)
+			{
+				abs->personArray[ret].m_Sex = sex;
+				break;
+			}
+			cout << "输入有误，请重新输入";
+		}
+
+		//年龄
+		cout << "请输入年龄：" << endl;
+		int age = 0;
+		cin >> age;
+		abs->personArray[ret].m_Age = age;
+
+		//联系电话
+		cout << "请输入联系电话：" << endl;
+		string phone = "";
+		cin >> phone;
+		abs->personArray[ret].m_Phone = phone;
+
+		//家庭住址
+		cout << "请输入家庭住址：" << endl;
+		string address;
+		cin >> address;
+		abs->personArray[ret].m_Addr = address;
+
+		cout << "修改成功" << endl;
+	}
+	else
+	{
+		cout << "查无此人" << endl;
+	}
+
+	system("pause");
+	system("cls");
+
+}
+```
+
+
+
+
+
+### 9.2 测试修改联系人功能
+
+在switch case 语句中，case 5里添加：
+
+```C++
+case 5:  //修改联系人
+	modifyPerson(&abs);
+	break;
+```
+
+
+
+测试效果如图：
+
+查不到指定联系人情况：
+
+![1544172265676](assets/1544172265676.png)
+
+查找到联系人，并修改成功：
+
+![1544172164141](assets/1544172164141.png)
+
+再次查看通讯录，确认修改完毕
+
+![1544172228627](assets/1544172228627.png)
+
+
+
+
+
+
+
+
+
+## 10、清空联系人
+
+功能描述：清空通讯录中所有信息
+
+清空联系人实现步骤
+
+* 封装清空联系人函数
+* 测试清空联系人
+
+### 10.1 封装清空联系人函数
+
+实现思路： 将通讯录所有联系人信息清除掉，只要将通讯录记录的联系人数量置为0，做逻辑清空即可。
+
+清空联系人代码：
+
+```C++
+//6、清空所有联系人
+void cleanPerson(Addressbooks * abs)
+{
+	abs->m_Size = 0;
+	cout << "通讯录已清空" << endl;
+	system("pause");
+	system("cls");
+}
+```
+
+
+
+### 10.2  测试清空联系人
+
+在switch case 语句中，case 6 里添加：
+
+```C++
+case 6:  //清空联系人
+	cleanPerson(&abs);
+	break;
+```
+
+
+
+测试效果如图：
+
+清空通讯录
+
+![1544172909693](assets/1544172909693.png)
+
+再次查看信息，显示记录为空
+
+![1544172943653](assets/1544172943653.png)
+
+
+
+**至此，通讯录管理系统完成！**
+
+
+# 职工管理系统
+
+## 1、管理系统需求
+
+职工管理系统可以用来管理公司内所有员工的信息
+
+本教程主要利用C++来实现一个基于多态的职工管理系统
+
+
+
+公司中职工分为三类：普通员工、经理、老板，显示信息时，需要显示职工编号、职工姓名、职工岗位、以及职责
+
+普通员工职责：完成经理交给的任务
+
+经理职责：完成老板交给的任务，并下发任务给员工
+
+老板职责：管理公司所有事务
+
+
+
+管理系统中需要实现的功能如下：
+
+* 退出管理程序：退出当前管理系统
+
+- 增加职工信息：实现批量添加职工功能，将信息录入到文件中，职工信息为：职工编号、姓名、部门编号
+- 显示职工信息：显示公司内部所有职工的信息
+- 删除离职职工：按照编号删除指定的职工
+- 修改职工信息：按照编号修改职工个人信息
+- 查找职工信息：按照职工的编号或者职工的姓名进行查找相关的人员信息
+- 按照编号排序：按照职工编号，进行排序，排序规则由用户指定
+- 清空所有文档：清空文件中记录的所有职工信息 （清空前需要再次确认，防止误删）
+
+
+
+系统界面效果图如下：
+
+![1546511409198](assets/1546511409198.png)
+
+需根据用户不同的选择，完成不同的功能！
+
+
+
+
+
+
+
+
+
+## 2、创建项目
+
+创建项目步骤如下：
+
+- 创建新项目
+- 添加文件
+
+
+
+### 2.1 创建项目
+
+打开vs2017后，点击创建新项目，创建新的C++项目
+
+![1544151201465](assets/1544151201465.png)
+
+
+
+填写项目名称以及项目路径，点击确定
+
+![1546349209805](assets/1546349209805.png)
+
+
+
+### 2.2 添加文件
+
+右键源文件，进行添加文件操作
+
+![1546349360960](assets/1546349360960.png)
+
+
+
+![1546349421496](assets/1546349421496.png)
+
+
+
+![1546349488752](assets/1546349488752.png)
+
+
+
+至此，项目已创建完毕
+
+
+
+
+
+
+
+## 3、创建管理类
+
+​	管理类负责的内容如下：
+
+* 与用户的沟通菜单界面
+* 对职工增删改查的操作
+* 与文件的读写交互
+
+
+
+### 3.1创建文件 
+
+在头文件和源文件的文件夹下分别创建workerManager.h 和 workerManager.cpp文件
+
+![1546349904944](assets/1546349904944.png)
+
+### 3.2 头文件实现
+
+在workerManager.h中设计管理类
+
+代码如下：
+
+```C++
+#pragma once
+#include<iostream>
+using namespace std;
+
+
+class WorkerManager
+{
+public:
+
+	//构造函数
+	WorkerManager();
+
+	//析构函数
+	~WorkerManager();
+
+};
+```
+
+### 3.3 源文件实现
+
+在workerManager.cpp中将构造和析构函数空实现补全
+
+```C++
+#include "workerManager.h"
+
+WorkerManager::WorkerManager()
+{
+}
+
+WorkerManager::~WorkerManager()
+{
+}
+
+```
+
+
+
+至此职工管理类以创建完毕
+
+
+
+
+
+
+
+
+
+## 4、菜单功能
+
+功能描述：与用户的沟通界面
+
+### 4.1 添加成员函数
+
+在管理类workerManager.h中添加成员函数  `void Show_Menu();`
+
+![1546351543942](assets/1546351543942.png)
+
+ 
+
+
+
+### 4.2 菜单功能实现
+
+在管理类workerManager.cpp中实现  Show_Menu()函数
+
+```C++
+void WorkerManager::Show_Menu()
+{
+	cout << "********************************************" << endl;
+	cout << "*********  欢迎使用职工管理系统！ **********" << endl;
+	cout << "*************  0.退出管理程序  *************" << endl;
+	cout << "*************  1.增加职工信息  *************" << endl;
+	cout << "*************  2.显示职工信息  *************" << endl;
+	cout << "*************  3.删除离职职工  *************" << endl;
+	cout << "*************  4.修改职工信息  *************" << endl;
+	cout << "*************  5.查找职工信息  *************" << endl;
+	cout << "*************  6.按照编号排序  *************" << endl;
+	cout << "*************  7.清空所有文档  *************" << endl;
+	cout << "********************************************" << endl;
+	cout << endl;
+}
+```
+
+
+
+### 4.3 测试菜单功能
+
+在职工管理系统.cpp中测试菜单功能
+
+代码：
+
+```C++
+#include<iostream>
+using namespace std;
+#include "workerManager.h"
+
+int main() {
+
+	WorkerManager wm;
+
+	wm.Show_Menu();
+
+	system("pause");
+
+	return 0;
+}
+```
+
+运行效果如图：
+
+![1546352771191](assets/1546352771191.png)
+
+
+
+
+
+
+
+
+
+
+
+## 5、退出功能
+
+### 5.1  提供功能接口
+
+在main函数中提供分支选择，提供每个功能接口
+
+代码：
+
+```C++
+int main() {
+
+	WorkerManager wm;
+	int choice = 0;
+	while (true)
+	{
+		//展示菜单
+		wm.Show_Menu();
+		cout << "请输入您的选择:" << endl;
+		cin >> choice;
+
+		switch (choice)
+		{
+		case 0: //退出系统
+			break;
+		case 1: //添加职工
+			break;
+		case 2: //显示职工
+			break;
+		case 3: //删除职工
+			break;
+		case 4: //修改职工
+			break;
+		case 5: //查找职工
+			break;
+		case 6: //排序职工
+			break;
+		case 7: //清空文件
+			break;
+		default:
+			system("cls");
+			break;
+		}
+	}
+
+	system("pause");
+	return 0;
+}
+```
+
+
+
+### 5.2 实现退出功能
+
+在workerManager.h中提供退出系统的成员函数 `	void exitSystem();`
+
+在workerManager.cpp中提供具体的功能实现
+
+```C++
+void WorkerManager::exitSystem()
+{
+	cout << "欢迎下次使用" << endl;
+	system("pause");
+	exit(0);
+}
+```
+
+
+
+### 5.3测试功能
+
+在main函数分支 0  选项中，调用退出程序的接口
+
+![1546353199424](assets/1546353199424.png)
+
+
+
+运行测试效果如图：
+
+![1546353155490](assets/1546353155490.png)
+
+
+
+
+
+
+
+
+
+
+
+## 6、创建职工类
+
+### 6.1 创建职工抽象类
+
+职工的分类为：普通员工、经理、老板
+
+将三种职工抽象到一个类（worker）中,利用多态管理不同职工种类
+
+职工的属性为：职工编号、职工姓名、职工所在部门编号
+
+职工的行为为：岗位职责信息描述，获取岗位名称
+
+
+
+头文件文件夹下  创建文件worker.h  文件并且添加如下代码：
+
+```C++
+#pragma once
+#include<iostream>
+#include<string>
+using namespace std;
+
+//职工抽象基类
+class Worker
+{
+public:
+
+	//显示个人信息
+	virtual void showInfo() = 0;
+	//获取岗位名称
+	virtual string getDeptName() = 0;
+
+	int m_Id; //职工编号
+	string m_Name; //职工姓名
+	int m_DeptId; //职工所在部门名称编号
+};
+```
+
+
+
+### 6.2 创建普通员工类
+
+普通员工类**继承**职工抽象类，并重写父类中纯虚函数
+
+在头文件和源文件的文件夹下分别创建employee.h 和 employee.cpp文件
+
+
+
+employee.h中代码如下：
+
+```C++
+#pragma once 
+#include<iostream>
+using namespace std;
+#include "worker.h"
+
+//员工类
+class Employee :public Worker
+{
+public:
+
+	//构造函数
+	Employee(int id, string name, int dId);
+
+	//显示个人信息
+	virtual void showInfo();
+
+	//获取职工岗位名称
+	virtual string getDeptName();
+};
+```
+
+employee.cpp中代码如下：
+
+```C++
+#include "employee.h"
+
+Employee::Employee(int id, string name, int dId)
+{
+	this->m_Id = id;
+	this->m_Name = name;
+	this->m_DeptId = dId;
+}
+
+void Employee::showInfo()
+{
+	cout << "职工编号： " << this->m_Id
+		<< " \t职工姓名： " << this->m_Name
+		<< " \t岗位：" << this->getDeptName()
+		<< " \t岗位职责：完成经理交给的任务" << endl;
+}
+
+
+string Employee::getDeptName()
+{
+	return string("员工");
+}
+
+
+```
+
+
+
+
+
+### 6.3 创建经理类
+
+经理类**继承**职工抽象类，并重写父类中纯虚函数，和普通员工类似
+
+在头文件和源文件的文件夹下分别创建manager.h 和 manager.cpp文件
+
+
+
+manager.h中代码如下：
+
+```c++
+#pragma once
+#include<iostream>
+using namespace std;
+#include "worker.h"
+
+//经理类
+class Manager :public Worker
+{
+public:
+
+	Manager(int id, string name, int dId);
+
+	//显示个人信息
+	virtual void showInfo();
+
+	//获取职工岗位名称
+	virtual string getDeptName();
+};
+```
+
+manager.cpp中代码如下：
+
+```c++
+#include "manager.h"
+
+Manager::Manager(int id, string name, int dId)
+{
+	this->m_Id = id;
+	this->m_Name = name;
+	this->m_DeptId = dId;
+
+}
+
+void Manager::showInfo()
+{
+	cout << "职工编号： " << this->m_Id
+		<< " \t职工姓名： " << this->m_Name
+		<< " \t岗位：" << this->getDeptName()
+		<< " \t岗位职责：完成老板交给的任务,并下发任务给员工" << endl;
+}
+
+string Manager::getDeptName()
+{
+	return string("经理");
+}
+
+
+```
+
+
+
+### 6.4 创建老板类
+
+老板类**继承**职工抽象类，并重写父类中纯虚函数，和普通员工类似
+
+在头文件和源文件的文件夹下分别创建boss.h 和 boss.cpp文件
+
+
+
+boss.h中代码如下：
+
+```c++
+#pragma once
+#include<iostream>
+using namespace std;
+#include "worker.h"
+
+//老板类
+class Boss :public Worker
+{
+public:
+
+	Boss(int id, string name, int dId);
+
+	//显示个人信息
+	virtual void showInfo();
+
+	//获取职工岗位名称
+	virtual string getDeptName();
+};
+```
+
+boss.cpp中代码如下：
+
+```c++
+#include "boss.h"
+
+Boss::Boss(int id, string name, int dId)
+{
+	this->m_Id = id;
+	this->m_Name = name;
+	this->m_DeptId = dId;
+
+}
+
+void Boss::showInfo()
+{
+	cout << "职工编号： " << this->m_Id
+		<< " \t职工姓名： " << this->m_Name
+		<< " \t岗位：" << this->getDeptName()
+		<< " \t岗位职责：管理公司所有事务" << endl;
+}
+
+string Boss::getDeptName()
+{
+	return string("总裁");
+}
+
+```
+
+
+
+
+
+### 6.5 测试多态
+
+在职工管理系统.cpp中添加测试函数，并且运行能够产生多态
+
+
+
+测试代码如下：
+
+```C++
+#include "worker.h"
+#include "employee.h"
+#include "manager.h"
+#include "boss.h"
+
+
+void test()
+{
+	Worker * worker = NULL;
+	worker = new Employee(1, "张三", 1);
+	worker->showInfo();
+	delete worker;
+	
+	worker = new Manager(2, "李四", 2);
+	worker->showInfo();
+	delete worker;
+
+	worker = new Boss(3, "王五", 3);
+	worker->showInfo();
+	delete worker;
+}
+
+```
+
+
+
+运行效果如图：
+
+![1546398236081](assets/1546398236081.png)
+
+测试成功后，测试代码可以注释保留，或者选择删除
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 7、添加职工
+
+功能描述：批量添加职工，并且保存到文件中
+
+### 7.1 功能分析
+
+分析：
+
+用户在批量创建时，可能会创建不同种类的职工
+
+如果想将所有不同种类的员工都放入到一个数组中，可以将所有员工的指针维护到一个数组里
+
+如果想在程序中维护这个不定长度的数组，可以将数组创建到堆区，并利用Worker **的指针维护
+
+![1546399491099](assets/1546399491099.png)
+
+### 7.2 功能实现
+
+在WokerManager.h头文件中添加成员属性 代码：
+
+```C++
+	//记录文件中的人数个数
+	int m_EmpNum;
+
+	//员工数组的指针
+	Worker ** m_EmpArray;
+```
+
+
+
+在WorkerManager构造函数中初始化属性
+
+```C++
+WorkerManager::WorkerManager()
+{
+	//初始化人数
+	this->m_EmpNum = 0;
+
+	//初始化数组指针
+	this->m_EmpArray = NULL;
+}
+```
+
+
+
+在workerManager.h中添加成员函数
+
+```C++
+	//增加职工
+	void Add_Emp();
+```
+
+
+
+workerManager.cpp中实现该函数
+
+```C++
+//增加职工
+void WorkerManager::Add_Emp()
+{
+	cout << "请输入增加职工数量： " << endl;
+
+	int addNum = 0;
+	cin >> addNum;
+
+	if (addNum > 0)
+	{
+		//计算新空间大小
+		int newSize = this->m_EmpNum + addNum;
+
+		//开辟新空间
+		Worker ** newSpace = new Worker*[newSize];
+
+		//将原空间下内容存放到新空间下
+		if (this->m_EmpArray != NULL)
+		{
+			for (int i = 0; i < this->m_EmpNum; i++)
+			{
+				newSpace[i] = this->m_EmpArray[i];
+			}
+		}
+
+		//输入新数据
+		for (int i = 0; i < addNum; i++)
+		{
+			int id;
+			string name;
+			int dSelect;
+
+			cout << "请输入第 " << i + 1 << " 个新职工编号：" << endl;
+			cin >> id;
+
+
+			cout << "请输入第 " << i + 1 << " 个新职工姓名：" << endl;
+			cin >> name;
+
+
+			cout << "请选择该职工的岗位：" << endl;
+			cout << "1、普通职工" << endl;
+			cout << "2、经理" << endl;
+			cout << "3、老板" << endl;
+			cin >> dSelect;
+
+
+			Worker * worker = NULL;
+			switch (dSelect)
+			{
+			case 1: //普通员工
+				worker = new Employee(id, name, 1);
+				break;
+			case 2: //经理
+				worker = new Manager(id, name, 2);
+				break;
+			case 3:  //老板
+				worker = new Boss(id, name, 3);
+				break;
+			default:
+				break;
+			}
+
+
+			newSpace[this->m_EmpNum + i] = worker;
+		}
+
+		//释放原有空间
+		delete[] this->m_EmpArray;
+
+		//更改新空间的指向
+		this->m_EmpArray = newSpace;
+
+		//更新新的个数
+		this->m_EmpNum = newSize;
+
+		//提示信息
+		cout << "成功添加" << addNum << "名新职工！" << endl;
+	}
+	else
+	{
+		cout << "输入有误" << endl;
+	}
+
+	system("pause");
+	system("cls");
+}
+```
+
+
+
+在WorkerManager.cpp的析构函数中，释放堆区数据
+
+```C++
+WorkerManager::~WorkerManager()
+{
+	if (this->m_EmpArray != NULL)
+	{
+		delete[] this->m_EmpArray;
+	}
+}
+
+```
+
+
+
+
+
+### 7.3 测试添加
+
+在main函数分支 1  选项中，调用添加职工接口
+
+![1546401705277](assets/1546401705277.png)
+
+效果如图：
+
+![1546401763461](assets/1546401763461.png)
+
+至此，添加职工到程序中功能实现完毕
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 8、文件交互 - 写文件
+
+功能描述：对文件进行读写
+
+​	在上一个添加功能中，我们只是将所有的数据添加到了内存中，一旦程序结束就无法保存了
+
+​	因此文件管理类中需要一个与文件进行交互的功能，对于文件进行读写操作
+
+
+
+### 8.1 设定文件路径
+
+首先我们将文件路径，在workerManager.h中添加宏常量,并且包含头文件 fstream
+
+```C++
+#include <fstream>
+#define  FILENAME "empFile.txt"
+```
+
+
+
+### 8.2 成员函数声明
+
+在workerManager.h中类里添加成员函数 `void save()`
+
+```C++
+//保存文件
+void save();
+```
+
+
+
+### 8.3 保存文件功能实现
+
+```C++
+void WorkerManager::save()
+{
+	ofstream ofs;
+	ofs.open(FILENAME, ios::out);
+
+
+	for (int i = 0; i < this->m_EmpNum; i++)
+	{
+		ofs << this->m_EmpArray[i]->m_Id << " " 
+			<< this->m_EmpArray[i]->m_Name << " " 
+			<< this->m_EmpArray[i]->m_DeptId << endl;
+	}
+
+	ofs.close();
+}
+```
+
+
+
+### 8.4 保存文件功能测试
+
+在添加职工功能中添加成功后添加保存文件函数
+
+
+
+![1546432469465](assets/1546432469465.png)
+
+
+
+再次运行代码，添加职工
+
+![1546401763461](assets/1546401763461.png)
+
+
+
+同级目录下多出文件，并且保存了添加的信息
+
+![1546432343078](assets/1546432343078.png)
+
+
+
+## 9、文件交互 - 读文件
+
+功能描述：将文件中的内容读取到程序中
+
+虽然我们实现了添加职工后保存到文件的操作，但是每次开始运行程序，并没有将文件中数据读取到程序中
+
+而我们的程序功能中还有清空文件的需求
+
+因此构造函数初始化数据的情况分为三种
+
+
+
+1. 第一次使用，文件未创建
+2. 文件存在，但是数据被用户清空
+3. 文件存在，并且保存职工的所有数据
+
+
+
+### 9.1 文件未创建
+
+在workerManager.h中添加新的成员属性 m_FileIsEmpty标志文件是否为空
+
+```C++
+	//标志文件是否为空
+	bool m_FileIsEmpty;
+```
+
+
+
+修改WorkerManager.cpp中构造函数代码
+
+```C++
+WorkerManager::WorkerManager()
+{
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+
+	//文件不存在情况
+	if (!ifs.is_open())
+	{
+		cout << "文件不存在" << endl; //测试输出
+		this->m_EmpNum = 0;  //初始化人数
+		this->m_FileIsEmpty = true; //初始化文件为空标志
+		this->m_EmpArray = NULL; //初始化数组
+		ifs.close(); //关闭文件
+		return;
+	}
+}
+```
+
+
+
+删除文件后，测试文件不存在时初始化数据功能
+
+
+
+### 9.2 文件存在且数据为空
+
+在workerManager.cpp中的构造函数追加代码：
+
+```C++
+	//文件存在，并且没有记录
+	char ch;
+	ifs >> ch;
+	if (ifs.eof())
+	{
+		cout << "文件为空!" << endl;
+		this->m_EmpNum = 0;
+		this->m_FileIsEmpty = true;
+		this->m_EmpArray = NULL;
+		ifs.close();
+		return;
+	}
+```
+
+追加代码位置如图：
+
+![1546435197575](assets/1546435197575.png)
+
+将文件创建后清空文件内容，并测试该情况下初始化功能
+
+
+
+我们发现文件不存在或者为空清空 m_FileIsEmpty 判断文件是否为空的标志都为真，那何时为假？
+
+成功添加职工后，应该更改文件不为空的标志
+
+在`void WorkerManager::Add_Emp() `成员函数中添加：
+
+```C++
+		//更新职工不为空标志
+		this->m_FileIsEmpty = false;
+```
+
+![1546656256176](assets/1546656256176.png)
+
+
+
+
+
+
+
+### 9.3 文件存在且保存职工数据
+
+#### 9.3.1 获取记录的职工人数
+
+在workerManager.h中添加成员函数 ` int get_EmpNum();`
+
+```C++
+	//统计人数
+	int get_EmpNum();
+```
+
+workerManager.cpp中实现
+
+```C++
+int WorkerManager::get_EmpNum()
+{
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+
+	int id;
+	string name;
+	int dId;
+
+	int num = 0;
+
+	while (ifs >> id && ifs >> name && ifs >> dId)
+	{
+        //记录人数
+		num++;
+	}
+	ifs.close();
+
+	return num;
+}
+```
+
+在workerManager.cpp构造函数中继续追加代码：
+
+```C++
+	int num =  this->get_EmpNum();
+	cout << "职工个数为：" << num << endl;  //测试代码
+	this->m_EmpNum = num;  //更新成员属性 
+```
+
+
+
+手动添加一些职工数据，测试获取职工数量函数
+
+![1546436429055](assets/1546436429055.png)
+
+![1546436385793](assets/1546436385793.png)
+
+
+
+#### 9.3.2 初始化数组
+
+根据职工的数据以及职工数据，初始化workerManager中的Worker ** m_EmpArray 指针
+
+
+
+在WorkerManager.h中添加成员函数  `void init_Emp();`
+
+```C++
+	//初始化员工
+	void init_Emp();
+```
+
+
+
+在WorkerManager.cpp中实现
+
+```C++
+void WorkerManager::init_Emp()
+{
+	ifstream ifs;
+	ifs.open(FILENAME, ios::in);
+
+	int id;
+	string name;
+	int dId;
+	
+	int index = 0;
+	while (ifs >> id && ifs >> name && ifs >> dId)
+	{
+		Worker * worker = NULL;
+		//根据不同的部门Id创建不同对象
+		if (dId == 1)  // 1普通员工
+		{
+			worker = new Employee(id, name, dId);
+		}
+		else if (dId == 2) //2经理
+		{
+			worker = new Manager(id, name, dId);
+		}
+		else //总裁
+		{
+			worker = new Boss(id, name, dId);
+		}
+		//存放在数组中
+		this->m_EmpArray[index] = worker;
+		index++;
+	}
+}
+```
+
+
+
+在workerManager.cpp构造函数中追加代码
+
+```C++
+	//根据职工数创建数组
+	this->m_EmpArray = new Worker *[this->m_EmpNum];
+	//初始化职工
+	init_Emp();
+
+	//测试代码
+	for (int i = 0; i < m_EmpNum; i++)
+	{
+		cout << "职工号： " << this->m_EmpArray[i]->m_Id
+			<< " 职工姓名： " << this->m_EmpArray[i]->m_Name
+			<< " 部门编号： " << this->m_EmpArray[i]->m_DeptId << endl;
+	}
+```
+
+
+
+运行程序，测试从文件中获取的数据
+
+![1546436938152](assets/1546436938152.png)
+
+至此初始化数据功能完毕，测试代码可以注释或删除掉！
+
+
+
+
+
+
+
+
+
+## 10、显示职工
+
+功能描述：显示当前所有职工信息
+
+#### 10.1 显示职工函数声明
+
+在workerManager.h中添加成员函数  `void Show_Emp();`
+
+```C++
+	//显示职工
+	void Show_Emp();
+```
+
+
+
+#### 10.2 显示职工函数实现
+
+在workerManager.cpp中实现成员函数 `void Show_Emp();`
+
+```C++
+//显示职工
+void WorkerManager::Show_Emp()
+{
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在或记录为空！" << endl;
+	}
+	else
+	{
+		for (int i = 0; i < m_EmpNum; i++)
+		{
+			//利用多态调用接口
+			this->m_EmpArray[i]->showInfo();
+		}
+	}
+
+	system("pause");
+	system("cls");
+}
+```
+
+
+
+#### 10.3 测试显示职工
+
+在main函数分支 2  选项中，调用显示职工接口
+
+![1546497336465](assets/1546497336465.png)
+
+
+
+测试时分别测试 文件为空和文件不为空两种情况
+
+测试效果：
+
+测试1-文件不存在或者为空情况
+
+![1546497082135](assets/1546497082135.png)
+
+测试2 - 文件存在且有记录情况
+
+![1546496947671](assets/1546496947671.png)
+
+
+
+测试完毕，至此，显示所有职工信息功能实现
+
+
+
+
+
+
+
+
+
+
+
+## 11、删除职工
+
+功能描述：按照职工的编号进行删除职工操作
+
+
+
+#### 11.1 删除职工函数声明
+
+在workerManager.h中添加成员函数  `void Del_Emp();`
+
+```C++
+	//删除职工
+	void Del_Emp();
+```
+
+
+
+#### 11.2 职工是否存在函数声明
+
+很多功能都需要用到根据职工是否存在来进行操作如：删除职工、修改职工、查找职工
+
+因此添加该公告函数，以便后续调用
+
+在workerManager.h中添加成员函数  `int IsExist(int id);`
+
+```C++
+	//按照职工编号判断职工是否存在,若存在返回职工在数组中位置，不存在返回-1
+	int IsExist(int id);
+```
+
+
+
+#### 11.3 职工是否存在函数实现
+
+在workerManager.cpp中实现成员函数 `int IsExist(int id);`
+
+```C++
+int WorkerManager::IsExist(int id)
+{
+	int index = -1;
+
+	for (int i = 0; i < this->m_EmpNum; i++)
+	{
+		if (this->m_EmpArray[i]->m_Id == id)
+		{
+			index = i;
+
+			break;
+		}
+	}
+
+	return index;
+}
+```
+
+
+
+
+
+#### 11.4 删除职工函数实现
+
+在workerManager.cpp中实现成员函数 ` void Del_Emp();`
+
+```C++
+//删除职工
+void WorkerManager::Del_Emp()
+{
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在或记录为空！" << endl;
+	}
+	else
+	{
+		//按职工编号删除
+		cout << "请输入想要删除的职工号：" << endl;
+		int id = 0;
+		cin >> id;
+
+		int index = this->IsExist(id);
+
+		if (index != -1)  //说明index上位置数据需要删除
+		{
+			for (int i = index; i < this->m_EmpNum - 1; i++)
+			{
+				this->m_EmpArray[i] = this->m_EmpArray[i + 1];
+			}
+			this->m_EmpNum--;
+
+			this->save(); //删除后数据同步到文件中
+			cout << "删除成功！" << endl;
+		}
+		else
+		{
+			cout << "删除失败，未找到该职工" << endl;
+		}
+	}
+	
+	system("pause");
+	system("cls");
+}
+```
+
+
+
+#### 11.5 测试删除职工
+
+在main函数分支 3  选项中，调用删除职工接口
+
+![1546502698622](assets/1546502698622.png)
+
+测试1 - 删除不存在职工情况
+
+![1546500324196](assets/1546500324196.png)
+
+测试2 - 删除存在的职工情况
+
+删除成功提示图：
+
+![1546500350526](assets/1546500350526.png)
+
+再次显示所有职工信息，确保已经删除
+
+![1546500361889](assets/1546500361889.png)
+
+查看文件中信息，再次核实员工已被完全删除
+
+![1546500383570](assets/1546500383570.png)
+
+至此，删除职工功能实现完毕！
+
+
+
+
+
+
+
+
+
+## 12、修改职工
+
+功能描述：能够按照职工的编号对职工信息进行修改并保存
+
+#### 12.1 修改职工函数声明
+
+在workerManager.h中添加成员函数  `void Mod_Emp();`
+
+```C++
+	//修改职工
+	void Mod_Emp();
+```
+
+
+
+#### 12.2 修改职工函数实现
+
+在workerManager.cpp中实现成员函数 ` void Mod_Emp();`
+
+```C++
+//修改职工
+void WorkerManager::Mod_Emp()
+{
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在或记录为空！" << endl;
+	}
+	else
+	{
+		cout << "请输入修改职工的编号：" << endl;
+		int id;
+		cin >> id;
+
+		int ret = this->IsExist(id);
+		if (ret != -1)
+		{ 
+			//查找到编号的职工
+
+			delete this->m_EmpArray[ret];
+			
+			int newId = 0;
+			string newName = "";
+			int dSelect = 0;
+
+			cout << "查到： " << id << "号职工，请输入新职工号： " << endl;
+			cin >> newId;
+
+			cout << "请输入新姓名： " << endl;
+			cin >> newName;
+
+			cout << "请输入岗位： " << endl;
+			cout << "1、普通职工" << endl;
+			cout << "2、经理" << endl;
+			cout << "3、老板" << endl;
+			cin >> dSelect;
+
+			Worker * worker = NULL;
+			switch (dSelect)
+			{
+			case1:
+				worker = new Employee(newId, newName, dSelect);
+				break;
+			case2:
+				worker = new Manager(newId, newName, dSelect);
+				break;
+			case 3:
+				worker = new Boss(newId, newName, dSelect);
+				break;
+			default:
+				break;
+			}
+
+			//更改数据 到数组中
+			this->m_EmpArray[ret]= worker;
+			
+			cout << "修改成功！" << endl;
+
+			//保存到文件中
+			this->save();
+		}
+		else
+		{
+			cout << "修改失败，查无此人" << endl;
+		}
+	}
+
+	//按任意键 清屏
+	system("pause");
+	system("cls");
+}
+
+```
+
+
+
+
+
+#### 12.3 测试修改职工
+
+在main函数分支 4  选项中，调用修改职工接口
+
+![1546502651922](assets/1546502651922.png)
+
+
+
+测试1 - 修改不存在职工情况
+
+![1546502759643](assets/1546502759643.png)
+
+测试2 - 修改存在职工情况，例如将职工 "李四" 改为 "赵四"
+
+![1546502830350](assets/1546502830350.png)
+
+修改后再次查看所有职工信息，并确认修改成功
+
+![1546502865443](assets/1546502865443.png)
+
+再次确认文件中信息也同步更新
+
+![1546502898653](assets/1546502898653.png)
+
+至此，修改职工功能已实现！
+
+
+
+
+
+
+
+
+
+
+
+## 13、查找职工
+
+功能描述：提供两种查找职工方式，一种按照职工编号，一种按照职工姓名
+
+#### 13.1 查找职工函数声明
+
+在workerManager.h中添加成员函数  `void Find_Emp();`
+
+```c++
+	//查找职工
+	void Find_Emp();
+```
+
+
+
+#### 13.2 查找职工函数实现
+
+在workerManager.cpp中实现成员函数 ` void Find_Emp();`
+
+```C++
+//查找职工
+void WorkerManager::Find_Emp()
+{
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在或记录为空！" << endl;
+	}
+	else
+	{
+		cout << "请输入查找的方式：" << endl;
+		cout << "1、按职工编号查找" << endl;
+		cout << "2、按姓名查找" << endl;
+
+		int select = 0;
+		cin >> select;
+
+
+		if (select == 1) //按职工号查找
+		{
+			int id;
+			cout << "请输入查找的职工编号：" << endl;
+			cin >> id;
+
+			int ret = IsExist(id);
+			if (ret != -1)
+			{
+				cout << "查找成功！该职工信息如下：" << endl;
+				this->m_EmpArray[ret]->showInfo();
+			}
+			else
+			{
+				cout << "查找失败，查无此人" << endl;
+			}
+		}
+		else if(select == 2) //按姓名查找
+		{
+			string name;
+			cout << "请输入查找的姓名：" << endl;
+			cin >> name;
+
+			bool flag = false;  //查找到的标志
+			for (int i = 0; i < m_EmpNum; i++)
+			{
+				if (m_EmpArray[i]->m_Name == name)
+				{
+					cout << "查找成功,职工编号为："
+                           << m_EmpArray[i]->m_Id
+                           << " 号的信息如下：" << endl;
+					
+					flag = true;
+
+					this->m_EmpArray[i]->showInfo();
+				}
+			}
+			if (flag == false)
+			{
+				//查无此人
+				cout << "查找失败，查无此人" << endl;
+			}
+		}
+		else
+		{
+			cout << "输入选项有误" << endl;
+		}
+	}
+
+
+	system("pause");
+	system("cls");
+}
+```
+
+
+
+
+
+#### 13.3 测试查找职工
+
+在main函数分支 5  选项中，调用查找职工接口
+
+![1546504714318](assets/1546504714318.png)
+
+测试1 - 按照职工编号查找 - 查找不存在职工
+
+![1546504767229](assets/1546504767229.png)
+
+测试2 - 按照职工编号查找 -  查找存在职工
+
+![1546505046521](assets/1546505046521.png)
+
+测试3 - 按照职工姓名查找 - 查找不存在职工
+
+![1546505115610](assets/1546505115610.png)
+
+
+
+测试4 - 按照职工姓名查找 - 查找存在职工（如果出现重名，也一并显示，在文件中可以添加重名职工）
+
+例如 添加两个王五的职工，然后按照姓名查找王五
+
+![1546507850441](assets/1546507850441.png)
+
+![1546507760284](assets/1546507760284.png)
+
+至此，查找职工功能实现完毕！
+
+
+
+
+
+
+
+## 14、排序
+
+功能描述：按照职工编号进行排序，排序的顺序由用户指定
+
+#### 14.1 排序函数声明
+
+在workerManager.h中添加成员函数  `void Sort_Emp();`
+
+```C++
+	//排序职工
+	void Sort_Emp();
+```
+
+
+
+#### 14.2 排序函数实现
+
+在workerManager.cpp中实现成员函数 ` void Sort_Emp();`
+
+```C++
+//排序职工
+void WorkerManager::Sort_Emp()
+{
+	if (this->m_FileIsEmpty)
+	{
+		cout << "文件不存在或记录为空！" << endl;
+		system("pause");
+		system("cls");
+	}
+	else
+	{
+		cout << "请选择排序方式： " << endl;
+		cout << "1、按职工号进行升序" << endl;
+		cout << "2、按职工号进行降序" << endl;
+
+		int select = 0;
+		cin >> select;
+
+
+		for (int i = 0; i < m_EmpNum; i++)
+		{
+			int minOrMax = i;
+			for (int j = i + 1; j < m_EmpNum; j++)
+			{
+				if (select == 1) //升序
+				{
+					if (m_EmpArray[minOrMax]->m_Id > m_EmpArray[j]->m_Id)
+					{
+						minOrMax = j;
+					}
+				}
+				else  //降序
+				{
+					if (m_EmpArray[minOrMax]->m_Id < m_EmpArray[j]->m_Id)
+					{
+						minOrMax = j;
+					}
+				}
+			}
+
+			if (i != minOrMax)
+			{
+				Worker * temp = m_EmpArray[i];
+				m_EmpArray[i] = m_EmpArray[minOrMax];
+				m_EmpArray[minOrMax] = temp;
+			}
+
+		}
+
+		cout << "排序成功,排序后结果为：" << endl;
+		this->save();
+		this->Show_Emp();
+	}
+
+}
+```
+
+
+
+
+
+#### 14.3 测试排序功能
+
+在main函数分支 6  选项中，调用排序职工接口
+
+![1546510145181](assets/1546510145181.png)
+
+测试：
+
+首先我们添加一些职工，序号是无序的，例如：
+
+![1546658169987](assets/1546658169987.png)
+
+
+
+测试 - 升序排序
+
+![1546658190479](assets/1546658190479.png)
+
+文件同步更新
+
+![1546658273581](assets/1546658273581.png)
+
+
+
+
+
+测试 - 降序排序
+
+![1546658288936](assets/1546658288936.png)
+
+文件同步更新
+
+![1546658313704](assets/1546658313704.png)
+
+至此，职工按照编号排序的功能实现完毕！
+
+
+
+
+
+
+
+
+
+
+
+## 15、清空文件
+
+功能描述：将文件中记录数据清空
+
+
+
+#### 15.1 清空函数声明
+
+在workerManager.h中添加成员函数  `void Clean_File();`
+
+```C++
+	//清空文件
+	void Clean_File();
+```
+
+
+
+
+
+#### 15.2 清空函数实现
+
+在workerManager.cpp中实现员函数 ` void Clean_File();`
+
+```C++
+//清空文件
+void WorkerManager::Clean_File()
+{
+	cout << "确认清空？" << endl;
+	cout << "1、确认" << endl;
+	cout << "2、返回" << endl;
+
+	int select = 0;
+	cin >> select;
+
+	if (select == 1)
+	{
+		//打开模式 ios::trunc 如果存在删除文件并重新创建
+		ofstream ofs(FILENAME, ios::trunc);
+		ofs.close();
+
+		if (this->m_EmpArray != NULL)
+		{
+            for (int i = 0; i < this->m_EmpNum; i++)
+			{
+				if (this->m_EmpArray[i] != NULL)
+				{
+					delete this->m_EmpArray[i];
+				}
+			}
+			this->m_EmpNum = 0;
+			delete[] this->m_EmpArray;
+			this->m_EmpArray = NULL;
+			this->m_FileIsEmpty = true;
+		}
+		cout << "清空成功！" << endl;
+	}
+
+	system("pause");
+	system("cls");
+}
+```
+
+
+
+
+
+#### 15.3 测试清空文件
+
+在main函数分支 7  选项中，调用清空文件接口
+
+![1546511085541](assets/1546511085541.png)
+
+测试：确认清空文件
+
+![1546510976745](assets/1546510976745.png)
+
+再次查看文件中数据，记录已为空
+
+![1546510994196](assets/1546510994196.png)
+
+打开文件，里面数据已确保清空，该功能需要慎用！
+
+![1546511018517](assets/1546511018517.png)
+
+
+
+随着清空文件功能实现，本案例制作完毕  ^ _ ^  
 
 # 演讲比赛流程管理系统
 

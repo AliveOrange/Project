@@ -1,46 +1,42 @@
 #include <iostream> 
-#include <string.h>
+#include <string>
 using namespace std;
 #include <fstream>
+#include <vector>
+#include <algorithm>
+#include <deque>
+#include <stack>
+#include <queue>
+#include <list>
+#include <set>
+#include <map>
 
-template<class NameType, class AgeType = int> 
-class Person
-{
+class MyCompare {
 public:
-	Person(NameType name, AgeType age)
-	{
-		this->mName = name;
-		this->mAge = age;
+	bool operator()(int v1, int v2) {
+		return v1 > v2;
 	}
-	void showPerson()
-	{
-		cout << "name: " << this->mName << " age: " << this->mAge << endl;
-	}
-public:
-	NameType mName;
-	AgeType mAge;
 };
 
-//1、类模板没有自动类型推导的使用方式
-void test01()
+void test01() 
 {
-	// Person p("孙悟空", 1000); // 错误 类模板使用时候，不可以用自动类型推导
-	Person <string ,int>p("孙悟空", 1000); //必须使用显示指定类型的方式，使用类模板
-	p.showPerson();
-}
+	//默认从小到大排序
+	//利用仿函数实现从大到小排序
+	map<int, int, MyCompare> m;
 
-//2、类模板在模板参数列表中可以有默认参数
-void test02()
-{
-	Person <string> p("猪八戒", 999); //类模板中的模板参数列表 可以指定默认参数
-	p.showPerson();
-}
+	m.insert(make_pair(1, 10));
+	m.insert(make_pair(2, 20));
+	m.insert(make_pair(3, 30));
+	m.insert(make_pair(4, 40));
+	m.insert(make_pair(5, 50));
 
+	for (map<int, int, MyCompare>::iterator it = m.begin(); it != m.end(); it++) {
+		cout << "key:" << it->first << " value:" << it->second << endl;
+	}
+}
 int main() {
 
 	test01();
-
-	test02();
 
 	system("pause");
 
