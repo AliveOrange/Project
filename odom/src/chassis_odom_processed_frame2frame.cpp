@@ -13,17 +13,18 @@ class ChassisDeadReckoningFrame2Frame
 {
 public:
     ChassisDeadReckoningFrame2Frame(double distance_f2r, double distance_fr2l, double distance_rr2l,
-                         double r_rrw, double r_rlw, double r_frw, double r_flw,
-                         double front_wheel_weight, double rear_wheel_weight, double steer_transmission_ratio,double yaw_rate_bias);
+                                    double r_rrw, double r_rlw, double r_frw, double r_flw,
+                                    double front_wheel_weight, double rear_wheel_weight,
+                                    double steer_transmission_ratio, double yaw_rate_bias);
     ChassisDeadReckoningFrame2Frame() = default;
-    struct Pose delta_dr_transform;                             //增量RT
-    struct Pose last_dr_transform;                              //上帧RT
-    struct Pose current_dr_transform;                           //本帧RT
+    struct Pose delta_dr_transform;                             // 增量RT
+    struct Pose last_dr_transform;                              // 上帧RT
+    struct Pose current_dr_transform;                           // 本帧RT
     struct Pose result_dr_transform;                            // DR递推结果：相对初始位置世界坐标系下当前帧位置/姿态/速度
-    struct VcuVehicleInfo vcu_vehicle_info;                     //底盘信号：时间戳、后轮轮速、角速度yaw/roll,档位，底盘车速
+    struct VcuVehicleInfo vcu_vehicle_info;                     // 底盘信号：时间戳、后轮轮速、角速度yaw/roll,档位，底盘车速
     std::deque<Calmcar::drivers::CHASIS::Chasis> chassis_queue; // CAN输入信号序列
-    std::deque<odom::proto::Frame> chassis_odom_queue;          //底盘里程计序列
-    std::deque<odom::proto::Frame> new_chassis_odom_queue;      //底盘里程计序列
+    std::deque<odom::proto::Frame> chassis_odom_queue;          // 底盘里程计序列
+    std::deque<odom::proto::Frame> new_chassis_odom_queue;      // 底盘里程计序列
     void DeadReckoningWithChassis();
     void delta_angle_to_rotation_matrix(Pose &delta_dr_transform);
     bool publish_chassis_odom(std::string type);
@@ -31,18 +32,17 @@ public:
     void init();
 
 private:
-    double front_wheel_weight_;       //前轮权重
-    double rear_wheel_weight_;        //后轮权重
-    int status_chassis_ = 0;          //底盘里程计初始化状态
-    double time_stag_ = -1e20;        //初始化轨迹第一帧之前的时间标记，初始化第一帧时间
-    double yaw_rate_bias_;             //yaw_rate零偏
-    struct VehicleInfo vehicle_info_; //底盘的标定数据，后轮半径，后轮中心距
+    double front_wheel_weight_;       // 前轮权重
+    double rear_wheel_weight_;        // 后轮权重
+    int status_chassis_ = 0;          // 底盘里程计初始化状态
+    double time_stag_ = -1e20;        // 初始化轨迹第一帧之前的时间标记，初始化第一帧时间
+    double yaw_rate_bias_;            // yaw_rate零偏
+    struct VehicleInfo vehicle_info_; // 底盘的标定数据，后轮半径，后轮中心距
     void linear_speed_and_angle_speed_compute_();
     std::mutex chassis_odom_mutex_;
     std::mutex chassis_odom_parse_mutex_;
     int save_log_tag_global_ = 20000;
     uint64_t rolling_counter_ = 0;
-
 
     std::ofstream save_chassis_odom_processed_frame2frame_;
 };
@@ -51,31 +51,30 @@ void ChassisDeadReckoningFrame2Frame::init()
     char name[256] = {0};
     time_t curtime;
     time(&curtime);
-    tm  *nowtime = localtime(&curtime);
-    int year     = 1900 + nowtime->tm_year;
-    int month    = 1 + nowtime->tm_mon;
-    int day      = nowtime->tm_mday;
-    int hour     = nowtime->tm_hour;
-    int min      = nowtime->tm_min;
-    int sec      = nowtime->tm_sec;
+    tm *nowtime = localtime(&curtime);
+    int year = 1900 + nowtime->tm_year;
+    int month = 1 + nowtime->tm_mon;
+    int day = nowtime->tm_mday;
+    int hour = nowtime->tm_hour;
+    int min = nowtime->tm_min;
+    int sec = nowtime->tm_sec;
     system("mkdir -p localization_log/odom_log/txt_log");
     snprintf(name, 256, "%s_%d_%d_%d_%d_%d_%d.%s", "localization_log/odom_log/txt_log/chassis_odom_processed_frame2frame", year, month, day, hour, min, sec, "txt");
     save_chassis_odom_processed_frame2frame_.open(name, ios::app);
+    //这行代码使用了C++中的iostream库中的setf函数，该函数是用于设置输出格式的。这里使用了两个参数，第一个参数是ios::fixed表示输出格式为定点小数，第二个参数是ios::floatfield表示小数点后保留两位。
     save_chassis_odom_processed_frame2frame_.setf(ios::fixed, ios::floatfield);
     save_chassis_odom_processed_frame2frame_.precision(15);
     save_chassis_odom_processed_frame2frame_ << "1 time, 2 x, 3 y, 4 z, 5 vx, 6 vy, 7 vz, 8 qx, 9 qy, 10 qz, 11 qw " << std::endl;
 }
 
-
-
 ChassisDeadReckoningFrame2Frame::ChassisDeadReckoningFrame2Frame(double distance_f2r, double distance_fr2l, double distance_rr2l,
-                                           double r_rrw, double r_rlw, double r_frw, double r_flw,
-                                           double front_wheel_weight,
-                                           double rear_wheel_weight,
-                                           double steer_transmission_ratio,
-                                           double yaw_rate_bias) : front_wheel_weight_(front_wheel_weight),
-                                                                   rear_wheel_weight_(rear_wheel_weight),
-                                                                   yaw_rate_bias_(yaw_rate_bias)
+                                                                 double r_rrw, double r_rlw, double r_frw, double r_flw,
+                                                                 double front_wheel_weight,
+                                                                 double rear_wheel_weight,
+                                                                 double steer_transmission_ratio,
+                                                                 double yaw_rate_bias) : front_wheel_weight_(front_wheel_weight),
+                                                                                         rear_wheel_weight_(rear_wheel_weight),
+                                                                                         yaw_rate_bias_(yaw_rate_bias)
 
 {
     vehicle_info_.distance_f2r = distance_f2r;
@@ -86,7 +85,6 @@ ChassisDeadReckoningFrame2Frame::ChassisDeadReckoningFrame2Frame(double distance
     vehicle_info_.r_rlw = r_rlw;
     vehicle_info_.r_rrw = r_rrw;
     vehicle_info_.steer_transmission_ratio = steer_transmission_ratio;
-
 }
 
 bool ChassisDeadReckoningFrame2Frame::parse_chassis_odom(std::deque<odom::proto::Frame> &chassis_odom_queue)
@@ -126,47 +124,47 @@ bool ChassisDeadReckoningFrame2Frame::publish_chassis_odom(std::string type)
 }
 void ChassisDeadReckoningFrame2Frame::linear_speed_and_angle_speed_compute_()
 {
-    if (vcu_vehicle_info.gear_status == 4 || vcu_vehicle_info.gear_status == 5) //前行档位，x轴向速度为正
+    if (vcu_vehicle_info.gear_status == 4 || vcu_vehicle_info.gear_status == 5) // 前行档位，x轴向速度为正
     {
-        //当前时刻局部坐标系速度计算
+        // 当前时刻局部坐标系速度计算
         double theta = vcu_vehicle_info.steer_wheel_angle / vehicle_info_.steer_transmission_ratio *
-                       M_PI / 180; //前轮与x轴夹角
+                       M_PI / 180; // 前轮与x轴夹角
         double front_wheel_v = (vcu_vehicle_info.front_left_wheel_speed * vehicle_info_.r_flw * cos(abs(theta)) +
                                 vcu_vehicle_info.front_right_wheel_speed * vehicle_info_.r_frw * cos(abs(theta))) /
-                               2; //前轮x轴线速度平均值
+                               2; // 前轮x轴线速度平均值
         double rear_wheel_v = (vcu_vehicle_info.rear_left_wheel_speed * vehicle_info_.r_rlw +
                                vcu_vehicle_info.rear_right_wheel_speed * vehicle_info_.r_rrw) /
-                              2; //后轮x轴线速度平均值
+                              2; // 后轮x轴线速度平均值
         current_dr_transform.speed.x = front_wheel_weight_ * front_wheel_v + rear_wheel_weight_ * rear_wheel_v;
         current_dr_transform.speed.y = 0;
         current_dr_transform.speed.z = 0;
-        //角速度
+        // 角速度
         current_dr_transform.angle_speed.roll = 0;
         current_dr_transform.angle_speed.pitch = 0;
-        current_dr_transform.angle_speed.yaw = vcu_vehicle_info.yaw_rate - yaw_rate_bias_; //整车综合yaw角速度
+        current_dr_transform.angle_speed.yaw = vcu_vehicle_info.yaw_rate - yaw_rate_bias_; // 整车综合yaw角速度
     }
-    else if (vcu_vehicle_info.gear_status == 2) //后退档位，x轴向速度为负
+    else if (vcu_vehicle_info.gear_status == 2) // 后退档位，x轴向速度为负
     {
-        //当前时刻局部坐标系速度计算
+        // 当前时刻局部坐标系速度计算
         double theta = vcu_vehicle_info.steer_wheel_angle / vehicle_info_.steer_transmission_ratio *
-                       M_PI / 180; //前轮与x轴夹角
+                       M_PI / 180; // 前轮与x轴夹角
         double front_wheel_v = (vcu_vehicle_info.front_left_wheel_speed * vehicle_info_.r_flw * cos(abs(theta)) +
                                 vcu_vehicle_info.front_right_wheel_speed * vehicle_info_.r_frw * cos(abs(theta))) /
-                               2; //前轮x轴线速度平均值
+                               2; // 前轮x轴线速度平均值
         double rear_wheel_v = (vcu_vehicle_info.rear_left_wheel_speed * vehicle_info_.r_rlw +
                                vcu_vehicle_info.rear_right_wheel_speed * vehicle_info_.r_rrw) /
-                              2;                                                                                   //后轮x轴线速度平均值
-        current_dr_transform.speed.x = -(front_wheel_weight_ * front_wheel_v + rear_wheel_weight_ * rear_wheel_v); //后退为负
+                              2;                                                                                   // 后轮x轴线速度平均值
+        current_dr_transform.speed.x = -(front_wheel_weight_ * front_wheel_v + rear_wheel_weight_ * rear_wheel_v); // 后退为负
         current_dr_transform.speed.y = 0;
         current_dr_transform.speed.z = 0;
-        //角速度
+        // 角速度
         current_dr_transform.angle_speed.roll = 0;
         current_dr_transform.angle_speed.pitch = 0;
-        current_dr_transform.angle_speed.yaw = vcu_vehicle_info.yaw_rate - yaw_rate_bias_; //整车综合yaw角速度
+        current_dr_transform.angle_speed.yaw = vcu_vehicle_info.yaw_rate - yaw_rate_bias_; // 整车综合yaw角速度
     }
     else
     {
-        //其他状态为零
+        // 其他状态为零
         current_dr_transform.speed.x = 0;
         current_dr_transform.speed.y = 0;
         current_dr_transform.speed.z = 0;
@@ -175,8 +173,8 @@ void ChassisDeadReckoningFrame2Frame::linear_speed_and_angle_speed_compute_()
         current_dr_transform.angle_speed.yaw = 0;
     }
 }
-    double taggg = 0;
-    int tagggg = 0;
+double taggg = 0; // taggg是什么东西？？？？
+int tagggg = 0;
 void ChassisDeadReckoningFrame2Frame::DeadReckoningWithChassis()
 {
     std::lock_guard<std::mutex> lock(chassis_odom_mutex_);
@@ -195,23 +193,23 @@ void ChassisDeadReckoningFrame2Frame::DeadReckoningWithChassis()
 
     for (size_t i = 0; i < chassis_queue.size(); i++)
     {
-        if (status_chassis_ == 0) //底盘里程计初始状态
+        if (status_chassis_ == 0) // 底盘里程计初始状态
         {
             //----------------------------------------->迭代递推第一帧odom位姿<-----------------------------------------
-            //底盘信号
-            vcu_vehicle_info.timestamp               = (double)chassis_queue.at(i).header().timestamp_sec() / 1000000;
-            vcu_vehicle_info.rear_left_wheel_speed   = chassis_queue.at(i).wheelspeed_report_6a().rl();
-            vcu_vehicle_info.rear_right_wheel_speed  = chassis_queue.at(i).wheelspeed_report_6a().rr();
-            vcu_vehicle_info.front_left_wheel_speed  = chassis_queue.at(i).wheelspeed_report_6a().fl();
+            // 底盘信号
+            vcu_vehicle_info.timestamp = (double)chassis_queue.at(i).header().timestamp_sec() / 1000000;
+            vcu_vehicle_info.rear_left_wheel_speed = chassis_queue.at(i).wheelspeed_report_6a().rl();
+            vcu_vehicle_info.rear_right_wheel_speed = chassis_queue.at(i).wheelspeed_report_6a().rr();
+            vcu_vehicle_info.front_left_wheel_speed = chassis_queue.at(i).wheelspeed_report_6a().fl();
             vcu_vehicle_info.front_right_wheel_speed = chassis_queue.at(i).wheelspeed_report_6a().fr();
-            vcu_vehicle_info.steer_wheel_angle       = chassis_queue.at(i).steering_report_65().angle();
-            vcu_vehicle_info.gear_status             = chassis_queue.at(i).gear_report_67().state();
-            vcu_vehicle_info.yaw_rate                = chassis_queue.at(i).gyro_report_6c().yaw();
+            vcu_vehicle_info.steer_wheel_angle = chassis_queue.at(i).steering_report_65().angle();
+            vcu_vehicle_info.gear_status = chassis_queue.at(i).gear_report_67().state();
+            vcu_vehicle_info.yaw_rate = chassis_queue.at(i).gyro_report_6c().yaw();
             linear_speed_and_angle_speed_compute_();
             // 发布proto格式chassis_odom数据
             odom::proto::Frame current_chassis_odom;
-            current_chassis_odom.mutable_header()->set_odom_id(odom::proto::OdomId::ODOM_CHASSIS);
-            current_chassis_odom.mutable_header()->set_sys_timestamp(vcu_vehicle_info.timestamp*1000000);
+            current_chassis_odom.mutable_header()->set_odom_id(odom::proto::OdomId::ODOM_CHASSIS); // 1
+            current_chassis_odom.mutable_header()->set_sys_timestamp(vcu_vehicle_info.timestamp * 1000000);
             current_chassis_odom.mutable_header()->set_rolling_counter(rolling_counter_);
             current_chassis_odom.mutable_header()->set_frame_id("chassis_odom");
             current_chassis_odom.mutable_odom()->mutable_position()->set_x(0);
@@ -227,69 +225,58 @@ void ChassisDeadReckoningFrame2Frame::DeadReckoningWithChassis()
             current_chassis_odom.mutable_info()->set_status(true);
             current_chassis_odom.mutable_info()->set_confidence(1.0);
             new_chassis_odom_queue.push_back(current_chassis_odom);
-            //将当前帧系数据保存到last_dr_transform中，参与下次迭代
-            last_dr_transform.timestamp         = vcu_vehicle_info.timestamp;
-            last_dr_transform.angle_speed.roll  = current_dr_transform.angle_speed.roll;
+            // 将当前帧系数据保存到last_dr_transform中，参与下次迭代
+            last_dr_transform.timestamp = vcu_vehicle_info.timestamp;
+            last_dr_transform.angle_speed.roll = current_dr_transform.angle_speed.roll;
             last_dr_transform.angle_speed.pitch = current_dr_transform.angle_speed.pitch;
-            last_dr_transform.angle_speed.yaw   = current_dr_transform.angle_speed.yaw;
-            last_dr_transform.speed.x           = current_dr_transform.speed.x;
-            last_dr_transform.speed.y           = current_dr_transform.speed.y;
-            last_dr_transform.speed.z           = current_dr_transform.speed.z;
-            //将当前帧世界系数据保存到last_dr_transform中，参与下次迭代
+            last_dr_transform.angle_speed.yaw = current_dr_transform.angle_speed.yaw;
+            last_dr_transform.speed.x = current_dr_transform.speed.x;
+            last_dr_transform.speed.y = current_dr_transform.speed.y;
+            last_dr_transform.speed.z = current_dr_transform.speed.z;
+            // 将当前帧世界系数据保存到last_dr_transform中，参与下次迭代
             last_dr_transform.position_matrix << 0, 0, 0;
-            last_dr_transform.rotation_matrix = Eigen::Matrix3d::Identity();
+            last_dr_transform.rotation_matrix = Eigen::Matrix3d::Identity(); // Eigen::Matrix3d::Identity()语句将创建一个3x3的单位矩阵，并返回一个Eigen::Matrix3d对象
             last_dr_transform.speed_matrix << current_dr_transform.speed.x, current_dr_transform.speed.y, current_dr_transform.speed.z;
             status_chassis_ = 1;
-
+            // 需要单独采集odom分析数据时，test_status设为 true
             if (test_status)
             {
-                save_chassis_odom_processed_frame2frame_ << chassis_queue.at(i).header().timestamp_sec() / (double)1000000<<","<<
-                0<<"," <<
-                0<<"," <<
-                0<<"," <<
-                current_dr_transform.speed.x<<"," <<
-                current_dr_transform.speed.y<<"," <<
-                current_dr_transform.speed.z<<"," <<
-                0<<"," <<
-                0<<"," <<
-                0<<"," <<
-                1<<"," <<
-                std::endl;
+                save_chassis_odom_processed_frame2frame_ << chassis_queue.at(i).header().timestamp_sec() / (double)1000000 << "," << 0 << "," << 0 << "," << 0 << "," << current_dr_transform.speed.x << "," << current_dr_transform.speed.y << "," << current_dr_transform.speed.z << "," << 0 << "," << 0 << "," << 0 << "," << 1 << "," << std::endl;
             }
         }
         else if (status_chassis_ == 1)
         {
             //----------------------------------------->迭代递推第二帧以及后续帧odom位姿<-----------------------------------------
-            //底盘信号
-            vcu_vehicle_info.timestamp               = chassis_queue.at(i).header().timestamp_sec() / 1000000;
-            vcu_vehicle_info.rear_left_wheel_speed   = chassis_queue.at(i).wheelspeed_report_6a().rl();
-            vcu_vehicle_info.rear_right_wheel_speed  = chassis_queue.at(i).wheelspeed_report_6a().rr();
-            vcu_vehicle_info.front_left_wheel_speed  = chassis_queue.at(i).wheelspeed_report_6a().fl();
+            // 底盘信号
+            vcu_vehicle_info.timestamp = chassis_queue.at(i).header().timestamp_sec() / 1000000;
+            vcu_vehicle_info.rear_left_wheel_speed = chassis_queue.at(i).wheelspeed_report_6a().rl();
+            vcu_vehicle_info.rear_right_wheel_speed = chassis_queue.at(i).wheelspeed_report_6a().rr();
+            vcu_vehicle_info.front_left_wheel_speed = chassis_queue.at(i).wheelspeed_report_6a().fl();
             vcu_vehicle_info.front_right_wheel_speed = chassis_queue.at(i).wheelspeed_report_6a().fr();
-            vcu_vehicle_info.steer_wheel_angle       = chassis_queue.at(i).steering_report_65().angle();
-            vcu_vehicle_info.gear_status             = chassis_queue.at(i).gear_report_67().state();
-            vcu_vehicle_info.yaw_rate                = chassis_queue.at(i).gyro_report_6c().yaw();
+            vcu_vehicle_info.steer_wheel_angle = chassis_queue.at(i).steering_report_65().angle();
+            vcu_vehicle_info.gear_status = chassis_queue.at(i).gear_report_67().state();
+            vcu_vehicle_info.yaw_rate = chassis_queue.at(i).gyro_report_6c().yaw();
             linear_speed_and_angle_speed_compute_();
             delta_dr_transform.timestamp = vcu_vehicle_info.timestamp - last_dr_transform.timestamp;
             //======================>姿态DR<======================
-            delta_dr_transform.angle.roll  = 0;
+            delta_dr_transform.angle.roll = 0;
             delta_dr_transform.angle.pitch = 0;
-            delta_dr_transform.angle.yaw   = (last_dr_transform.angle_speed.yaw + current_dr_transform.angle_speed.yaw) / 2 * delta_dr_transform.timestamp;
-            //瞬时角度增量转换到起始世界坐标系
-            // R(起点->t) = R(t-1->t)*R(起点->t-1)
-            delta_angle_to_rotation_matrix(delta_dr_transform); //角度增量转成旋转矩阵
-            //当前帧世界系下姿态                     上一帧世界系下的姿态                      瞬时车体姿态增量
+            delta_dr_transform.angle.yaw = (last_dr_transform.angle_speed.yaw + current_dr_transform.angle_speed.yaw) / 2 * delta_dr_transform.timestamp; // 这里最精确的算法应该用积分，但考虑delta-T足够小，用平均值计算
+            // 瞬时角度增量转换到起始世界坐标系
+            //  R(起点->t) = R(t-1->t)*R(起点->t-1)
+            delta_angle_to_rotation_matrix(delta_dr_transform); // 角度增量转成旋转矩阵
+            // 当前帧世界系下姿态                     上一帧世界系下的姿态                      瞬时车体姿态增量
             result_dr_transform.rotation_matrix = last_dr_transform.rotation_matrix * delta_dr_transform.rotation_matrix;
             result_dr_transform.transform_matrix.block<3, 3>(0, 0) = result_dr_transform.rotation_matrix.block<3, 3>(0, 0);
             Eigen::Quaterniond quaternion(result_dr_transform.rotation_matrix);
             result_dr_transform.quaternion = quaternion;
             //======================>位置DR<======================
-            //局部位置增量                     
+            // 局部位置增量
             delta_dr_transform.position.x = ((last_dr_transform.speed.x + current_dr_transform.speed.x) / 2) * cos(((last_dr_transform.angle_speed.yaw + current_dr_transform.angle_speed.yaw) / 2) * delta_dr_transform.timestamp) * delta_dr_transform.timestamp;
             delta_dr_transform.position.y = ((last_dr_transform.speed.x + current_dr_transform.speed.x) / 2) * sin(((last_dr_transform.angle_speed.yaw + current_dr_transform.angle_speed.yaw) / 2) * delta_dr_transform.timestamp) * delta_dr_transform.timestamp;
             delta_dr_transform.position.z = 0;
             delta_dr_transform.position_matrix << delta_dr_transform.position.x, delta_dr_transform.position.y, delta_dr_transform.position.z;
-            //当前帧世界系下位置                     上一帧世界系位置                       上一帧旋转矩阵                        局部位置增量
+            // 当前帧世界系下位置                     上一帧世界系位置                       上一帧旋转矩阵                        局部位置增量
             result_dr_transform.position_matrix = last_dr_transform.position_matrix + last_dr_transform.rotation_matrix * delta_dr_transform.position_matrix;
             // std::cout<<"位置 x："<<delta_dr_transform.position_matrix(0)<<std::endl;
             // std::cout<<"位置 y："<<delta_dr_transform.position_matrix(1)<<std::endl;
@@ -301,34 +288,34 @@ void ChassisDeadReckoningFrame2Frame::DeadReckoningWithChassis()
             result_dr_transform.position.y = result_dr_transform.position_matrix(1, 0);
             result_dr_transform.position.z = result_dr_transform.position_matrix(2, 0);
             //======================>速度DR<======================
-            //局部速度增量                 
+            // 局部速度增量
             delta_dr_transform.speed.x = ((last_dr_transform.speed.x + current_dr_transform.speed.x) / 2) * cos(((last_dr_transform.angle_speed.yaw + current_dr_transform.angle_speed.yaw) / 2) * delta_dr_transform.timestamp);
             delta_dr_transform.speed.y = ((last_dr_transform.speed.x + current_dr_transform.speed.x) / 2) * sin(((last_dr_transform.angle_speed.yaw + current_dr_transform.angle_speed.yaw) / 2) * delta_dr_transform.timestamp);
             delta_dr_transform.speed.z = 0;
             delta_dr_transform.speed_matrix << delta_dr_transform.speed.x, delta_dr_transform.speed.y, delta_dr_transform.speed.z;
-            //当前帧世界系下速度                  上一帧世界系速度                    上一帧旋转矩阵                        局部速度增量
+            // 当前帧世界系下速度                  上一帧世界系速度                    上一帧旋转矩阵                        局部速度增量
             result_dr_transform.speed_matrix = last_dr_transform.speed_matrix + last_dr_transform.rotation_matrix * delta_dr_transform.speed_matrix;
-            result_dr_transform.speed.x      = result_dr_transform.speed_matrix(0, 0);
-            result_dr_transform.speed.y      = result_dr_transform.speed_matrix(1, 0);
-            result_dr_transform.speed.z      = result_dr_transform.speed_matrix(2, 0);
+            result_dr_transform.speed.x = result_dr_transform.speed_matrix(0, 0);
+            result_dr_transform.speed.y = result_dr_transform.speed_matrix(1, 0);
+            result_dr_transform.speed.z = result_dr_transform.speed_matrix(2, 0);
             //======================>当前帧数据保存到上一帧状态变量中<======================
-            //将当前数据保存到last_dr_transform中，参与下次迭代
-            //瞬时量,局部坐标系
-            last_dr_transform.timestamp         = vcu_vehicle_info.timestamp;
-            last_dr_transform.angle_speed.roll  = current_dr_transform.angle_speed.roll;
+            // 将当前数据保存到last_dr_transform中，参与下次迭代
+            // 瞬时量,局部坐标系
+            last_dr_transform.timestamp = vcu_vehicle_info.timestamp;
+            last_dr_transform.angle_speed.roll = current_dr_transform.angle_speed.roll;
             last_dr_transform.angle_speed.pitch = current_dr_transform.angle_speed.pitch;
-            last_dr_transform.angle_speed.yaw   = current_dr_transform.angle_speed.yaw;
-            last_dr_transform.speed.x           = current_dr_transform.speed.x;
-            last_dr_transform.speed.y           = current_dr_transform.speed.y;
-            last_dr_transform.speed.z           = current_dr_transform.speed.z;
-            //位姿量，全局坐标系
-            last_dr_transform.rotation_matrix   = result_dr_transform.rotation_matrix;
-            last_dr_transform.position_matrix   = result_dr_transform.position_matrix;
-            last_dr_transform.speed_matrix      = result_dr_transform.speed_matrix;
+            last_dr_transform.angle_speed.yaw = current_dr_transform.angle_speed.yaw;
+            last_dr_transform.speed.x = current_dr_transform.speed.x;
+            last_dr_transform.speed.y = current_dr_transform.speed.y;
+            last_dr_transform.speed.z = current_dr_transform.speed.z;
+            // 位姿量，全局坐标系
+            last_dr_transform.rotation_matrix = result_dr_transform.rotation_matrix;
+            last_dr_transform.position_matrix = result_dr_transform.position_matrix;
+            last_dr_transform.speed_matrix = result_dr_transform.speed_matrix;
             // 发布proto格式chassis_odom数据
             odom::proto::Frame current_chassis_odom;
             current_chassis_odom.mutable_header()->set_odom_id(odom::proto::OdomId::ODOM_CHASSIS);
-            current_chassis_odom.mutable_header()->set_sys_timestamp(vcu_vehicle_info.timestamp*1000000);
+            current_chassis_odom.mutable_header()->set_sys_timestamp(vcu_vehicle_info.timestamp * 1000000);
             current_chassis_odom.mutable_header()->set_rolling_counter(rolling_counter_);
             current_chassis_odom.mutable_header()->set_frame_id("chassis_odom_processed_frame2frame");
             current_chassis_odom.mutable_odom()->mutable_position()->set_x(result_dr_transform.position.x);
@@ -347,33 +334,22 @@ void ChassisDeadReckoningFrame2Frame::DeadReckoningWithChassis()
 
             if (test_status)
             {
-                save_chassis_odom_processed_frame2frame_ << chassis_queue.at(i).header().timestamp_sec() / (double)1000000<<","<<
-                result_dr_transform.position.x<<"," <<
-                result_dr_transform.position.y<<"," <<
-                result_dr_transform.position.z<<"," <<
-                result_dr_transform.speed.x<<"," <<
-                result_dr_transform.speed.y<<"," <<
-                result_dr_transform.speed.z<<"," <<
-                result_dr_transform.quaternion.x()<<"," <<
-                result_dr_transform.quaternion.y()<<"," <<
-                result_dr_transform.quaternion.z()<<"," <<
-                result_dr_transform.quaternion.w()<<"," <<
-                std::endl;
+                save_chassis_odom_processed_frame2frame_ << chassis_queue.at(i).header().timestamp_sec() / (double)1000000 << "," << result_dr_transform.position.x << "," << result_dr_transform.position.y << "," << result_dr_transform.position.z << "," << result_dr_transform.speed.x << "," << result_dr_transform.speed.y << "," << result_dr_transform.speed.z << "," << result_dr_transform.quaternion.x() << "," << result_dr_transform.quaternion.y() << "," << result_dr_transform.quaternion.z() << "," << result_dr_transform.quaternion.w() << "," << std::endl;
             }
         }
     }
     chassis_queue.clear();
     return;
 }
-//角度增量转为旋转矩阵
+// 角度增量转为旋转矩阵
 void ChassisDeadReckoningFrame2Frame::delta_angle_to_rotation_matrix(Pose &delta_dr_transform)
 {
-    double cosyaw   = cos(delta_dr_transform.angle.yaw);
-    double sinyaw   = sin(delta_dr_transform.angle.yaw);
+    double cosyaw = cos(delta_dr_transform.angle.yaw);
+    double sinyaw = sin(delta_dr_transform.angle.yaw);
     double cospitch = cos(delta_dr_transform.angle.pitch);
     double sinpitch = sin(delta_dr_transform.angle.pitch);
-    double cosroll  = cos(delta_dr_transform.angle.roll);
-    double sinroll  = sin(delta_dr_transform.angle.roll);
+    double cosroll = cos(delta_dr_transform.angle.roll);
+    double sinroll = sin(delta_dr_transform.angle.roll);
     delta_dr_transform.rotation_matrix(0, 0) = cosyaw * cospitch;
     delta_dr_transform.rotation_matrix(0, 1) = cosyaw * sinroll * sinpitch - cosroll * sinyaw;
     delta_dr_transform.rotation_matrix(0, 2) = sinyaw * sinroll + cosyaw * cosroll * sinpitch;

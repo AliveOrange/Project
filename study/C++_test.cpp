@@ -1,6 +1,5 @@
 #include <iostream> 
 #include <string>
-using namespace std;
 #include <fstream>
 #include <vector>
 #include <algorithm>
@@ -10,35 +9,31 @@ using namespace std;
 #include <list>
 #include <set>
 #include <map>
+#include <functional>
+#include <thread>         // std::thread
+#include <mutex>          // std::mutex
+ 
+using namespace std;
 
-class MyCompare {
-public:
-	bool operator()(int v1, int v2) {
-		return v1 > v2;
-	}
-};
-
-void test01() 
-{
-	//默认从小到大排序
-	//利用仿函数实现从大到小排序
-	map<int, int, MyCompare> m;
-
-	m.insert(make_pair(1, 10));
-	m.insert(make_pair(2, 20));
-	m.insert(make_pair(3, 30));
-	m.insert(make_pair(4, 40));
-	m.insert(make_pair(5, 50));
-
-	for (map<int, int, MyCompare>::iterator it = m.begin(); it != m.end(); it++) {
-		cout << "key:" << it->first << " value:" << it->second << endl;
-	}
+volatile int counter(0); // non-atomic counter
+std::mutex mtx;           // locks access to counter
+ 
+void attempt_10k_increases() {
+    for (int i=0; i<10000; ++i) {
+        if (mtx.try_lock()) {   // only increase if currently not locked:
+            ++counter;
+            mtx.unlock();
+        }
+    }
 }
-int main() {
-
-	test01();
-
-	system("pause");
-
-	return 0;
+ 
+int main (int argc, const char* argv[]) {
+    std::thread threads[10];
+    for (int i=0; i<10; ++i)
+        threads[i] = std::thread(attempt_10k_increases);
+ 
+    for (auto& th : threads) th.join();
+    std::cout << counter << " successful increases of the counter.\n";
+ 
+    return 0;
 }

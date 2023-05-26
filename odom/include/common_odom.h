@@ -8,34 +8,34 @@
 // #ifndef COMMON_HEADER
 // #define COMMON_HEADER
 #pragma once
-#include <glog/logging.h>
-#include <dds/dds.h>
+#include <glog/logging.h> //Google Glog是Google的一个开源库，用于实现应用级别的logging。 
+#include <dds/dds.h>      
 #include <iostream>
-#include <thread>
+#include <thread>         //生成单个可执行线程，可以在多线程环境中与其他线程并发执行，同时共享相同的地址空间。
 #include <deque>
 #include <fstream>
 #include <iostream>
-#include <dirent.h>
-#include <fcntl.h>
+#include <dirent.h>       // 包含一些遍历目录文件的方法
+#include <fcntl.h>        //fcntl.h函数库中的几个常用的原型函数对文件的打开、数据写入、数据读取、关闭文件的操作。
 #include <vector>
 
-#include <sys/stat.h>
-#include <sys/types.h>
+#include <sys/stat.h>      //函数都是获取文件（普通文件，目录，管道，socket，字符，块（）的属性。
+#include <sys/types.h>     //中文名称为基本系统数据类型。在应用程序源文件中包含 <sys/types.h> 以访问 _LP64 和 _ILP32 的定义。
 
-#include <Eigen/Dense>
-#include <Eigen/Core>
-#include <Eigen/Eigen>
+#include <Eigen/Dense>     //Dense：包含了Core、Geometry、LU、Cholesky、SVD、QR、Eigenvalues等模块。
+#include <Eigen/Core>      //Core：Matrix和Array类，基础的线性代数运算和数组操作；
+#include <Eigen/Eigen>     //Eigen：包含了Dense和Sparse模块。 Sparse：稀疏矩阵的存储和运算
 
-#include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/io/coded_stream.h>  //该文件包含CodedInputStream和CodedOutputStream类，它们分别包装了ZeroCopyInputStream或ZeroCopyOutputStream，并允许您以各种格式读取或写入单个数据块。
 #include <google/protobuf/io/zero_copy_stream.h>
 #include <google/protobuf/io/zero_copy_stream_impl.h>
 #include <google/protobuf/arena.h>
 
-#include "chasis.pb.h"
+#include "chasis.pb.h" //其实.pb.h 是 protoc编译器根据 .proto 文件编译生成对应的头文件
 #include "ins_in.pb.h"
 #include "odom.pb.h"
 
-#include <mutex>
+#include <mutex>       // 在多线程编程中使用互斥体来保护共享数据，防止数据竞争问题的发生。
 
 
 #include "yaml-cpp/binary.h"
@@ -93,12 +93,18 @@ static void param_set()
         ins_topic = config["ins_topic"].as<std::string>();
         test_status = config["test_status"].as<bool>();
     }
-    catch (YAML::BadFile &e)
+    catch (YAML::BadFile &e) //2. YAML::BadFile是被捕获的异常类型，当读取配置文件时发生错误时会引发该异常。 
+                             //3. &e是对被捕获的异常的引用，可以用它来访问有关错误的信息
     {
         std::cout << "配置参数读取错误!" << std::endl;
     }
 };
-
+//GCJ02坐标系
+//为了数据安全和保密，通过地形图非线性保密处理算法（俗称火星加密）加密过的WGS84坐标系，俗称国测局坐标系，或火星坐标系。
+//GCJ02坐标系与WGS84坐标系之间的偏差大概在50-700m左右。
+//UTM投影
+//Universal Transverse Mercator，通用横轴墨卡托投影，是一种国际标准化的地图投影法。使用笛卡尔坐标系，标记南纬80°至北纬84°之间的所有位置，它的坐标基础是WGS84坐标系，因为UTM是一种分度带投影，所以不同经度区间的UTM投影坐标系的EPSG编码不同。
+//UTM采用网格编码，每个网格的编码经度在前，纬度在后。
 static void GC2UTM(double longitude_, double latitude_, double height_ellipsoid_, double &x, double &y, double &z)
 {
     int ProjNo = 0;
@@ -210,6 +216,8 @@ struct Pose
 /*
     输入角度，
     输出旋转矩阵或者四元数
+    使用Eigen库中的AngleAxisd类，将一个旋转角度和旋转轴作为输入，并返回一个Rotation Matrix作为输出。
+    其中，a[0]代表旋转角度，Eigen::Vector3d::UnitZ()代表z轴旋转。
 */
 template <typename T1, typename T2>
 static void rpy_to_rotation(T1 a, T2 &b) //交换数据

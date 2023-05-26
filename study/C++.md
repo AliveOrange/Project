@@ -2,10 +2,24 @@
 html:
   toc: true
 ---
-# C++课程安排
+# C++补充项
+### 捕获异常
+我们可以借助 C++ 异常机制来捕获上面的异常，避免程序崩溃。捕获异常的语法为：
+try{
+    // 可能抛出异常的语句
+}catch(exceptionType variable){
+    // 处理异常的语句
+}
+
+try和catch都是 C++ 中的关键字，后跟语句块，不能省略{ }。try 中包含可能会抛出异常的语句，一旦有异常抛出就会被后面的 catch 捕获。从 try 的意思可以看出，它只是“检测”语句块有没有异常，如果没有发生异常，它就“检测”不到。catch 是“抓住”的意思，用来捕获并处理 try 检测到的异常；如果 try 语句块没有检测到异常（没有异常抛出），那么就不会执行 catch 中的语句。
+
+这就好比，catch 告诉 try：你去检测一下程序有没有错误，有错误的话就告诉我，我来处理，没有的话就不要理我！
+http://c.biancheng.net/view/2330.html
 
 
 
+
+# C++基础入门
 * 明确C++课程学习阶段以及课程内容
 
 
@@ -17,8 +31,6 @@ html:
 | 第三阶段 | C++提高编程     | 介绍C++泛型编程思想，以及STL的基本使用 | 演讲比赛系统   |
 
 * 综合大案例：机房预约系统
-# C++基础入门
-
 ## 1 C++初识
 
 ### 1.1  第一个C++程序
@@ -228,7 +240,7 @@ int main() {
 
 static --修饰局部变量，局部变量的生命周期延长了，放到局部变量前，每次调动这个函数，都不会重新创建，比如 一个函数内部 static int a = 2； a++；第一次调用a =2；第二次调用a =3，出了作用域a 不会销毁，后续调用会延续之前的a的数值，static int a = 2只会调用一次，下次调用直接跳过这行。
 
-static--修饰全局变量， 全局变量会被限制，使全局变量作用域变小，静态的全局变量只能在自己所在的源文件的内部使用，出了源文件用extern函数也无法调用该全局变量。
+static--修饰全局变量， 全局变量会被限制，使全局变量作用域变小，静态的全局变量只能在自己所在的源文件的内部使用，出了源文件用extern函数也无法调用该全局变量。（在头文件中static修饰的全局变量在自定义头文件中声明一个static变量后,在包含了该头文件的cpp文件即使修改了该变量值,对于其他也包含了该头文件的cpp文件并不影响）（在头文件中static修饰的函数该函数只能在该文件中供自己使用,任何其他包含了该头文件的文件中是无法引用该函数的,但可以定义一模一样的函数.）
 
 static--修饰函数，效果和修饰全局变量相似，static修饰函数改变了函数的链接属性。
 	函数的定义和声明默认情况下是extern的，但静态函数只是在声明他的文件当中可见，不能被其他文件所用。好处：
@@ -10958,7 +10970,48 @@ int main() {
 ```C++
 #include <vector>
 
- 
+//容器嵌套容器
+void test01() {
+
+	vector< vector<int> >  v;
+
+	vector<int> v1;
+	vector<int> v2;
+	vector<int> v3;
+	vector<int> v4;
+
+	for (int i = 0; i < 4; i++) {
+		v1.push_back(i + 1);
+		v2.push_back(i + 2);
+		v3.push_back(i + 3);
+		v4.push_back(i + 4);
+	}
+
+	//将容器元素插入到vector v中
+	v.push_back(v1);
+	v.push_back(v2);
+	v.push_back(v3);
+	v.push_back(v4);
+
+
+	for (vector<vector<int>>::iterator it = v.begin(); it != v.end(); it++) {
+
+		for (vector<int>::iterator vit = (*it).begin(); vit != (*it).end(); vit++) {
+			cout << *vit << " ";
+		}
+		cout << endl;
+	}
+
+}
+
+int main() {
+
+	test01();
+
+	system("pause");
+
+	return 0;
+}
 ```
 
 
